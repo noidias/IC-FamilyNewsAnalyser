@@ -1,48 +1,131 @@
 
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Stream;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 			
-	String input = 
-	"A	T-10		In the name of family cooperation Botased has sent a shipment of 3467 Cash to CITYHUNTER.\r\n" + 
-	"E	T-9		CITYHUNTER explored planet 5 in the 90,10 system.\r\n" + 
-	"E	T-9		CITYHUNTER explored planet 8 in the 90,10 system.\r\n" + 
-	"A	T-9		In the name of family cooperation Botased has sent a shipment of 3925 Cash to CITYHUNTER.\r\n" + 
-	"E	T-7		CITYHUNTER explored planet 10 in the 88,8 system.\r\n" + 
-	"E	T-7		CITYHUNTER explored planet 8 in the 88,8 system.\r\n" + 
-	"A	T-6		In the name of family cooperation Protagonist has sent a shipment of 50315 Cash 1154 Iron 230 Endurium to CITYHUNTER.\r\n" + 
-	"A	T-6		In the name of family cooperation Botased has sent a shipment of 4213 Cash to CITYHUNTER.\r\n" + 
-	"A	T-3		In the name of family cooperation Botased has sent a shipment of 49473 Cash 1169 Iron 248 Octarine 233 Endurium to Protagonist.\r\n" + 
-	"A	T-1		In the name of family cooperation Kriad has sent a shipment of 16820 Cash 3108 Iron 265 Endurium to CITYHUNTER.\r\n" + 
-	"A	T-1		In the name of family cooperation Protagonist has sent a shipment of 92200 Cash 3405 Iron 413 Endurium to CITYHUNTER.\r\n" + 
-	"E	T-1		Rama has joined our glorious family!\r\n" + 
-	"E	T-1		Sector12 has joined our glorious family!\r\n" + 
-	"E	T-1		pretty has joined our glorious family!\r\n" + 
-	"E	T-1		Protagonist has joined our glorious family!\r\n" + 
-	"E	T-1		Mybalzich has joined our glorious family!\r\n" + 
-	"E	T-1		Kriad has joined our glorious family!\r\n" + 
-	"E	T-1		Botased has joined our glorious family!";
+	String famNews = readLineByLineJava8("famNews2.txt");
+	String planetScreen = readLineByLineJava8("planetList.txt");
+	String famCouncilScreen = readLineByLineJava8("famCouncil.txt");
 	
-	planetFormater(input);
-	
+	exploredPlanetFormater(famNews);
+	//planetScreenFormater(planetScreen);
 	}		
-	
+
 			
-	public static void planetFormater(String input) {
+	public static void exploredPlanetFormater(String famNews) {
 		//Pattern PlanetPattern = Pattern.compile("(?s)empire=\\d{6}\\\">([\\w+\\s*\\w*]*)</a>.</td>\\s*<td><a href=..view_race.php.id=\\d+.>[\\w+\\s*\\w*!*'*$*\\.*]*</a></td>\\s*<td>((\\d{0,3},)?(\\d{3},)?\\d{0,3})</td>\\s{5,6}<td>(\\d*)</td> ");
-		Pattern planetPattern = Pattern.compile("(?s)planet (\\d+) in the (\\d+),(\\d+) system.");
-		Matcher planet = planetPattern.matcher(input);
+		//int exploredPlanetCount = 0;
 		
+		HashMap<String, String> exploredPlanets = new HashMap<String, String>();
+		
+		Pattern planetPattern = Pattern.compile("(?s)E	T-\\d{1,4}[ ]*([\\w+\\s*\\w*]*) explored planet (\\d+) in the (\\d+),(\\d+) system.");
+		Matcher planet = planetPattern.matcher(famNews);
+		System.out.println("Explored Planets");
+		while (planet.find())	{
+				 String playerName = planet.group(1);	 
+				 int planetNo = Integer.parseInt(planet.group(2));
+				 int planetX = Integer.parseInt(planet.group(3));
+				 int planetY = Integer.parseInt(planet.group(4));
+				 String planetCoords = (planetX+","+planetY+":"+planetNo);
+				 exploredPlanets.put(playerName, planetCoords);
+				 
+				 //System.out.println(planetX+","+planetY+":"+planetNo);
+				 //exploredPlanetCount++;
+			 }
+	      Set set = exploredPlanets.entrySet();
+	      Iterator iterator = set.iterator();
+	      while(iterator.hasNext()) {
+	         Map.Entry mentry = (Map.Entry)iterator.next();
+	         System.out.print("key is: "+ mentry.getKey() + " & Value is: ");
+	         System.out.println(mentry.getValue());
+	         System.out.println(exploredPlanets.size());
+	      }
+		//System.out.println("Total Explored = " + exploredPlanetCount);
+	}
+	
+	
+	
+	public static void famCouncilScreenAnalyser(String famCouncilScreen) {
+		//Pattern PlanetPattern = Pattern.compile("(?s)empire=\\d{6}\\\">([\\w+\\s*\\w*]*)</a>.</td>\\s*<td><a href=..view_race.php.id=\\d+.>[\\w+\\s*\\w*!*'*$*\\.*]*</a></td>\\s*<td>((\\d{0,3},)?(\\d{3},)?\\d{0,3})</td>\\s{5,6}<td>(\\d*)</td> ");
+		int exploredPlanetCount = 0;
+		
+		/*
+		 * 
+		 * Income	+1,371,858
+TIF:	+689,588
+royal victorin:	+629,844
+Biscuit:	+33,369
+Who:	+6,842
+Zanharim:	+5,949
+Blood Eagle:	+5,916
+Gideon:	+350
+		 * 
+		 * 
+		 * 
+		 */
+		
+		Pattern planetPattern = Pattern.compile("(?s)explored planet (\\d+) in the (\\d+),(\\d+) system.");
+		Matcher planet = planetPattern.matcher(famCouncilScreen);
+		System.out.println("Explored Planets");
 		while (planet.find())	{
 				 int planetNo = Integer.parseInt(planet.group(1));
 				 int planetX = Integer.parseInt(planet.group(2));;
 				 int planetY = Integer.parseInt(planet.group(3));; 
 				 System.out.println(planetX+","+planetY+":"+planetNo);
+				 exploredPlanetCount++;
 			 }
+		System.out.println("Total Explored = " + exploredPlanetCount);
+	}
+	
+	
+	public static void planetScreenFormater(String planetScreen) {
+		int planetCount = 0;
+		Pattern planetPattern = Pattern.compile("(?s)(\\d+),(\\d+):(\\d+)	\\d+ ");
+		
+		Matcher planet = planetPattern.matcher(planetScreen);
+		System.out.println("Planets Screen formatted");
+		while (planet.find())	{
+				 int planetX = Integer.parseInt(planet.group(1));
+				 int planetY = Integer.parseInt(planet.group(2));;
+				 int planetNo = Integer.parseInt(planet.group(3));; 
+				 System.out.println(planetX+","+planetY+":"+planetNo);
+				 planetCount++;
+			 }
+		System.out.println("Planet Screen Total = " + planetCount);
+	
+	}
+	
+	
+	
+	
+	private static String readLineByLineJava8(String filePath)
+	{
+	    StringBuilder contentBuilder = new StringBuilder();
+	    try (Stream<String> stream = Files.lines( Paths.get(filePath), StandardCharsets.UTF_8))
+	    {
+	        stream.forEach(s -> contentBuilder.append(s).append("\n"));
+	    }
+	    catch (IOException e)
+	    {
+	        e.printStackTrace();
+	    }
+	    return contentBuilder.toString();
 	}
 			
 }

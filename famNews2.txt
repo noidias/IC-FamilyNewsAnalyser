@@ -1,0 +1,507 @@
+Imperial Conflict
+  T 662   950,644   287,502,254   16,007,801   1,369   588,657
+ToT
+ HQ
+ Messages
+ Map
+ Family
+ Family Forum
+ Foreign Relations
+ Military
+ Planets
+ Market
+ Rankings
+ Bookmarks
+ Tools
+ Empire Settings
+ Switch Empire
+
+Family #
+ 
+x,y or x,y:num
+ Store
+ Donate
+ Forum
+ Family Forum
+ Chat
+ Rules
+ Guide
+ Contact
+Your Family
+Overview
+News
+Council
+Vote
+Aid
+Defense
+Chat
+The Family News: Ticks 562-662
+empire
+type
+time desc
+time asc
+A	T-662		In the name of family cooperation TIF has sent a shipment of 1000000 Cash to sleepy.
+A	T-662		In the name of family cooperation TIF has sent a shipment of 1000000 Cash to Who.
+A	T-661		In the name of family cooperation TIF has sent a shipment of 12029505 Cash to Biscuit.
+EA	T-661		After a brave fight our family member Blood Eagle had to flee the planet planet 9 in the 64,80 system which was attacked by Shredder of family 6368.
+EA	T-661		After a brave fight our family member Blood Eagle had to flee the planet planet 6 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-661		After a brave fight our family member Blood Eagle had to flee the planet planet 13 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-661		After a brave fight our family member Blood Eagle had to flee the planet planet 4 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-661		After a brave fight our family member Blood Eagle had to flee the planet planet 12 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-661		After a brave fight our family member Blood Eagle had to flee the planet planet 10 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-661		After a brave fight our family member Blood Eagle had to flee the planet planet 5 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-661		After a brave fight our family member Blood Eagle had to flee the planet planet 6 in the 64,80 system which was attacked by Shredder of family 6368.
+EA	T-661		After a brave fight our family member Blood Eagle had to flee the planet planet 13 in the 64,80 system which was attacked by Shredder of family 6368.
+EA	T-661		After a brave fight our family member Blood Eagle had to flee the planet planet 2 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-661		After a brave fight our family member Blood Eagle had to flee the planet planet 4 in the 64,80 system which was attacked by Shredder of family 6368.
+EA	T-661		After a brave fight our family member Blood Eagle had to flee the planet planet 8 in the 64,80 system which was attacked by Shredder of family 6368.
+EA	T-661		After a brave fight our family member Blood Eagle had to flee the planet planet 1 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-661		After a brave fight our family member Blood Eagle had to flee the planet planet 8 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-661		After a brave fight our family member Blood Eagle had to flee the planet planet 9 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-661		After a brave fight our family member Blood Eagle had to flee the planet planet 5 in the 64,80 system which was attacked by Shredder of family 6368.
+A	T-660		In the name of family cooperation TIF has sent a shipment of 5000000 Cash to Blood Eagle.
+A	T-659		In the name of family cooperation TIF has sent a shipment of 3000000 Cash to sleepy.
+A	T-659		In the name of family cooperation TIF has sent a shipment of 2000000 Cash to Who.
+SA	T-659		The forces of Blood Eagle took planet 11 in the 65,83 system from Donatello (6368).
+A	T-658		In the name of family cooperation Who has sent a shipment of 69766995 Food 1375755 Iron 324918 Octarine 543933 Endurium to TIF.
+A	T-658		In the name of family cooperation TIF has sent a shipment of 2000000 Iron 300000 Endurium to Blood Eagle.
+A	T-658		In the name of family cooperation royal victorin has sent a shipment of 10000000 Cash to Blood Eagle.
+SA	T-658		The forces of Blood Eagle took planet 8 in the 71,31 system from Pitbull (6363).
+SA	T-658		The forces of Blood Eagle took planet 2 in the 71,31 system from Airwing (6363).
+A	T-657		In the name of family cooperation TIF has sent a shipment of 2300000 Iron 200000 Endurium to Blood Eagle.
+A	T-657		In the name of family cooperation royal victorin has sent a shipment of 30000000 Cash to Blood Eagle.
+SA	T-657		The forces of Blood Eagle took planet 4 in the 70,41 system from Airwing (6363).
+SA	T-657		The forces of Blood Eagle took planet 5 in the 70,41 system from Pitbull (6363).
+FA	T-657		Blood Eagle made an attack against planet 5 in the 70,41 system owned by Pitbull (6363), but the planet's defense was too strong.
+SA	T-657		The forces of Blood Eagle took planet 10 in the 70,41 system from Darrk (6363).
+FA	T-657		Blood Eagle made an attack against planet 4 in the 70,41 system owned by Airwing (6363), but the planet's defense was too strong.
+FA	T-657		Blood Eagle made an attack against planet 4 in the 70,41 system owned by Airwing (6363), but the planet's defense was too strong.
+FA	T-657		Blood Eagle made an attack against planet 4 in the 70,41 system owned by Airwing (6363), but the planet's defense was too strong.
+FA	T-657		Blood Eagle made an attack against planet 4 in the 70,41 system owned by Airwing (6363), but the planet's defense was too strong.
+SA	T-657		The forces of Blood Eagle took planet 4 in the 74,84 system from Hellboy (6363).
+SA	T-657		The forces of Blood Eagle took planet 5 in the 65,83 system from Donatello (6368).
+SA	T-657		The forces of Blood Eagle took planet 10 in the 65,83 system from Donatello (6368).
+FA	T-657		Blood Eagle made an attack against planet 11 in the 65,83 system owned by Donatello (6368), but the planet's defense was too strong.
+SA	T-657		The forces of Blood Eagle took planet 2 in the 65,83 system from Donatello (6368).
+SA	T-657		The forces of Blood Eagle took planet 6 in the 65,83 system from Shredder (6368).
+SA	T-657		The forces of Blood Eagle took planet 4 in the 65,83 system from Shredder (6368).
+FA	T-657		Blood Eagle made an attack against planet 3 in the 65,83 system owned by Shredder (6368), but the planet's defense was too strong.
+SA	T-657		The forces of Blood Eagle took planet 12 in the 65,83 system from Shredder (6368).
+SA	T-657		The forces of Blood Eagle took planet 13 in the 65,83 system from Shredder (6368).
+SA	T-657		The forces of Blood Eagle took planet 1 in the 65,83 system from Shredder (6368).
+SA	T-657		The forces of Blood Eagle took planet 9 in the 65,83 system from Shredder (6368).
+SA	T-657		The forces of Blood Eagle took planet 8 in the 65,83 system from Shredder (6368).
+EA	T-656		After a brave fight our family member Blood Eagle had to flee the planet planet 9 in the 62,95 system which was attacked by Pitbull of family 6363.
+EA	T-656		Our family member Blood Eagle managed to defend planet 9 in the 62,95 system against an attack by forces from Pitbull, family 6363.
+EA	T-656		After a brave fight our family member Blood Eagle had to flee the planet planet 5 in the 62,95 system which was attacked by Pitbull of family 6363.
+EA	T-656		After a brave fight our family member Blood Eagle had to flee the planet planet 1 in the 62,95 system which was attacked by Pitbull of family 6363.
+A	T-655		In the name of family cooperation TIF has sent a shipment of 9194968 Cash to Blood Eagle.
+A	T-655		In the name of family cooperation royal victorin has sent a shipment of 300000 Octarine to Blood Eagle.
+A	T-655		In the name of family cooperation TIF has sent a shipment of 5000000 Cash to Who.
+A	T-655		In the name of family cooperation TIF has sent a shipment of 5000000 Cash to sleepy.
+SA	T-654		The forces of Blood Eagle took planet 5 in the 62,95 system from Shredder (6368).
+SA	T-654		The forces of Blood Eagle took planet 9 in the 62,95 system from Shredder (6368).
+SA	T-654		The forces of Blood Eagle took planet 7 in the 64,80 system from MichelAngelo (6368).
+SA	T-654		The forces of Blood Eagle took planet 12 in the 64,80 system from Leonardo (6368).
+SA	T-654		The forces of Blood Eagle took planet 4 in the 64,80 system from Leonardo (6368).
+SA	T-654		The forces of Blood Eagle took planet 9 in the 64,80 system from Leonardo (6368).
+SA	T-654		The forces of Blood Eagle took planet 8 in the 64,80 system from Leonardo (6368).
+SA	T-654		The forces of Blood Eagle took planet 5 in the 64,80 system from Leonardo (6368).
+SA	T-654		The forces of Blood Eagle took planet 13 in the 64,80 system from Leonardo (6368).
+SA	T-654		The forces of Blood Eagle took planet 6 in the 64,80 system from Leonardo (6368).
+A	T-653		In the name of family cooperation royal victorin has sent a shipment of 18140038 Iron to TIF.
+A	T-653		In the name of family cooperation Biscuit has sent a shipment of 38143655 Food 16588969 Iron 495711 Octarine 697842 Endurium to royal victorin.
+FA	T-652		Blood Eagle made an attack against planet 2 in the 64,80 system owned by Shredder (6368), but the planet's defense was too strong.
+FA	T-652		Blood Eagle made an attack against planet 11 in the 64,80 system owned by Shredder (6368), but the planet's defense was too strong.
+SA	T-652		The forces of Blood Eagle took planet 1 in the 62,95 system from Shredder (6368).
+FA	T-652		Blood Eagle made an attack against planet 7 in the 64,80 system owned by MichelAngelo (6368), but the planet's defense was too strong.
+FA	T-652		Blood Eagle made an attack against planet 12 in the 64,80 system owned by Leonardo (6368), but the planet's defense was too strong.
+FA	T-652		Blood Eagle made an attack against planet 4 in the 64,80 system owned by Leonardo (6368), but the planet's defense was too strong.
+SA	T-652		The forces of Blood Eagle took planet 3 in the 64,80 system from Leonardo (6368).
+SA	T-652		The forces of Blood Eagle took planet 1 in the 64,80 system from Leonardo (6368).
+EA	T-652		After a brave fight our family member Blood Eagle had to flee the planet planet 9 in the 62,95 system which was attacked by Shredder of family 6368.
+EA	T-652		After a brave fight our family member Blood Eagle had to flee the planet planet 5 in the 62,95 system which was attacked by Shredder of family 6368.
+EO	T-652		Octarine Hurricanes started by Biscuit are rampaging through Leonardo, slowing Cash Factory production. The hurricanes are expected to last for 6 weeks.
+EO	T-652		Octarine Hurricanes started by Biscuit are rampaging through Leonardo, slowing Cash Factory production. The hurricanes are expected to last for 6 weeks.
+EO	T-652		Octarine Hurricanes started by Biscuit are rampaging through Leonardo, slowing Cash Factory production. The hurricanes are expected to last for 6 weeks.
+EA	T-652		After a brave fight our family member TIF had to flee the planet planet 3 in the 64,80 system which was attacked by Leonardo of family 6368.
+EA	T-652		After a brave fight our family member TIF had to flee the planet planet 1 in the 64,80 system which was attacked by Leonardo of family 6368.
+A	T-652		In the name of family cooperation TIF has sent a shipment of 5000000 Cash to sleepy.
+EA	T-652		After a brave fight our family member TIF had to flee the planet planet 13 in the 64,80 system which was attacked by Leonardo of family 6368.
+EA	T-652		After a brave fight our family member TIF had to flee the planet planet 6 in the 64,80 system which was attacked by Leonardo of family 6368.
+EA	T-652		After a brave fight our family member TIF had to flee the planet planet 8 in the 64,80 system which was attacked by Leonardo of family 6368.
+EA	T-652		After a brave fight our family member TIF had to flee the planet planet 9 in the 64,80 system which was attacked by Leonardo of family 6368.
+A	T-652		In the name of family cooperation TIF has sent a shipment of 15000000 Cash to Biscuit.
+EA	T-652		After a brave fight our family member TIF had to flee the planet planet 5 in the 64,80 system which was attacked by Leonardo of family 6368.
+EA	T-651		Our family member TIF managed to defend planet 5 in the 64,80 system against an attack by forces from MichelAngelo, family 6368.
+SA	T-651		The forces of TIF took planet 5 in the 64,80 system from Leonardo (6368).
+SA	T-651		The forces of TIF took planet 1 in the 64,80 system from MichelAngelo (6368).
+SA	T-651		The forces of TIF took planet 9 in the 64,80 system from Leonardo (6368).
+SA	T-651		The forces of TIF took planet 8 in the 64,80 system from Leonardo (6368).
+SA	T-651		The forces of TIF took planet 6 in the 64,80 system from Leonardo (6368).
+FA	T-651		TIF made an attack against planet 1 in the 65,83 system owned by Shredder (6368), but the planet's defense was too strong.
+SA	T-651		The forces of TIF took planet 3 in the 64,80 system from MichelAngelo (6368).
+SA	T-651		The forces of TIF took planet 13 in the 64,80 system from Leonardo (6368).
+EA	T-651		Our family member Blood Eagle managed to defend planet 9 in the 62,95 system against an attack by forces from Shredder, family 6368.
+EA	T-651		Our family member Blood Eagle managed to defend planet 5 in the 62,95 system against an attack by forces from Shredder, family 6368.
+FA	T-650		Blood Eagle made an attack against planet 2 in the 66,7 system owned by Netscape (6367), but the planet's defense was too strong.
+SA	T-650		The forces of Blood Eagle took planet 2 in the 81,85 system from Netscape (6367).
+FA	T-650		Blood Eagle made an attack against planet 2 in the 81,85 system owned by Netscape (6367), but the planet's defense was too strong.
+EA	T-650		After a brave fight our family member TIF had to flee the planet planet 2 in the 66,7 system which was attacked by Netscape of family 6367.
+EA	T-650		After a brave fight our family member TIF had to flee the planet planet 2 in the 81,85 system which was attacked by Netscape of family 6367.
+A	T-650		In the name of family cooperation TIF has sent a shipment of 300000 Iron to Blood Eagle.
+A	T-650		In the name of family cooperation TIF has sent a shipment of 15000000 Cash to Blood Eagle.
+FA	T-650		Blood Eagle made an attack against planet 2 in the 44,20 system owned by MichelAngelo (6368), but the planet's defense was too strong.
+FA	T-650		Blood Eagle made an attack against planet 5 in the 65,83 system owned by Donatello (6368), but the planet's defense was too strong.
+FA	T-650		Blood Eagle made an attack against planet 10 in the 65,83 system owned by Donatello (6368), but the planet's defense was too strong.
+SA	T-650		Blood Eagle attacked Donatello (6368) on planet 9 in the 64,80 system, and the heavy battle made the planet uninhabitable; an exploration ship will have to be sent there.
+FA	T-650		Blood Eagle made an attack against planet 11 in the 65,83 system owned by Donatello (6368), but the planet's defense was too strong.
+SA	T-650		Blood Eagle attacked Donatello (6368) on planet 5 in the 64,80 system, and the heavy battle made the planet uninhabitable; an exploration ship will have to be sent there.
+SA	T-650		Blood Eagle attacked Donatello (6368) on planet 6 in the 64,80 system, and the heavy battle made the planet uninhabitable; an exploration ship will have to be sent there.
+FA	T-650		Blood Eagle made an attack against planet 2 in the 65,83 system owned by Donatello (6368), but the planet's defense was too strong.
+SA	T-650		Blood Eagle attacked Donatello (6368) on planet 13 in the 64,80 system, and the heavy battle made the planet uninhabitable; an exploration ship will have to be sent there.
+SA	T-650		Blood Eagle attacked Donatello (6368) on planet 8 in the 64,80 system, and the heavy battle made the planet uninhabitable; an exploration ship will have to be sent there.
+EA	T-649		After a brave fight our family member Biscuit had to flee the planet planet 13 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-649		After a brave fight our family member sleepy had to flee the planet planet 4 in the 65,83 system which was attacked by Shredder of family 6368.
+A	T-649		In the name of family cooperation Biscuit has sent a shipment of 5000000 Cash to Blood Eagle.
+SA	T-648		The forces of Blood Eagle took planet 9 in the 62,95 system from Splinter (6368).
+SA	T-648		The forces of Blood Eagle took planet 5 in the 62,95 system from Splinter (6368).
+A	T-648		In the name of family cooperation Who has sent a shipment of 130472750 Food 2441691 Iron 605576 Octarine 1004800 Endurium to TIF.
+EA	T-648		After a brave fight our family member Blood Eagle had to flee the planet planet 11 in the 65,83 system which was attacked by Donatello of family 6368.
+EA	T-648		After a brave fight our family member Blood Eagle had to flee the planet planet 10 in the 65,83 system which was attacked by Donatello of family 6368.
+EA	T-648		After a brave fight our family member Blood Eagle had to flee the planet planet 5 in the 65,83 system which was attacked by Donatello of family 6368.
+EA	T-648		After a brave fight our family member Blood Eagle had to flee the planet planet 2 in the 65,83 system which was attacked by Donatello of family 6368.
+EA	T-648		Our family member Blood Eagle managed to defend planet 7 in the 70,80 system against an attack by forces from Shredder, family 6368.
+EA	T-647		Our family member sleepy managed to defend planet 4 in the 65,83 system against an attack by forces from Shredder, family 6368.
+EA	T-647		Our family member Biscuit managed to defend planet 13 in the 65,83 system against an attack by forces from Shredder, family 6368.
+EA	T-646		After a brave fight our family member Blood Eagle had to flee the planet planet 13 in the 64,80 system which was attacked by Donatello of family 6368.
+EA	T-646		After a brave fight our family member Blood Eagle had to flee the planet planet 9 in the 64,80 system which was attacked by Donatello of family 6368.
+EA	T-646		After a brave fight our family member Blood Eagle had to flee the planet planet 8 in the 64,80 system which was attacked by Donatello of family 6368.
+EA	T-646		After a brave fight our family member Blood Eagle had to flee the planet planet 6 in the 64,80 system which was attacked by Donatello of family 6368.
+EA	T-646		After a brave fight our family member Blood Eagle had to flee the planet planet 5 in the 64,80 system which was attacked by Donatello of family 6368.
+A	T-646		In the name of family cooperation Biscuit has sent a shipment of 20000000 Food to royal victorin.
+A	T-646		In the name of family cooperation Biscuit has sent a shipment of 103112022 Food to TIF.
+EA	T-646		After a brave fight our family member Blood Eagle had to flee the planet planet 1 in the 62,95 system which was attacked by Shredder of family 6368.
+EA	T-645		After a brave fight our family member Biscuit had to flee the planet planet 9 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-645		Our family member sleepy managed to defend planet 4 in the 65,83 system against an attack by forces from Shredder, family 6368.
+EA	T-645		After a brave fight our family member Biscuit had to flee the planet planet 8 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-645		After a brave fight our family member Biscuit had to flee the planet planet 3 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-645		After a brave fight our family member Biscuit had to flee the planet planet 12 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-645		After a brave fight our family member Biscuit had to flee the planet planet 6 in the 65,83 system which was attacked by Shredder of family 6368.
+A	T-644		In the name of family cooperation Biscuit has sent a shipment of 6000000 Cash to Blood Eagle.
+SA	T-644		The forces of Blood Eagle took planet 10 in the 65,83 system from Shredder (6368).
+FA	T-644		Blood Eagle made an attack against planet 1 in the 65,83 system owned by Shredder (6368), but the planet's defense was too strong.
+SA	T-644		The forces of Blood Eagle took planet 11 in the 65,83 system from Shredder (6368).
+SA	T-644		The forces of Blood Eagle took planet 2 in the 65,83 system from Shredder (6368).
+SA	T-644		The forces of Blood Eagle took planet 5 in the 65,83 system from Shredder (6368).
+EA	T-643		Our family member Blood Eagle managed to defend planet 6 in the 64,80 system against an attack by forces from Leonardo, family 6368.
+EA	T-643		Our family member Blood Eagle managed to defend planet 5 in the 64,80 system against an attack by forces from Leonardo, family 6368.
+EA	T-643		After a brave fight our family member Blood Eagle had to flee the planet planet 5 in the 62,95 system which was attacked by Splinter of family 6368.
+EA	T-643		After a brave fight our family member Blood Eagle had to flee the planet planet 9 in the 62,95 system which was attacked by Splinter of family 6368.
+EA	T-643		Our family member Blood Eagle managed to defend planet 9 in the 62,95 system against an attack by forces from Splinter, family 6368.
+SA	T-643		The forces of Blood Eagle took planet 9 in the 62,95 system from Splinter (6368).
+SA	T-643		The forces of Blood Eagle took planet 5 in the 62,95 system from Splinter (6368).
+A	T-643		In the name of family cooperation TIF has sent a shipment of 15077245 Cash 12495581 Iron 8776 Octarine to Biscuit.
+A	T-642		In the name of family cooperation TIF has sent a shipment of 46206 Octarine to Biscuit.
+A	T-642		In the name of family cooperation TIF has sent a shipment of 4024139 Cash to Biscuit.
+A	T-642		In the name of family cooperation TIF has sent a shipment of 10000000 Cash to Who.
+EA	T-642		After a brave fight our family member Blood Eagle had to flee the planet planet 3 in the 64,80 system which was attacked by MichelAngelo of family 6368.
+EA	T-642		Our family member Blood Eagle managed to defend planet 3 in the 64,80 system against an attack by forces from MichelAngelo, family 6368.
+EA	T-642		After a brave fight our family member Blood Eagle had to flee the planet planet 1 in the 64,80 system which was attacked by MichelAngelo of family 6368.
+EA	T-642		Our family member Blood Eagle managed to defend planet 1 in the 64,80 system against an attack by forces from MichelAngelo, family 6368.
+EA	T-642		Our family member Blood Eagle managed to defend planet 1 in the 64,80 system against an attack by forces from MichelAngelo, family 6368.
+EA	T-642		Our family member Blood Eagle managed to defend planet 1 in the 64,80 system against an attack by forces from MichelAngelo, family 6368.
+EA	T-642		Our family member Blood Eagle managed to defend planet 1 in the 64,80 system against an attack by forces from MichelAngelo, family 6368.
+SA	T-642		The forces of Blood Eagle took planet 8 in the 64,80 system from Leonardo (6368).
+SA	T-642		The forces of Blood Eagle took planet 13 in the 64,80 system from Leonardo (6368).
+SA	T-642		The forces of Blood Eagle took planet 3 in the 64,80 system from Leonardo (6368).
+SA	T-642		The forces of Blood Eagle took planet 1 in the 64,80 system from Leonardo (6368).
+SA	T-642		The forces of Blood Eagle took planet 9 in the 64,80 system from Leonardo (6368).
+SA	T-642		The forces of Blood Eagle took planet 6 in the 64,80 system from Leonardo (6368).
+SA	T-642		The forces of Blood Eagle took planet 5 in the 64,80 system from Leonardo (6368).
+EA	T-642		After a brave fight our family member Biscuit had to flee the planet planet 2 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-642		After a brave fight our family member Blood Eagle had to flee the planet planet 5 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-642		After a brave fight our family member Biscuit had to flee the planet planet 11 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-642		After a brave fight our family member Biscuit had to flee the planet planet 10 in the 65,83 system which was attacked by Shredder of family 6368.
+A	T-641		In the name of family cooperation Biscuit has sent a shipment of 1069698 Endurium to Blood Eagle.
+A	T-641		In the name of family cooperation TIF has sent a shipment of 14000000 Cash to Biscuit.
+A	T-641		In the name of family cooperation TIF has sent a shipment of 13000000 Cash to sleepy.
+A	T-641		In the name of family cooperation TIF has sent a shipment of 66000000 Cash 6000000 Iron 54456 Endurium to Blood Eagle.
+EA	T-640		After a brave fight our family member Blood Eagle had to flee the planet planet 5 in the 62,95 system which was attacked by Splinter of family 6368.
+EA	T-640		Our family member Blood Eagle managed to defend planet 12 in the 55,20 system against an attack by forces from Splinter, family 6368.
+EA	T-640		After a brave fight our family member Blood Eagle had to flee the planet planet 9 in the 62,95 system which was attacked by Splinter of family 6368.
+EA	T-640		Our family member Blood Eagle managed to defend planet 1 in the 55,20 system against an attack by forces from Splinter, family 6368.
+SA	T-639		The forces of Blood Eagle took planet 1 in the 55,20 system from MichelAngelo (6368).
+SA	T-639		The forces of Blood Eagle took planet 11 in the 55,20 system from MichelAngelo (6368).
+SA	T-639		The forces of Blood Eagle took planet 3 in the 55,20 system from MichelAngelo (6368).
+SA	T-639		The forces of Blood Eagle took planet 10 in the 55,20 system from MichelAngelo (6368).
+SA	T-639		The forces of Blood Eagle took planet 12 in the 55,20 system from MichelAngelo (6368).
+SA	T-639		The forces of Blood Eagle took planet 6 in the 55,20 system from MichelAngelo (6368).
+SA	T-639		The forces of Blood Eagle took planet 9 in the 55,20 system from MichelAngelo (6368).
+SA	T-639		The forces of Blood Eagle took planet 4 in the 55,20 system from MichelAngelo (6368).
+EA	T-639		After a brave fight our family member sleepy had to flee the planet planet 12 in the 57,13 system which was attacked by Bebop of family 6368.
+EA	T-639		After a brave fight our family member sleepy had to flee the planet planet 8 in the 57,13 system which was attacked by Bebop of family 6368.
+EA	T-639		After a brave fight our family member sleepy had to flee the planet planet 5 in the 57,13 system which was attacked by Bebop of family 6368.
+EA	T-639		After a brave fight our family member sleepy had to flee the planet planet 4 in the 57,13 system which was attacked by Bebop of family 6368.
+EA	T-639		After a brave fight our family member sleepy had to flee the planet planet 10 in the 57,13 system which was attacked by Bebop of family 6368.
+FA	T-639		sleepy made an attack against planet 4 in the 60,93 system owned by Splinter (6368), but the planet's defense was too strong.
+EA	T-638		After a brave fight our family member Who had to flee the planet planet 1 in the 65,83 system which was attacked by Shredder of family 6368.
+EA	T-638		Our family member Blood Eagle managed to defend planet 5 in the 65,83 system against an attack by forces from Shredder, family 6368.
+EA	T-638		Our family member Biscuit managed to defend planet 3 in the 65,83 system against an attack by forces from Shredder, family 6368.
+A	T-637		In the name of family cooperation TIF has sent a shipment of 3000000 Iron to royal victorin.
+A	T-637		In the name of family cooperation TIF has sent a shipment of 1300000 Cash to royal victorin.
+EA	T-636		After a brave fight our family member Blood Eagle had to flee the planet planet 8 in the 64,80 system which was attacked by Leonardo of family 6368.
+EA	T-636		After a brave fight our family member Blood Eagle had to flee the planet planet 6 in the 64,80 system which was attacked by Leonardo of family 6368.
+EA	T-636		After a brave fight our family member Blood Eagle had to flee the planet planet 3 in the 64,80 system which was attacked by Leonardo of family 6368.
+EA	T-636		After a brave fight our family member Blood Eagle had to flee the planet planet 1 in the 64,80 system which was attacked by Leonardo of family 6368.
+EA	T-636		After a brave fight our family member Blood Eagle had to flee the planet planet 9 in the 64,80 system which was attacked by Leonardo of family 6368.
+EA	T-636		After a brave fight our family member Blood Eagle had to flee the planet planet 13 in the 64,80 system which was attacked by Leonardo of family 6368.
+EA	T-636		After a brave fight our family member Blood Eagle had to flee the planet planet 5 in the 64,80 system which was attacked by Leonardo of family 6368.
+FA	T-636		Blood Eagle made an attack against planet 5 in the 58,83 system owned by Donatello (6368), but the planet's defense was too strong.
+FA	T-636		Blood Eagle made an attack against planet 4 in the 58,83 system owned by Splinter (6368), but the planet's defense was too strong.
+FA	T-636		Blood Eagle made an attack against planet 12 in the 58,83 system owned by Shredder (6368), but the planet's defense was too strong.
+FA	T-636		Blood Eagle made an attack against planet 6 in the 58,83 system owned by MichelAngelo (6368), but the planet's defense was too strong.
+FA	T-636		Blood Eagle made an attack against planet 2 in the 58,83 system owned by Splinter (6368), but the planet's defense was too strong.
+FA	T-636		Blood Eagle made an attack against planet 8 in the 58,83 system owned by Splinter (6368), but the planet's defense was too strong.
+SA	T-636		The forces of Blood Eagle took planet 5 in the 64,80 system from Leonardo (6368).
+SA	T-636		The forces of Blood Eagle took planet 9 in the 64,80 system from Leonardo (6368).
+SA	T-636		The forces of Blood Eagle took planet 13 in the 64,80 system from Leonardo (6368).
+SA	T-636		The forces of Blood Eagle took planet 1 in the 64,80 system from Leonardo (6368).
+SA	T-636		The forces of Blood Eagle took planet 8 in the 64,80 system from Leonardo (6368).
+SA	T-636		The forces of Blood Eagle took planet 3 in the 64,80 system from Leonardo (6368).
+SA	T-636		The forces of Blood Eagle took planet 6 in the 64,80 system from Leonardo (6368).
+EA	T-636		Our family member Blood Eagle managed to defend planet 5 in the 65,83 system against an attack by forces from Shredder, family 6368.
+SA	T-635		The forces of Blood Eagle took planet 9 in the 62,95 system from Splinter (6368).
+FA	T-635		Blood Eagle made an attack against planet 8 in the 62,90 system owned by Splinter (6368), but the planet's defense was too strong.
+FA	T-635		Blood Eagle made an attack against planet 3 in the 62,95 system owned by Splinter (6368), but the planet's defense was too strong.
+SA	T-635		The forces of Blood Eagle took planet 5 in the 62,95 system from Splinter (6368).
+FA	T-635		sleepy made an attack against planet 8 in the 62,90 system owned by Splinter (6368), but the planet's defense was too strong.
+SA	T-635		The forces of Blood Eagle took planet 1 in the 62,95 system from Splinter (6368).
+FA	T-635		sleepy made an attack against planet 7 in the 64,80 system owned by MichelAngelo (6368), but the planet's defense was too strong.
+EA	T-634		After a brave fight our family member Blood Eagle had to flee the planet planet 6 in the 64,80 system which was attacked by Leonardo of family 6368.
+EA	T-634		After a brave fight our family member Blood Eagle had to flee the planet planet 8 in the 64,80 system which was attacked by Leonardo of family 6368.
+FA	T-634		Blood Eagle made an attack against planet 2 in the 64,80 system owned by Shredder (6368), but the planet's defense was too strong.
+FA	T-634		Blood Eagle made an attack against planet 11 in the 64,80 system owned by Shredder (6368), but the planet's defense was too strong.
+EA	T-634		After a brave fight our family member Blood Eagle had to flee the planet planet 9 in the 64,80 system which was attacked by Leonardo of family 6368.
+FA	T-634		Blood Eagle made an attack against planet 10 in the 64,80 system owned by Donatello (6368), but the planet's defense was too strong.
+EA	T-634		After a brave fight our family member Blood Eagle had to flee the planet planet 13 in the 64,80 system which was attacked by Leonardo of family 6368.
+EA	T-634		After a brave fight our family member Blood Eagle had to flee the planet planet 5 in the 64,80 system which was attacked by Leonardo of family 6368.
+FA	T-634		Blood Eagle made an attack against planet 7 in the 64,80 system owned by MichelAngelo (6368), but the planet's defense was too strong.
+EA	T-634		After a brave fight our family member Blood Eagle had to flee the planet planet 3 in the 64,80 system which was attacked by Leonardo of family 6368.
+FA	T-634		Blood Eagle made an attack against planet 12 in the 64,80 system owned by Leonardo (6368), but the planet's defense was too strong.
+EA	T-634		After a brave fight our family member Blood Eagle had to flee the planet planet 1 in the 64,80 system which was attacked by Leonardo of family 6368.
+SA	T-634		The forces of Blood Eagle took planet 5 in the 64,80 system from Leonardo (6368).
+SA	T-634		The forces of Blood Eagle took planet 8 in the 64,80 system from Leonardo (6368).
+SA	T-634		The forces of Blood Eagle took planet 1 in the 64,80 system from Leonardo (6368).
+SA	T-634		The forces of Blood Eagle took planet 9 in the 64,80 system from Leonardo (6368).
+FA	T-634		Blood Eagle made an attack against planet 4 in the 64,80 system owned by Leonardo (6368), but the planet's defense was too strong.
+SA	T-634		The forces of Blood Eagle took planet 13 in the 64,80 system from Leonardo (6368).
+SA	T-634		The forces of Blood Eagle took planet 3 in the 64,80 system from Leonardo (6368).
+SA	T-634		The forces of Blood Eagle took planet 6 in the 64,80 system from Leonardo (6368).
+A	T-633		In the name of family cooperation royal victorin has sent a shipment of 47000000 Cash to TIF.
+A	T-633		In the name of family cooperation TIF has sent a shipment of 10000000 Cash to Biscuit.
+A	T-633		In the name of family cooperation TIF has sent a shipment of 10000000 Cash to Who.
+A	T-633		In the name of family cooperation sleepy has sent a shipment of 46688 Iron 17188 Octarine 28225 Endurium to royal victorin.
+A	T-633		In the name of family cooperation royal victorin has sent a shipment of 22444135 Iron to TIF.
+A	T-633		In the name of family cooperation TIF has sent a shipment of 20000000 Cash to Blood Eagle.
+A	T-632		In the name of family cooperation royal victorin has sent a shipment of 1900000 Octarine to TIF.
+SA	T-632		The forces of sleepy took planet 8 in the 57,13 system from MichelAngelo (6368).
+SA	T-632		The forces of sleepy took planet 12 in the 57,13 system from MichelAngelo (6368).
+SA	T-632		The forces of sleepy took planet 10 in the 57,13 system from MichelAngelo (6368).
+SA	T-632		The forces of sleepy took planet 5 in the 57,13 system from MichelAngelo (6368).
+SA	T-631		The forces of sleepy took planet 9 in the 57,12 system from MichelAngelo (6368).
+SA	T-631		The forces of sleepy took planet 4 in the 57,12 system from MichelAngelo (6368).
+SA	T-631		The forces of sleepy took planet 8 in the 57,12 system from MichelAngelo (6368).
+SA	T-631		The forces of sleepy took planet 4 in the 57,13 system from MichelAngelo (6368).
+A	T-630		In the name of family cooperation TIF has sent a shipment of 18193549 Cash to royal victorin.
+A	T-630		In the name of family cooperation sleepy has sent a shipment of 672156 Food 109615 Iron 40279 Octarine 123261 Endurium to royal victorin.
+A	T-630		In the name of family cooperation royal victorin has sent a shipment of 24000000 Cash 1800000 Iron 200000 Endurium to sleepy.
+A	T-629		In the name of family cooperation Who has sent a shipment of 24140981 Food 743616 Iron 105793 Octarine 403846 Endurium to royal victorin.
+A	T-629		In the name of family cooperation royal victorin has sent a shipment of 40000000 Cash 700000 Iron 1500000 Endurium to Who.
+A	T-629		In the name of family cooperation royal victorin has sent a shipment of 49000000 Cash 1300000 Endurium to Biscuit.
+A	T-629		In the name of family cooperation TIF has sent a shipment of 33842495 Cash 21256789 Iron 2352388 Octarine 8339380 Endurium to royal victorin.
+A	T-629		In the name of family cooperation TIF has sent a shipment of 1000000 Food to sleepy.
+IA	T-629		In an intra family fight sleepy defeated TIF and took control over planet 6 in the 76,14 system.
+IA	T-629		In an intra family fight sleepy defeated TIF and took control over planet 8 in the 65,8 system.
+IA	T-629		In an intra family fight sleepy defeated TIF and took control over planet 5 in the 96,83 system.
+IA	T-629		In an intra family fight sleepy defeated TIF and took control over planet 2 in the 68,9 system.
+IA	T-629		In an intra family fight sleepy defeated TIF and took control over planet 4 in the 95,83 system.
+IA	T-629		In an intra family fight sleepy defeated TIF and took control over planet 2 in the 65,9 system.
+IA	T-629		In an intra family fight sleepy defeated TIF and took control over planet 12 in the 67,6 system.
+SA	T-629		The forces of Blood Eagle took planet 2 in the 61,9 system from Shredder (6368).
+A	T-627		In the name of family cooperation Biscuit has sent a shipment of 12000000 Cash 109091380 Food 2582133 Iron 2380041 Octarine 903660 Endurium to TIF.
+A	T-627		In the name of family cooperation TIF has sent a shipment of 109625980 Cash 5328762 Octarine to Biscuit.
+A	T-626		In the name of family cooperation TIF has sent a shipment of 30000 Octarine to sleepy.
+A	T-626		In the name of family cooperation sleepy has sent a shipment of 524072 Iron 171293 Octarine to TIF.
+A	T-626		In the name of family cooperation Who has sent a shipment of 108963706 Food 2013844 Iron 409341 Octarine 1061399 Endurium to TIF.
+A	T-626		In the name of family cooperation sleepy has sent a shipment of 5000000 Cash 480000 Endurium to Who.
+A	T-626		In the name of family cooperation TIF has sent a shipment of 10000000 Cash to Who.
+A	T-626		In the name of family cooperation TIF has sent a shipment of 15000000 Cash to sleepy.
+A	T-626		In the name of family cooperation TIF has sent a shipment of 15000000 Cash to Blood Eagle.
+E	T-625		Edjes has joined our glorious family!
+A	T-625		In the name of family cooperation royal victorin has sent a shipment of 1000000 Cash 1000000 Iron 400000 Endurium to Blood Eagle.
+E	T-620		Blood Eagle explored planet 5 in the 65,83 system.
+E	T-620		Blood Eagle explored planet 1 in the 74,84 system.
+E	T-619		Blood Eagle explored planet 6 in the 83,83 system.
+E	T-619		Blood Eagle explored planet 12 in the 83,83 system.
+E	T-619		Blood Eagle explored planet 8 in the 70,90 system.
+A	T-619		In the name of family cooperation TIF has sent a shipment of 10000000 Cash to Blood Eagle.
+A	T-619		In the name of family cooperation TIF has sent a shipment of 5000000 Cash to Biscuit.
+A	T-619		In the name of family cooperation TIF has sent a shipment of 5000000 Cash to Who.
+E	T-618		TIF explored planet 4 in the 95,83 system.
+E	T-618		TIF explored planet 4 in the 90,87 system.
+E	T-618		TIF explored planet 12 in the 67,6 system.
+E	T-618		TIF explored planet 11 in the 64,100 system.
+E	T-618		Blood Eagle explored planet 5 in the 69,87 system.
+E	T-618		Who explored planet 8 in the 93,100 system.
+E	T-618		TIF explored planet 13 in the 92,93 system.
+E	T-618		TIF explored planet 10 in the 81,85 system.
+E	T-618		TIF explored planet 2 in the 66,90 system.
+E	T-618		TIF explored planet 6 in the 76,14 system.
+E	T-618		TIF explored planet 8 in the 65,8 system.
+E	T-618		Blood Eagle explored planet 5 in the 71,21 system.
+E	T-618		TIF explored planet 12 in the 66,7 system.
+E	T-618		Who explored planet 2 in the 85,5 system.
+E	T-618		TIF explored planet 11 in the 81,85 system.
+E	T-618		sleepy explored planet 13 in the 94,3 system.
+E	T-618		Blood Eagle explored planet 1 in the 82,98 system.
+E	T-618		Who explored planet 10 in the 74,3 system.
+E	T-618		Blood Eagle explored planet 2 in the 100,10 system.
+E	T-618		TIF explored planet 7 in the 94,92 system.
+E	T-618		Blood Eagle explored planet 10 in the 67,95 system.
+E	T-618		TIF explored planet 10 in the 75,91 system.
+E	T-618		Blood Eagle explored planet 6 in the 87,11 system.
+E	T-618		Who explored planet 6 in the 73,4 system.
+E	T-618		Blood Eagle explored planet 10 in the 74,1 system.
+E	T-618		TIF explored planet 2 in the 94,93 system.
+E	T-618		TIF explored planet 5 in the 96,83 system.
+E	T-618		TIF explored planet 2 in the 68,9 system.
+E	T-618		Blood Eagle explored planet 2 in the 74,7 system.
+E	T-618		sleepy explored planet 5 in the 98,4 system.
+E	T-618		TIF explored planet 2 in the 65,9 system.
+E	T-618		sleepy explored planet 3 in the 97,12 system.
+E	T-618		TIF explored planet 8 in the 79,1 system.
+E	T-618		TIF explored planet 10 in the 68,10 system.
+E	T-618		Who explored planet 2 in the 73,5 system.
+E	T-618		Blood Eagle explored planet 6 in the 99,5 system.
+A	T-618		In the name of family cooperation TIF has sent a shipment of 50000 Octarine to Blood Eagle.
+FA	T-618		Zanharim is no more.
+A	T-617		In the name of family cooperation TIF has sent a shipment of 10000000 Cash to Blood Eagle.
+A	T-617		In the name of family cooperation TIF has sent a shipment of 4000000 Cash to Biscuit.
+A	T-617		In the name of family cooperation TIF has sent a shipment of 4000000 Cash to Biscuit.
+A	T-617		In the name of family cooperation TIF has sent a shipment of 4000000 Cash to Who.
+A	T-616		In the name of family cooperation TIF has sent a shipment of 90000000 Cash 4000000 Iron 400000 Octarine 1000000 Endurium to sleepy.
+A	T-615		In the name of family cooperation Biscuit has sent a shipment of 91570063 Food 2167308 Iron 232571 Octarine 758483 Endurium to TIF.
+A	T-614		In the name of family cooperation TIF has sent a shipment of 5000000 Cash to Biscuit.
+A	T-614		In the name of family cooperation TIF has sent a shipment of 3000000 Cash to Who.
+A	T-614		In the name of family cooperation TIF has sent a shipment of 10000000 Cash to Blood Eagle.
+A	T-612		In the name of family cooperation Who has sent a shipment of 93196753 Food 1741356 Iron 408434 Octarine 708646 Endurium to TIF.
+A	T-612		In the name of family cooperation TIF has sent a shipment of 10000000 Cash 100 Food 500000 Iron 50000 Endurium to Blood Eagle.
+A	T-609		In the name of family cooperation TIF has sent a shipment of 10000000 Cash to Blood Eagle.
+A	T-607		In the name of family cooperation TIF has sent a shipment of 6000000 Cash 300000 Iron 300000 Endurium to sleepy.
+A	T-607		In the name of family cooperation royal victorin has sent a shipment of 70000000 Cash 4000000 Iron 500000 Octarine 1638551 Endurium to TIF.
+A	T-606		In the name of family cooperation sleepy has sent a shipment of 6000000 Cash 305323 Food 331816 Iron 11615 Octarine 119026 Endurium to TIF.
+A	T-606		In the name of family cooperation TIF has sent a shipment of 6000000 Cash 300000 Iron 100000 Endurium to sleepy.
+A	T-605		In the name of family cooperation Biscuit has sent a shipment of 46520683 Food 1100982 Iron 118144 Octarine 385304 Endurium to TIF.
+A	T-604		In the name of family cooperation sleepy has sent a shipment of 1944602 Food 201348 Iron 73463 Octarine 120397 Endurium to royal victorin.
+A	T-603		In the name of family cooperation TIF has sent a shipment of 5000000 Cash 300000 Endurium to Blood Eagle.
+A	T-602		In the name of family cooperation Blood Eagle has sent a shipment of 14522539 Iron to TIF.
+A	T-602		In the name of family cooperation TIF has sent a shipment of 3000000 Cash to Who.
+A	T-602		In the name of family cooperation TIF has sent a shipment of 10000000 Cash 14519139 Iron to Blood Eagle.
+A	T-602		In the name of family cooperation royal victorin has sent a shipment of 15000000 Cash to Blood Eagle.
+A	T-600		In the name of family cooperation Biscuit has sent a shipment of 1317887 Iron 141420 Octarine 461213 Endurium to royal victorin.
+A	T-600		In the name of family cooperation Biscuit has sent a shipment of 55685724 Food to TIF.
+A	T-600		In the name of family cooperation Who has sent a shipment of 70051826 Food 1309164 Iron 307054 Octarine 532764 Endurium to TIF.
+A	T-594		In the name of family cooperation Biscuit has sent a shipment of 55685724 Food to TIF.
+A	T-594		In the name of family cooperation Biscuit has sent a shipment of 1317887 Iron 141420 Octarine 461213 Endurium to royal victorin.
+A	T-593		In the name of family cooperation TIF has sent a shipment of 10000000 Cash to Blood Eagle.
+A	T-591		In the name of family cooperation TIF has sent a shipment of 3000000 Cash to Who.
+A	T-591		In the name of family cooperation sleepy has sent a shipment of 1369754 Food 109138 Iron 40150 Octarine 65810 Endurium to TIF.
+A	T-591		In the name of family cooperation Who has sent a shipment of 54161977 Food 1171598 Iron 274790 Octarine 360572 Endurium to TIF.
+A	T-588		In the name of family cooperation Biscuit has sent a shipment of 64327679 Food 1522657 Iron 163396 Octarine 532880 Endurium to TIF.
+A	T-586		In the name of family cooperation TIF has sent a shipment of 3000000 Cash to sleepy.
+A	T-586		In the name of family cooperation TIF has sent a shipment of 5000000 Cash to Blood Eagle.
+A	T-586		In the name of family cooperation TIF has sent a shipment of 3000000 Cash to Biscuit.
+A	T-586		In the name of family cooperation TIF has sent a shipment of 3000000 Cash to Who.
+A	T-584		In the name of family cooperation sleepy has sent a shipment of 121355 Iron 30565 Octarine 31426 Endurium to royal victorin.
+A	T-583		In the name of family cooperation Who has sent a shipment of 18683065 Food 686354 Iron 100974 Octarine 960163 Endurium to royal victorin.
+A	T-582		In the name of family cooperation royal victorin has sent a shipment of 1000000 Iron to Who.
+A	T-582		In the name of family cooperation royal victorin has sent a shipment of 50000000 Cash 1500000 Iron 1000000 Endurium to Who.
+A	T-582		In the name of family cooperation royal victorin has sent a shipment of 1000000 Cash to sleepy.
+A	T-582		In the name of family cooperation sleepy has sent a shipment of 317000 Food 50000 Endurium to royal victorin.
+A	T-581		In the name of family cooperation Biscuit has sent a shipment of 9289685 Food 219910 Iron 23598 Octarine 76961 Endurium to royal victorin.
+A	T-580		In the name of family cooperation sleepy has sent a shipment of 8600000 Food 60000 Iron 10000 Octarine 80000 Endurium to royal victorin.
+A	T-580		In the name of family cooperation Biscuit has sent a shipment of 1927917 Iron 206884 Octarine 674709 Endurium to royal victorin.
+A	T-580		In the name of family cooperation Biscuit has sent a shipment of 81429508 Food to TIF.
+A	T-580		In the name of family cooperation Who has sent a shipment of 95743245 Food 2307452 Iron 534920 Octarine 627615 Endurium to TIF.
+A	T-572		In the name of family cooperation TIF has sent a shipment of 18821254 Cash to Blood Eagle.
+A	T-571		In the name of family cooperation Blood Eagle has sent a shipment of 600000 Iron to TIF.
+A	T-571		In the name of family cooperation Blood Eagle has sent a shipment of 2000000 Iron to TIF.
+A	T-571		In the name of family cooperation Blood Eagle has sent a shipment of 4805783 Cash 40000000 Food 6608261 Iron 4306650 Endurium to TIF.
+A	T-571		In the name of family cooperation sleepy has sent a shipment of 63000000 Cash 40000000 Food 9600000 Iron 28000 Octarine 4800000 Endurium to Blood Eagle.
+A	T-571		In the name of family cooperation TIF has sent a shipment of 3000000 Cash to Blood Eagle.
+A	T-571		In the name of family cooperation TIF has sent a shipment of 3000000 Cash to Who.
+A	T-571		In the name of family cooperation TIF has sent a shipment of 5000000 Cash to Biscuit.
+A	T-571		In the name of family cooperation Biscuit has sent a shipment of 54140424 Food 1282114 Iron 137584 Octarine 448697 Endurium to TIF.
+IA	T-570		In an intra family fight sleepy defeated Who and took control over planet 4 in the 65,83 system.
+IA	T-570		In an intra family fight sleepy defeated Who and took control over planet 9 in the 94,78 system.
+IA	T-570		In an intra family fight sleepy defeated Who and took control over planet 13 in the 77,14 system.
+IA	T-570		In an intra family fight sleepy defeated Who and took control over planet 5 in the 87,91 system.
+IA	T-570		In an intra family fight sleepy defeated Who and took control over planet 7 in the 93,6 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 1 in the 67,95 system.
+A	T-570		In the name of family cooperation TIF has sent a shipment of 118839859 Cash 40000000 Food 11137475 Iron 5119968 Endurium to sleepy.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 7 in the 66,90 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 12 in the 66,36 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 13 in the 67,95 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 12 in the 68,10 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 7 in the 76,22 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 10 in the 71,21 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 10 in the 68,36 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 9 in the 90,87 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 8 in the 93,6 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 3 in the 100,18 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 4 in the 95,24 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 8 in the 97,12 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 5 in the 95,83 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 2 in the 85,82 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 13 in the 91,15 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 9 in the 94,3 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 11 in the 100,18 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 10 in the 99,5 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 9 in the 71,21 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 1 in the 70,80 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 8 in the 64,100 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 13 in the 70,16 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 10 in the 81,80 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 12 in the 77,34 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 9 in the 83,83 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 4 in the 85,84 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 13 in the 66,25 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 10 in the 66,25 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 7 in the 66,25 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 13 in the 65,88 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 9 in the 66,7 system.
+IA	T-570		In an intra family fight sleepy defeated Blood Eagle and took control over planet 12 in the 62,31 system.
+A	T-567		In the name of family cooperation TIF has sent a shipment of 10000000 Cash to Blood Eagle.
+A	T-567		In the name of family cooperation TIF has sent a shipment of 3000000 Cash to Who.
+A	T-565		In the name of family cooperation Biscuit has sent a shipment of 1898497 Iron 162329 Octarine 526781 Endurium to royal victorin.
+A	T-565		In the name of family cooperation Biscuit has sent a shipment of 80158552 Food to TIF.
+A	T-564		In the name of family cooperation Who has sent a shipment of 54311442 Food 1331152 Iron 302437 Octarine 356787 Endurium to TIF.
+Universal News
+Kanga took 12,54:2 from Cupid.
+Kanga took 18,58:6 from Cupid.
+Kanga took 18,58:8 from Cupid.
+UndedBizarroSkratch took 81,75:5 from Mr_Hinx.
+UndedBizarroSkratch took 81,75:6 from Mr_Hinx.
+Family Topics
+ 	Welcome to the Family #6370 forums!
+ 	68
+ 	Planet's for attakers (core defence)
+ 	61
+ 	Inf
+Community Topics
+ 	Standardize coordinates format
+ 	Ok, I lied. :unamused:
+ 	Are votes released after an idea is implemented?
+ 	Race-Change Allowance
+ 	Tmp is ending

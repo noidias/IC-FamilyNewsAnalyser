@@ -1,0 +1,122 @@
+Imperial Conflict
+  T 196   111,864   4,568,543   818   10,128   14,040
+ToT
+ HQ
+ Messages
+ Map
+ Family
+ Family Forum
+ Foreign Relations
+ Military
+ Planets
+ Market
+ Rankings
+ Bookmarks
+ Tools
+ Empire Settings
+ Switch Empire
+
+Family #
+ 
+x,y or x,y:num
+ Store
+ Donate
+ Forum
+ Family Forum
+ Chat
+ Rules
+ Guide
+ Contact
+Your Empire's Planets
+  
+  
+Planet	Built / Max / (%)	Pop / Max / (%)	Bonus	Units	Lasers	Portal	Build	
+74,90:4	908 / 227 (300%)	9,080 / 9,080	science 62%		12	 Raze	Build	
+74,90:12	0 (269) / 269	320 / 10,760 (3%)				Portal	Build	
+75,91:1	0 (231) / 231	274 / 9,240 (3%)				Portal	Build	
+75,91:2	864 / 216 (300%)	8,640 / 8,640	science 59%		3	Portal	Build	
+75,91:4	1032 / 258 (300%)	10,320 / 10,320	science 61%		1	 Raze	Build	
+75,91:5	0 (307) / 307	364 / 12,280 (3%)				Portal	Build	
+75,91:6	0 (163) / 163	195 / 6,520 (3%)				Portal	Build	
+75,91:7	0 (300) / 300	355 / 12,000 (3%)				Portal	Build	
+75,91:8	0 (312) / 312	369 / 12,480 (3%)	octarine 38%			Portal	Build	
+75,91:11	0 (248) / 248	294 / 9,920 (3%)				Portal	Build	
+79,1:1	723 (23) / 289 (151%)	99,685 / 108,410 (92%)			3	Building	Build	
+79,1:2	640 (20) / 256 (150%)	85,916 / 94,090 (91%)			4	Portal	Build	
+79,1:3	358 / 135 (166%)	42,405 / 61,300 (69%)			3	Portal	Build	
+79,1:4	445 (14) / 178 (150%)	57,846 / 63,670 (91%)			3	Portal	Build	
+79,1:5	0 (206) / 206	245 / 8,240 (3%)	octarine 28%			Portal	Build	
+79,1:6	533 (17) / 213 (151%)	69,533 / 76,770 (91%)			3	Portal	Build	
+79,1:11	643 (20) / 257 (151%)	84,514 / 92,830 (91%)			3	Portal	Build	
+79,1:12	0 (150) / 150	179 / 6,000 (3%)				Portal	Build	
+79,1:13	0 (175) / 175	209 / 7,000 (3%)	food 28%			Portal	Build	
+80,2:3	368 / 139 (165%)	46,210 / 64,710 (71%)			3	Portal	Build	
+80,93:9	811 / 294 (176%)	11,760 / 11,760			3	Portal	Build	
+80,93:10	475 / 172 (177%)	6,880 / 6,880			3	Portal	Build	
+80,93:11	852 / 213 (300%)	8,520 / 8,520	endurium 27%  science 45%		11	Portal	Build	
+80,93:12	485 (16) / 194 (150%)	67,963 / 73,410 (93%)	food 26%		1	 Raze	Build	
+80,93:13	461 / 167 (177%)	6,680 / 6,680			3	Portal	Build	
+81,3:1	575 (18) / 230 (150%)	80,418 / 87,200 (92%)			1	 Raze	Build	
+81,3:2	789 (26) / 316 (150%)	108,122 / 117,290 (92%)			3	Building	Build	
+81,3:3	770 (25) / 308 (150%)	105,595 / 115,020 (92%)			4	Portal	Build	
+81,97:5	333 (10) / 133 (151%)	59,460 / 62,520 (95%)			3	Portal	Build	
+81,97:6	710 (23) / 284 (150%)	98,738 / 106,910 (92%)			4	Portal	Build	
+81,97:17	625 (20) / 250 (150%)	416,250 / 416,250	iron 5%			 Raze	Build	
+82,98:2	484 / 121 (300%)	8,090 / 8,090	science 57%		4	Portal	Build	
+82,98:5	520 (17) / 208 (150%)	71,480 / 77,870 (92%)			4	Portal	Build	
+82,98:7	705 (23) / 282 (150%)	97,926 / 106,180 (92%)			4	Portal	Build	
+82,98:10	718 (23) / 287 (151%)	99,595 / 108,330 (92%)			4	Building	Build	
+82,98:11	460 (15) / 184 (150%)	63,901 / 69,110 (92%)			4	Portal	Build	
+82,98:13	513 (16) / 205 (151%)	70,624 / 77,100 (92%)			4	Portal	Build	
+86,93:3	503 (16) / 201 (151%)	68,275 / 74,990 (91%)			3	Portal	Build	
+87,91:10	518 (16) / 207 (151%)	67,819 / 74,580 (91%)			3	Portal	Build	
+87,91:13	743 (23) / 297 (151%)	97,870 / 107,430 (91%)	octarine 37%  endurium 40%		3	Portal	Build	
+88,87:1	627 (153) / 306 (105%)	16,883 / 21,990 (77%)			5	Portal	Build	
+88,87:2	378 / 176 (115%)	9,714 / 23,940 (41%)			4	Portal	Build	
+88,87:3	516 (96) / 240 (115%)	13,243 / 33,000 (40%)			4	Portal	Build	
+88,87:4	440 (11) / 220 (100%)	7,712 / 8,800 (88%)	octarine 29%	Y	4	Portal	Build	
+88,87:5	580 (15) / 290 (100%)	9,979 / 11,600 (86%)		Y	4	Portal	Build	
+88,87:6	568 (14) / 284 (100%)	9,841 / 11,360 (87%)	endurium 43%	Y	4	Portal	Build	
+88,87:8	574 (14) / 287 (100%)	9,948 / 11,480 (87%)		Y	4	Portal	Build	
+88,87:9	340 (8) / 170 (100%)	6,137 / 6,800 (90%)	endurium 41%  morale 1	Y	4	Portal	Build	
+88,87:10	466 (12) / 233 (100%)	8,137 / 9,320 (87%)	food 27%	Y	4	Portal	Build	
+88,87:11	630 (16) / 315 (100%)	10,784 / 12,600 (86%)	octarine 46%	Y	4	Building	Build	
+88,87:12	608 (15) / 304 (100%)	10,496 / 12,160 (86%)		Y	4	Portal	Build	
+88,87:13	382 (10) / 191 (100%)	6,833 / 7,640 (89%)	endurium 48%	Y	4	Portal	Build	
+90,87:1	383 / 178 (116%)	9,824 / 24,670 (40%)			4	Portal	Build	
+90,87:3	329 / 153 (116%)	8,445 / 21,070 (40%)	morale 1		4	Portal	Build	
+90,87:7	318 / 148 (115%)	8,172 / 20,220 (40%)			4	Portal	Build	
+90,87:12	318 / 148 (115%)	8,172 / 20,220 (40%)			4	Portal	Build	
+91,94:3	798 / 290 (176%)	11,600 / 11,600			12	Portal	Build	
+92,90:1	296 (7) / 148 (100%)	4,591 / 5,920 (78%)	food 35%	Y	11	Portal	Build	
+92,90:2	386 (10) / 193 (100%)	5,822 / 7,720 (75%)		Y	11	Portal	Build	
+92,90:3	390 (10) / 195 (100%)	5,857 / 7,800 (75%)		Y	11	Portal	Build	
+92,90:4	446 (11) / 223 (100%)	6,652 / 8,920 (75%)	food 43%  endurium 43%  morale 1	Y	11	Portal	Build	
+92,90:5	380 (9) / 190 (100%)	5,754 / 7,600 (76%)	iron 35%  morale 1	Y	11	Portal	Build	
+92,90:6	484 (12) / 242 (100%)	7,210 / 9,680 (74%)		Y	11	Building	Build	
+92,90:7	498 (12) / 249 (100%)	7,353 / 9,960 (74%)		Y	11	Portal	Build	
+92,90:8	468 (12) / 234 (100%)	6,936 / 9,360 (74%)	food 41%	Y	11	Portal	Build	
+92,90:9	300 (8) / 150 (100%)	4,642 / 6,000 (77%)	octarine 47%	Y	11	Portal	Build	
+92,90:10	442 (11) / 221 (100%)	6,573 / 8,840 (74%)		Y	11	Portal	Build	
+92,90:12	338 (8) / 169 (100%)	5,168 / 6,760 (76%)		Y	11	Portal	Build	
+92,90:13	392 (10) / 196 (100%)	5,897 / 7,840 (75%)		Y	11	Portal	Build	
+92,93:4	644 (70) / 280 (130%)	45,117 / 46,300 (97%)	science 49%		15	 Raze	Build	
+93,89:1	248 (6) / 124 (100%)	3,714 / 4,960 (75%)	morale 1	Y	16	Portal	Build	
+93,89:3	0 (227) / 227	269 / 9,080 (3%)	food 31%			Portal	Build	
+93,89:5	470 (12) / 235 (100%)	6,605 / 9,400 (70%)		Y	16	Portal	Build	
+93,89:6	386 (10) / 193 (100%)	5,518 / 7,720 (71%)		Y	16	Portal	Build	
+93,89:7	532 (13) / 266 (100%)	7,445 / 10,640 (70%)	food 29%  morale 1	Y	16	Portal	Build	
+93,89:8	426 (11) / 213 (100%)	6,071 / 8,520 (71%)	octarine 6%  endurium 45%	Y	16	Portal	Build	
+93,89:9	540 (14) / 270 (100%)	7,599 / 10,800 (70%)	endurium 34%	Y	16	Portal	Build	
+93,89:11	0 (238) / 238	283 / 9,520 (3%)	octarine 46%			Portal	Build	
+93,89:12	352 (9) / 176 (100%)	5,085 / 7,040 (72%)	morale 1	Y	16	Portal	Build	
+94,93:1	342 / 159 (116%)	8,776 / 21,960 (40%)			10	Portal	Build	
+94,93:3	488 (91) / 227 (115%)	12,527 / 31,180 (40%)			10	Portal	Build	
+94,93:4	475 (89) / 221 (115%)	12,196 / 30,290 (40%)			10	Portal	Build	
+94,93:9	284 / 132 (116%)	7,286 / 18,280 (40%)			10	Portal	Build	
+94,93:11	1054 / 265 (298%)	10,600 / 10,600			11	Portal	Build	
+84 Planets	37880 / 18651 (104%)	2,510,385 / 3,001,540 (83%)				6 Portals		
+   
+
+Statuses
+Having space to construct new buildings on is vital for your empire's expansion. Therefore it makes me quite disturbed to see that your planets are running out on free space to build. Maybe you should consider getting new land by exploring a new planet or conquer one owned by another ruler.

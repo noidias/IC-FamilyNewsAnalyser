@@ -1,0 +1,213 @@
+Imperial Conflict
+  T 196   111,864   4,568,543   818   10,128   14,040
+ToT
+ HQ
+ Messages
+ Map
+ Family
+ Family Forum
+ Foreign Relations
+ Military
+ Planets
+ Market
+ Rankings
+ Bookmarks
+ Tools
+ Empire Settings
+ Switch Empire
+
+Family #
+ 
+x,y or x,y:num
+ Store
+ Donate
+ Forum
+ Family Forum
+ Chat
+ Rules
+ Guide
+ Contact
+Your Family
+Overview
+News
+Council
+Vote
+Aid
+Defense
+Last Turn's Affairs
+Gold
+Income	+1,371,858
+TIF:	+689,588
+royal victorin:	+629,844
+Biscuit:	+33,369
+Who:	+6,842
+Zanharim:	+5,949
+Blood Eagle:	+5,916
+Gideon:	+350
+Unit Upkeep	-61,283
+Blood Eagle:	-37,628
+Zanharim:	-8,669
+Who:	-7,297
+royal victorin:	-4,345
+TIF:	-1,535
+Biscuit:	-1,221
+Gideon:	-588
+Building Upkeep	-165,989
+royal victorin:	-47,357
+TIF:	-37,880
+Zanharim:	-31,268
+Who:	-21,521
+Biscuit:	-18,553
+Blood Eagle:	-9,160
+Gideon:	-250
+Bureaucracy	-8,487
+royal victorin:	-5,604
+Blood Eagle:	-1,077
+Gideon:	-971
+Zanharim:	-619
+Who:	-115
+Biscuit:	-67
+TIF:	-34
+Net income	+1,136,099
+TIF:	+650,139
+royal victorin:	+572,538
+Biscuit:	+13,528
+Gideon:	-1,459
+Who:	-22,091
+Zanharim:	-34,607
+Blood Eagle:	-41,949
+Food
+Food produced	+727,525
+Who:	+535,470
+Biscuit:	+183,645
+Blood Eagle:	+6,400
+Gideon:	+1,010
+royal victorin:	+1,000
+Zanharim:	0
+TIF:	0
+Food consumed	-400,931
+TIF:	-242,130
+royal victorin:	-47,281
+Blood Eagle:	-34,903
+Biscuit:	-33,478
+Zanharim:	-21,442
+Who:	-20,609
+Gideon:	-1,088
+Food decayed	-37,096
+TIF:	-24,174
+royal victorin:	-8,223
+Who:	-2,551
+Zanharim:	-1,322
+Biscuit:	-753
+Gideon:	-73
+Blood Eagle:	0
+Net flow	+289,498
+Who:	+512,310
+Biscuit:	+149,414
+Gideon:	-151
+Zanharim:	-22,764
+Blood Eagle:	-28,503
+royal victorin:	-54,504
+TIF:	-266,304
+Resources
+Iron mined	+59,434
+Zanharim:	+27,761
+Who:	+15,077
+Biscuit:	+14,169
+Blood Eagle:	+2,258
+Gideon:	+159
+royal victorin:	+10
+TIF:	0
+Iron decayed	-3,372
+royal victorin:	-2,327
+Blood Eagle:	-335
+TIF:	-311
+Zanharim:	-179
+Who:	-75
+Gideon:	-74
+Biscuit:	-71
+Endurium produced	+9,299
+Biscuit:	+3,851
+Who:	+3,023
+Zanharim:	+1,973
+Blood Eagle:	+442
+royal victorin:	+10
+Gideon:	0
+TIF:	0
+Endurium decayed	-706
+royal victorin:	-500
+TIF:	-84
+Blood Eagle:	-70
+Biscuit:	-19
+Who:	-15
+Zanharim:	-14
+Gideon:	-4
+Octarine produced	+3,341
+Who:	+1,632
+Biscuit:	+1,151
+Zanharim:	+371
+Blood Eagle:	+187
+Gideon:	0
+royal victorin:	0
+TIF:	0
+Octarine decayed	-443
+royal victorin:	-342
+TIF:	-51
+Blood Eagle:	-26
+Who:	-8
+Gideon:	-6
+Biscuit:	-6
+Zanharim:	-4
+Research Points
+Military	0
+Who:	0
+Gideon:	0
+Biscuit:	0
+Blood Eagle:	0
+royal victorin:	0
+Zanharim:	0
+TIF:	0
+Welfare	0
+Who:	0
+Gideon:	0
+Biscuit:	0
+Blood Eagle:	0
+royal victorin:	0
+Zanharim:	0
+TIF:	0
+Economy	+16,998
+royal victorin:	+16,998
+Who:	0
+Gideon:	0
+Biscuit:	0
+Blood Eagle:	0
+Zanharim:	0
+TIF:	0
+Construction	+597,963
+TIF:	+184,922
+Zanharim:	+166,957
+Blood Eagle:	+110,210
+Who:	+103,163
+royal victorin:	+16,998
+Biscuit:	+13,013
+Gideon:	+2,700
+Resources	+144,902
+Biscuit:	0
+Gideon:	0
+TIF:	0
+Blood Eagle:	0
+royal victorin:	0
+Zanharim:	+41,739
+Who:	+103,163
+Universal News
+Justin_Bieber took 7,23:4 from Queen_Marlena.
+Pitbull took 57,92:3 from stormwold.
+Pitbull took 57,92:4 from stormwold.
+Silvio_Berlusconi took 18,36:1 from Queen_Marlena.
+Silvio_Berlusconi took 18,36:4 from Skeletor.
+Family Topics
+ 	Welcome to the Family #6370 forums!
+ 	Discord down, using this
+ 	#6360 NAP
+ 	Attacker expos
+ 

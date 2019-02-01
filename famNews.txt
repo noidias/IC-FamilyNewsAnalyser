@@ -1,0 +1,629 @@
+Imperial Conflict
+  T 195   6,760   4,834,897   62,190   10,271   16,730
+ToT
+ HQ
+ Messages
+ Map
+ Family
+ Family Forum
+ Foreign Relations
+ Military
+ Planets
+ Market
+ Rankings
+ Bookmarks
+ Tools
+ Empire Settings
+ Switch Empire
+
+Family #
+ 
+x,y or x,y:num
+ Store
+ Donate
+ Forum
+ Family Forum
+ Chat
+ Rules
+ Guide
+ Contact
+Your Family
+Overview
+News
+Council
+Vote
+Aid
+Defense
+Chat
+The Family News: Ticks 95-195
+empire
+type
+time desc
+time asc
+A	T-195		In the name of family cooperation TIF has sent a shipment of 1000000 Food to royal victorin.
+A	T-194		In the name of family cooperation Who has sent a shipment of 3357350 Food 113344 Iron 12341 Octarine 22832 Endurium to TIF.
+A	T-194		In the name of family cooperation Biscuit has sent a shipment of 946636 Cash 134440 Food 495417 Iron 68783 Octarine 103306 Endurium to royal victorin.
+A	T-194		In the name of family cooperation royal victorin has sent a shipment of 1016139 Cash 70202 Iron 5069 Endurium to Biscuit.
+A	T-194		In the name of family cooperation TIF has sent a shipment of 965495 Cash to Biscuit.
+A	T-194		In the name of family cooperation TIF has sent a shipment of 80000 Cash to Who.
+A	T-194		In the name of family cooperation Zanharim has sent a shipment of 70182 Iron 5049 Endurium to royal victorin.
+A	T-194		In the name of family cooperation TIF has sent a shipment of 150000 Cash to Zanharim.
+E	T-193		Biscuit explored planet 8 in the 91,94 system.
+E	T-193		Biscuit explored planet 2 in the 91,94 system.
+E	T-193		Biscuit explored planet 8 in the 81,97 system.
+E	T-193		TIF explored planet 3 in the 93,89 system.
+E	T-193		TIF explored planet 13 in the 79,1 system.
+E	T-193		Biscuit explored planet 5 in the 91,94 system.
+E	T-193		Biscuit explored planet 13 in the 81,97 system.
+E	T-193		TIF explored planet 7 in the 75,91 system.
+E	T-193		TIF explored planet 6 in the 75,91 system.
+E	T-193		Biscuit explored planet 10 in the 81,97 system.
+E	T-193		Biscuit explored planet 1 in the 70,95 system.
+E	T-193		TIF explored planet 12 in the 74,90 system.
+E	T-193		Biscuit explored planet 10 in the 91,94 system.
+E	T-193		TIF explored planet 11 in the 75,91 system.
+E	T-193		TIF explored planet 1 in the 75,91 system.
+E	T-193		TIF explored planet 5 in the 75,91 system.
+E	T-193		TIF explored planet 12 in the 79,1 system.
+E	T-193		TIF explored planet 11 in the 93,89 system.
+E	T-193		Biscuit explored planet 11 in the 81,97 system.
+E	T-193		Biscuit explored planet 9 in the 91,94 system.
+E	T-193		Biscuit explored planet 1 in the 91,94 system.
+E	T-193		Biscuit explored planet 13 in the 91,94 system.
+E	T-193		Biscuit explored planet 8 in the 70,95 system.
+E	T-193		TIF explored planet 5 in the 79,1 system.
+E	T-193		Biscuit explored planet 7 in the 91,94 system.
+E	T-193		Biscuit explored planet 11 in the 91,94 system.
+E	T-193		Biscuit explored planet 6 in the 91,94 system.
+E	T-193		Biscuit explored planet 4 in the 70,90 system.
+E	T-193		TIF explored planet 8 in the 75,91 system.
+E	T-193		Biscuit explored planet 3 in the 70,90 system.
+E	T-193		Biscuit explored planet 11 in the 70,90 system.
+E	T-193		Biscuit explored planet 1 in the 70,90 system.
+E	T-193		Biscuit explored planet 12 in the 70,90 system.
+E	T-193		Biscuit explored planet 6 in the 70,90 system.
+E	T-193		Biscuit explored planet 10 in the 70,95 system.
+E	T-193		Biscuit explored planet 9 in the 72,94 system.
+E	T-193		Biscuit explored planet 9 in the 81,97 system.
+E	T-193		Biscuit explored planet 7 in the 81,97 system.
+E	T-193		Biscuit explored planet 13 in the 70,90 system.
+E	T-193		Biscuit explored planet 4 in the 81,97 system.
+A	T-193		In the name of family cooperation TIF has sent a shipment of 200000 Cash to Blood Eagle.
+SA	T-193		The forces of Blood Eagle took planet 12 in the 83,83 system from Garrosh_Hellscream (6369).
+A	T-193		In the name of family cooperation Biscuit has sent a shipment of 1496492 Food to TIF.
+FA	T-193		Zanharim made an attack against planet 12 in the 83,83 system owned by Garrosh_Hellscream (6369), but the planet's defense was too strong.
+A	T-193		In the name of family cooperation TIF has sent a shipment of 300000 Food to Zanharim.
+A	T-192		In the name of family cooperation royal victorin has sent a shipment of 1667314 Cash 332898 Iron 18709 Octarine 66908 Endurium to Biscuit.
+E	T-191		royal victorin explored planet 5 in the 92,93 system.
+E	T-191		royal victorin explored planet 12 in the 92,93 system.
+E	T-191		royal victorin explored planet 1 in the 92,93 system.
+E	T-191		royal victorin explored planet 10 in the 92,93 system.
+E	T-191		royal victorin explored planet 11 in the 92,93 system.
+E	T-191		royal victorin explored planet 7 in the 92,93 system.
+E	T-191		royal victorin explored planet 8 in the 92,93 system.
+E	T-191		royal victorin explored planet 9 in the 92,93 system.
+E	T-191		royal victorin explored planet 6 in the 92,93 system.
+E	T-191		royal victorin explored planet 3 in the 92,93 system.
+E	T-191		royal victorin explored planet 2 in the 92,93 system.
+A	T-191		In the name of family cooperation Zanharim has sent a shipment of 170000 Cash 23077 Iron 364 Octarine 1935 Endurium to royal victorin.
+A	T-190		In the name of family cooperation Zanharim has sent a shipment of 698261 Cash 478757 Iron 21064 Octarine 84301 Endurium to royal victorin.
+IA	T-190		In an intra family fight royal victorin defeated Zanharim and took control over planet 1 in the 93,6 system.
+IA	T-190		In an intra family fight royal victorin defeated Zanharim and took control over planet 4 in the 67,95 system.
+IA	T-190		In an intra family fight royal victorin defeated Zanharim and took control over planet 3 in the 76,14 system.
+IA	T-190		In an intra family fight royal victorin defeated Zanharim and took control over planet 7 in the 70,90 system.
+IA	T-190		In an intra family fight royal victorin defeated Zanharim and took control over planet 12 in the 94,3 system.
+IA	T-190		In an intra family fight royal victorin defeated Zanharim and took control over planet 9 in the 77,14 system.
+IA	T-190		In an intra family fight royal victorin defeated Zanharim and took control over planet 11 in the 85,5 system.
+IA	T-190		In an intra family fight royal victorin defeated Zanharim and took control over planet 7 in the 81,85 system.
+IA	T-190		In an intra family fight royal victorin defeated Zanharim and took control over planet 1 in the 93,100 system.
+IA	T-190		In an intra family fight royal victorin defeated Zanharim and took control over planet 6 in the 94,93 system.
+IA	T-190		In an intra family fight royal victorin defeated Zanharim and took control over planet 13 in the 90,87 system.
+A	T-187		In the name of family cooperation TIF has sent a shipment of 78327 Cash to Zanharim.
+A	T-187		In the name of family cooperation TIF has sent a shipment of 628474 Cash 414830 Iron 19558 Octarine 79179 Endurium to Zanharim.
+A	T-187		In the name of family cooperation Zanharim has sent a shipment of 22222 Iron 2222 Endurium to TIF.
+A	T-186		In the name of family cooperation TIF has sent a shipment of 250000 Cash to Blood Eagle.
+A	T-186		In the name of family cooperation Zanharim has sent a shipment of 22222 Iron 1111 Endurium to TIF.
+A	T-185		In the name of family cooperation TIF has sent a shipment of 200000 Cash to Blood Eagle.
+A	T-185		In the name of family cooperation TIF has sent a shipment of 1000000 Food to royal victorin.
+A	T-185		In the name of family cooperation Zanharim has sent a shipment of 500000 Cash 6000 Endurium to TIF.
+A	T-185		In the name of family cooperation TIF has sent a shipment of 50000 Food 10000 Endurium to Zanharim.
+A	T-185		In the name of family cooperation TIF has sent a shipment of 1263746 Cash to Zanharim.
+A	T-185		In the name of family cooperation Zanharim has sent a shipment of 206426 Iron 3511 Octarine 10762 Endurium to TIF.
+A	T-183		In the name of family cooperation Biscuit has sent a shipment of 92461 Cash 2317687 Food 205204 Iron 16680 Octarine 55764 Endurium to TIF.
+A	T-183		In the name of family cooperation TIF has sent a shipment of 995840 Cash 41443 Octarine to Biscuit.
+A	T-183		In the name of family cooperation Who has sent a shipment of 632503 Food 9382 Iron 1023 Octarine 1894 Endurium to TIF.
+A	T-182		In the name of family cooperation Who has sent a shipment of 416066 Cash 404 Iron 153 Octarine 15140 Endurium to TIF.
+A	T-182		In the name of family cooperation TIF has sent a shipment of 4421859 Cash 50000 Food 47753 Iron 43142 Endurium to Who.
+A	T-181		In the name of family cooperation Who has sent a shipment of 889474 Food 29337 Iron 1922 Octarine 3546 Endurium to TIF.
+A	T-179		In the name of family cooperation TIF has sent a shipment of 200000 Cash to Blood Eagle.
+A	T-177		In the name of family cooperation Who has sent a shipment of 136767 Food 7335 Iron 480 Octarine 886 Endurium to TIF.
+A	T-176		In the name of family cooperation TIF has sent a shipment of 30000 Cash to Who.
+A	T-176		In the name of family cooperation Who has sent a shipment of 205169 Food 21610 Iron 1415 Octarine 2611 Endurium to TIF.
+A	T-176		In the name of family cooperation Who has sent a shipment of 100000 Food to Blood Eagle.
+A	T-176		In the name of family cooperation Who has sent a shipment of 100000 Food to Zanharim.
+A	T-175		In the name of family cooperation royal victorin has sent a shipment of 768275 Cash to TIF.
+A	T-175		In the name of family cooperation TIF has sent a shipment of 200000 Cash to Blood Eagle.
+A	T-175		In the name of family cooperation TIF has sent a shipment of 75000 Food to Zanharim.
+A	T-175		In the name of family cooperation Zanharim has sent a shipment of 20979 Iron 357 Octarine 1474 Endurium to TIF.
+A	T-174		In the name of family cooperation Zanharim has sent a shipment of 171635 Cash 31978 Iron 37009 Octarine 36676 Endurium to TIF.
+A	T-173		In the name of family cooperation Who has sent a shipment of 273372 Food 14347 Iron 940 Octarine 1734 Endurium to TIF.
+A	T-173		In the name of family cooperation TIF has sent a shipment of 1809066 Cash 76121 Iron 35781 Octarine 44371 Endurium to Zanharim.
+A	T-173		In the name of family cooperation royal victorin has sent a shipment of 703411 Cash 72370 Iron 35781 Octarine 44371 Endurium to TIF.
+E	T-172		Gideon has joined our glorious family!
+A	T-171		In the name of family cooperation TIF has sent a shipment of 106462 Cash 73078 Iron 36140 Octarine 44796 Endurium to royal victorin.
+A	T-171		In the name of family cooperation Who has sent a shipment of 94690 Cash 179811 Food 66584 Iron 36140 Octarine 44796 Endurium to TIF.
+A	T-171		In the name of family cooperation TIF has sent a shipment of 548710 Cash to Who.
+A	T-171		In the name of family cooperation royal victorin has sent a shipment of 1325903 Cash 60260 Iron 34906 Octarine 52290 Endurium to Who.
+EA	T-171		After a brave fight our family member Zanharim had to flee the planet planet 3 in the 97,82 system which was attacked by Mr_Hinx of family 6360.
+EA	T-171		After a brave fight our family member Zanharim had to flee the planet planet 7 in the 97,82 system which was attacked by Mr_Hinx of family 6360.
+A	T-170		In the name of family cooperation Who has sent a shipment of 200000 Food to Blood Eagle.
+A	T-170		In the name of family cooperation Who has sent a shipment of 300000 Food to TIF.
+A	T-170		In the name of family cooperation TIF has sent a shipment of 1085212 Cash to royal victorin.
+A	T-170		In the name of family cooperation Zanharim has sent a shipment of 4431 Cash 60532 Iron 35081 Octarine 52522 Endurium to royal victorin.
+A	T-170		In the name of family cooperation royal victorin has sent a shipment of 241455 Cash to Zanharim.
+A	T-169		In the name of family cooperation Zanharim has sent a shipment of 42833 Cash to Blood Eagle.
+SA	T-169		Zanharim attacked KnightsOfOld (6360) on planet 10 in the 68,10 system, and the heavy battle made the planet uninhabitable; an exploration ship will have to be sent there.
+SA	T-169		Zanharim attacked Mr_Hinx (6360) on planet 9 in the 68,10 system, and the heavy battle made the planet uninhabitable; an exploration ship will have to be sent there.
+A	T-169		In the name of family cooperation royal victorin has sent a shipment of 242811 Cash to Zanharim.
+E	T-168		Zanharim explored planet 10 in the 81,85 system.
+E	T-168		Zanharim explored planet 13 in the 100,83 system.
+E	T-168		Zanharim explored planet 7 in the 97,82 system.
+E	T-168		Zanharim explored planet 3 in the 97,82 system.
+A	T-168		In the name of family cooperation Biscuit has sent a shipment of 332248 Food 28268 Iron 2297 Octarine 7683 Endurium to Zanharim.
+A	T-168		In the name of family cooperation royal victorin has sent a shipment of 59527 Cash 9846 Iron 37439 Octarine 42337 Endurium to Zanharim.
+A	T-168		In the name of family cooperation Zanharim has sent a shipment of 15896 Iron to royal victorin.
+A	T-168		In the name of family cooperation TIF has sent a shipment of 539262 Cash to royal victorin.
+E	T-167		Zanharim explored planet 5 in the 96,83 system.
+E	T-167		Zanharim explored planet 6 in the 83,83 system.
+E	T-167		Zanharim explored planet 5 in the 65,83 system.
+E	T-167		Zanharim explored planet 1 in the 74,84 system.
+A	T-167		In the name of family cooperation TIF has sent a shipment of 2070293 Cash to royal victorin.
+A	T-167		In the name of family cooperation Zanharim has sent a shipment of 247701 Cash 239624 Iron 37627 Octarine 73467 Endurium to royal victorin.
+A	T-167		In the name of family cooperation Zanharim has sent a shipment of 200000 Food to royal victorin.
+A	T-167		In the name of family cooperation Zanharim has sent a shipment of 1000000 Food to TIF.
+A	T-167		In the name of family cooperation Zanharim has sent a shipment of 400000 Food to royal victorin.
+A	T-167		In the name of family cooperation Zanharim has sent a shipment of 1500000 Food to TIF.
+E	T-166		Zanharim explored planet 7 in the 85,84 system.
+E	T-166		Zanharim explored planet 4 in the 95,83 system.
+A	T-166		In the name of family cooperation Biscuit has sent a shipment of 3114615 Food 242601 Iron 18492 Octarine 63649 Endurium to Zanharim.
+A	T-166		In the name of family cooperation royal victorin has sent a shipment of 722470 Cash to Zanharim.
+A	T-166		In the name of family cooperation Who has sent a shipment of 59452 Food to Blood Eagle.
+A	T-166		In the name of family cooperation Who has sent a shipment of 220000 Food to TIF.
+IA	T-166		In an intra family fight Zanharim defeated Blood Eagle and took control over planet 11 in the 81,85 system.
+IA	T-166		In an intra family fight Zanharim defeated Blood Eagle and took control over planet 7 in the 81,85 system.
+E	T-165		Zanharim explored planet 10 in the 75,91 system.
+E	T-165		Zanharim explored planet 4 in the 93,83 system.
+A	T-164		In the name of family cooperation Who has sent a shipment of 7960 Iron to Zanharim.
+A	T-164		In the name of family cooperation Who has sent a shipment of 64310 Food to TIF.
+IA	T-164		In an intra family fight Zanharim defeated Blood Eagle and took control over planet 9 in the 77,14 system.
+IA	T-164		In an intra family fight Zanharim defeated Blood Eagle and took control over planet 3 in the 76,14 system.
+A	T-164		In the name of family cooperation Who has sent a shipment of 50000 Food to Blood Eagle.
+IA	T-164		In an intra family fight Zanharim defeated Blood Eagle and took control over planet 4 in the 67,95 system.
+IA	T-164		In an intra family fight Zanharim defeated Blood Eagle and took control over planet 12 in the 67,6 system.
+IA	T-163		In an intra family fight Zanharim defeated Blood Eagle and took control over planet 11 in the 85,5 system.
+SA	T-163		The forces of Zanharim took planet 10 in the 70,16 system from Guldan (6369).
+A	T-163		In the name of family cooperation royal victorin has sent a shipment of 1529265 Cash to Zanharim.
+A	T-163		In the name of family cooperation Who has sent a shipment of 78961 Food to TIF.
+IA	T-163		In an intra family fight Zanharim defeated Blood Eagle and took control over planet 10 in the 65,88 system.
+IA	T-163		In an intra family fight Zanharim defeated Blood Eagle and took control over planet 6 in the 94,93 system.
+IA	T-163		In an intra family fight Zanharim defeated Blood Eagle and took control over planet 12 in the 94,3 system.
+IA	T-163		In an intra family fight Zanharim defeated Blood Eagle and took control over planet 13 in the 90,87 system.
+IA	T-163		In an intra family fight Zanharim defeated Blood Eagle and took control over planet 1 in the 93,6 system.
+IA	T-163		In an intra family fight Zanharim defeated Blood Eagle and took control over planet 1 in the 93,100 system.
+IA	T-163		In an intra family fight Zanharim defeated Blood Eagle and took control over planet 5 in the 69,87 system.
+IA	T-163		In an intra family fight Zanharim defeated Blood Eagle and took control over planet 7 in the 70,90 system.
+A	T-163		In the name of family cooperation TIF has sent a shipment of 801024 Cash 2805 Iron 18175 Octarine 18846 Endurium to Zanharim.
+A	T-162		In the name of family cooperation TIF has sent a shipment of 120000 Food to royal victorin.
+A	T-162		In the name of family cooperation Zanharim has sent a shipment of 10086 Iron to TIF.
+A	T-162		In the name of family cooperation Who has sent a shipment of 16377 Iron to TIF.
+EA	T-162		Our family member Hoebagslutwhore managed to defend planet 8 in the 99,5 system against an attack by forces from Battlecat, family 6371.
+A	T-161		In the name of family cooperation TIF has sent a shipment of 10000 Food to Zanharim.
+A	T-161		In the name of family cooperation TIF has sent a shipment of 60000 Food to royal victorin.
+A	T-161		In the name of family cooperation Zanharim has sent a shipment of 10086 Iron 1255 Endurium to TIF.
+A	T-160		In the name of family cooperation Zanharim has sent a shipment of 2621 Iron 14589 Octarine 21492 Endurium to TIF.
+A	T-160		In the name of family cooperation Blood Eagle has sent a shipment of 2621 Iron 19589 Octarine 28836 Endurium to Zanharim.
+A	T-160		In the name of family cooperation TIF has sent a shipment of 1863845 Cash 60000 Food 1255 Endurium to Zanharim.
+A	T-160		In the name of family cooperation TIF has sent a shipment of 60000 Food to royal victorin.
+A	T-160		In the name of family cooperation Zanharim has sent a shipment of 10086 Iron 350 Octarine 1255 Endurium to TIF.
+A	T-160		In the name of family cooperation TIF has sent a shipment of 300000 Cash to Blood Eagle.
+A	T-160		In the name of family cooperation TIF has sent a shipment of 50000 Cash to Zanharim.
+A	T-159		In the name of family cooperation TIF has sent a shipment of 10000 Food to Blood Eagle.
+A	T-159		In the name of family cooperation Who has sent a shipment of 5486 Iron to Blood Eagle.
+A	T-159		In the name of family cooperation TIF has sent a shipment of 1400000 Cash 80902 Iron 13297 Endurium to Blood Eagle.
+A	T-159		In the name of family cooperation Zanharim has sent a shipment of 67385 Iron 3427 Octarine 10511 Endurium to TIF.
+A	T-158		In the name of family cooperation Who has sent a shipment of 12726 Iron 207 Endurium to TIF.
+A	T-156		In the name of family cooperation royal victorin has sent a shipment of 1000000 Cash 24 Iron 42 Endurium to TIF.
+A	T-156		In the name of family cooperation TIF has sent a shipment of 100000 Food to royal victorin.
+E	T-155		Who explored planet 4 in the 76,14 system.
+E	T-155		Blood Eagle explored planet 13 in the 77,14 system.
+E	T-155		Blood Eagle explored planet 9 in the 77,14 system.
+E	T-155		Blood Eagle explored planet 3 in the 76,14 system.
+E	T-155		Blood Eagle explored planet 4 in the 99,3 system.
+A	T-155		In the name of family cooperation Who has sent a shipment of 707879 Cash 32611 Food 5737 Iron 100 Octarine 8 Endurium to TIF.
+E	T-154		Blood Eagle explored planet 10 in the 65,88 system.
+E	T-154		Blood Eagle explored planet 11 in the 85,5 system.
+E	T-154		Blood Eagle explored planet 4 in the 66,7 system.
+E	T-154		Blood Eagle explored planet 13 in the 85,5 system.
+E	T-154		Blood Eagle explored planet 12 in the 98,4 system.
+E	T-154		Blood Eagle explored planet 9 in the 83,83 system.
+E	T-154		Blood Eagle explored planet 7 in the 65,88 system.
+E	T-154		Blood Eagle explored planet 7 in the 81,85 system.
+E	T-154		Blood Eagle explored planet 11 in the 81,85 system.
+E	T-154		Blood Eagle explored planet 6 in the 94,93 system.
+E	T-154		Blood Eagle explored planet 10 in the 93,89 system.
+E	T-154		Blood Eagle explored planet 1 in the 93,6 system.
+E	T-154		Who explored planet 10 in the 67,6 system.
+E	T-154		Blood Eagle explored planet 5 in the 64,100 system.
+E	T-154		Who explored planet 9 in the 67,6 system.
+E	T-154		Who explored planet 7 in the 67,6 system.
+E	T-154		Who explored planet 1 in the 68,9 system.
+E	T-154		Who explored planet 4 in the 68,9 system.
+E	T-154		Blood Eagle explored planet 12 in the 67,6 system.
+A	T-154		In the name of family cooperation TIF has sent a shipment of 1857493 Cash 50000 Food 1075 Endurium to Who.
+E	T-153		Who explored planet 10 in the 74,7 system.
+E	T-153		Blood Eagle explored planet 5 in the 74,7 system.
+E	T-153		Who explored planet 11 in the 98,4 system.
+E	T-153		Who explored planet 9 in the 98,4 system.
+E	T-153		Blood Eagle explored planet 1 in the 69,87 system.
+E	T-153		Who explored planet 13 in the 93,89 system.
+E	T-153		Who explored planet 4 in the 93,89 system.
+E	T-153		Who explored planet 2 in the 93,89 system.
+E	T-153		Who explored planet 11 in the 73,4 system.
+E	T-153		Blood Eagle explored planet 13 in the 90,87 system.
+E	T-153		Blood Eagle explored planet 7 in the 70,90 system.
+E	T-153		Blood Eagle explored planet 12 in the 70,91 system.
+E	T-153		Who explored planet 9 in the 73,4 system.
+E	T-153		Who explored planet 11 in the 74,7 system.
+E	T-153		Who explored planet 13 in the 73,5 system.
+E	T-153		Who explored planet 8 in the 73,5 system.
+E	T-153		Who explored planet 7 in the 73,5 system.
+E	T-153		Blood Eagle explored planet 5 in the 69,87 system.
+E	T-153		Blood Eagle explored planet 12 in the 94,3 system.
+E	T-153		Who explored planet 7 in the 74,7 system.
+E	T-153		Who explored planet 1 in the 73,5 system.
+E	T-152		Blood Eagle explored planet 1 in the 93,100 system.
+E	T-152		Blood Eagle explored planet 4 in the 67,95 system.
+E	T-152		Blood Eagle explored planet 6 in the 93,100 system.
+A	T-150		In the name of family cooperation TIF has sent a shipment of 3817043 Cash 108649 Iron 26552 Octarine 36377 Endurium to Blood Eagle.
+A	T-150		In the name of family cooperation TIF has sent a shipment of 50000 Cash 100 Food 100 Iron 100 Octarine 100 Endurium to Who.
+A	T-150		In the name of family cooperation royal victorin has sent a shipment of 3867043 Cash 108749 Iron 26652 Octarine 36477 Endurium to TIF.
+A	T-150		In the name of family cooperation TIF has sent a shipment of 2503578 Cash 108669 Iron 26652 Octarine 36397 Endurium to royal victorin.
+A	T-149		In the name of family cooperation Zanharim has sent a shipment of 1591950 Cash 202755 Food 109215 Iron 26785 Octarine 32659 Endurium to TIF.
+A	T-148		In the name of family cooperation TIF has sent a shipment of 268518 Cash 95254 Iron 6461 Octarine 22666 Endurium to Zanharim.
+A	T-148		In the name of family cooperation Who has sent a shipment of 268518 Cash 955 Food 36717 Iron 845 Octarine 17 Endurium to TIF.
+A	T-148		In the name of family cooperation TIF has sent a shipment of 1000 Octarine to Who.
+A	T-148		In the name of family cooperation TIF has sent a shipment of 456312 Cash to Who.
+A	T-147		In the name of family cooperation Biscuit has sent a shipment of 1027928 Food 58831 Iron 6649 Octarine 22762 Endurium to TIF.
+A	T-147		In the name of family cooperation Zanharim has sent a shipment of 800000 Cash 6000 Endurium to Biscuit.
+A	T-147		In the name of family cooperation TIF has sent a shipment of 456012 Cash to Zanharim.
+A	T-146		In the name of family cooperation TIF has sent a shipment of 451548 Cash 4879 Endurium to Zanharim.
+E	T-145		royal victorin explored planet 3 in the 94,92 system.
+E	T-145		royal victorin explored planet 8 in the 94,92 system.
+E	T-145		royal victorin explored planet 11 in the 94,92 system.
+E	T-145		royal victorin explored planet 12 in the 94,92 system.
+E	T-145		royal victorin explored planet 2 in the 94,92 system.
+E	T-145		royal victorin explored planet 1 in the 94,92 system.
+E	T-145		royal victorin explored planet 6 in the 94,92 system.
+E	T-145		royal victorin explored planet 10 in the 94,92 system.
+E	T-145		royal victorin explored planet 9 in the 94,92 system.
+E	T-145		royal victorin explored planet 5 in the 94,92 system.
+E	T-145		royal victorin explored planet 4 in the 94,92 system.
+E	T-145		royal victorin explored planet 13 in the 94,92 system.
+A	T-145		In the name of family cooperation Zanharim has sent a shipment of 500000 Food to TIF.
+A	T-145		In the name of family cooperation TIF has sent a shipment of 2468698 Cash to Zanharim.
+A	T-145		In the name of family cooperation Zanharim has sent a shipment of 40000 Cash 40 Food 40 Iron 20 Endurium to Blood Eagle.
+A	T-144		In the name of family cooperation royal victorin has sent a shipment of 440123 Cash to Zanharim.
+E	T-142		royal victorin explored planet 3 in the 81,97 system.
+A	T-142		In the name of family cooperation royal victorin has sent a shipment of 39012 Cash 15171 Iron 18426 Octarine 18916 Endurium to Zanharim.
+A	T-142		In the name of family cooperation Zanharim has sent a shipment of 869442 Cash 62999 Iron 18426 Octarine 21437 Endurium to royal victorin.
+A	T-142		In the name of family cooperation royal victorin has sent a shipment of 100000 Food to Zanharim.
+A	T-142		In the name of family cooperation royal victorin has sent a shipment of 1243847 Cash 72715 Iron 18426 Octarine 22915 Endurium to Zanharim.
+A	T-141		In the name of family cooperation Zanharim has sent a shipment of 15478 Cash 207136 Food 73033 Iron 20261 Octarine 22952 Endurium to royal victorin.
+A	T-141		In the name of family cooperation Biscuit has sent a shipment of 176007 Food 87821 Iron 7940 Octarine 22344 Endurium to Zanharim.
+E	T-140		Zanharim explored planet 11 in the 64,100 system.
+A	T-140		In the name of family cooperation Biscuit has sent a shipment of 1046211 Food to Zanharim.
+E	T-139		Zanharim explored planet 13 in the 72,99 system.
+A	T-139		In the name of family cooperation TIF has sent a shipment of 1039825 Cash 5678 Iron 18470 Octarine 3301 Endurium to Zanharim.
+E	T-138		Zanharim explored planet 2 in the 85,5 system.
+E	T-138		Zanharim explored planet 10 in the 74,1 system.
+E	T-137		Zanharim explored planet 10 in the 67,95 system.
+E	T-137		Zanharim explored planet 10 in the 74,3 system.
+E	T-137		Zanharim explored planet 6 in the 76,14 system.
+E	T-137		Zanharim explored planet 7 in the 77,14 system.
+A	T-137		In the name of family cooperation Who has sent a shipment of 4651 Iron 539 Octarine to TIF.
+A	T-137		In the name of family cooperation TIF has sent a shipment of 40000 Cash 2000 Octarine to Who.
+E	T-136		Zanharim explored planet 5 in the 98,4 system.
+E	T-136		Zanharim explored planet 11 in the 80,2 system.
+E	T-136		Zanharim explored planet 6 in the 73,4 system.
+E	T-136		Zanharim explored planet 8 in the 79,1 system.
+E	T-136		Zanharim explored planet 2 in the 73,5 system.
+E	T-136		Zanharim explored planet 11 in the 81,3 system.
+E	T-136		Zanharim explored planet 2 in the 68,9 system.
+E	T-136		Zanharim explored planet 7 in the 72,13 system.
+E	T-136		Zanharim explored planet 12 in the 99,3 system.
+E	T-135		Zanharim explored planet 8 in the 93,100 system.
+E	T-135		Zanharim explored planet 2 in the 74,7 system.
+E	T-135		Zanharim explored planet 5 in the 73,11 system.
+E	T-135		Zanharim explored planet 2 in the 93,6 system.
+A	T-135		In the name of family cooperation Who has sent a shipment of 1085426 Cash 35895 Food 89865 Iron 20752 Octarine 9719 Endurium to TIF.
+A	T-135		In the name of family cooperation TIF has sent a shipment of 1846448 Cash 50000 Food 96270 Iron 20823 Octarine 14487 Endurium to Who.
+A	T-135		In the name of family cooperation Who has sent a shipment of 13030 Iron to TIF.
+A	T-135		In the name of family cooperation Zanharim has sent a shipment of 1846448 Cash 49339 Food 83240 Iron 20823 Octarine 14487 Endurium to TIF.
+A	T-135		In the name of family cooperation TIF has sent a shipment of 1069325 Cash 50000 Food 83460 Iron 20688 Octarine 14675 Endurium to Zanharim.
+IA	T-135		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 7 in the 93,89 system.
+IA	T-135		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 9 in the 93,89 system.
+IA	T-135		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 5 in the 93,89 system.
+IA	T-135		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 6 in the 93,89 system.
+IA	T-135		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 1 in the 93,89 system.
+IA	T-135		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 12 in the 93,89 system.
+IA	T-135		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 8 in the 93,89 system.
+E	T-134		Zanharim explored planet 7 in the 94,92 system.
+A	T-134		In the name of family cooperation Biscuit has sent a shipment of 276861 Cash 738240 Food 13384 Iron 5210 Octarine 16416 Endurium to TIF.
+A	T-134		In the name of family cooperation TIF has sent a shipment of 500000 Cash to Biscuit.
+A	T-134		In the name of family cooperation TIF has sent a shipment of 1000000 Cash to Zanharim.
+IA	T-134		In an intra family fight Biscuit defeated Zanharim and took control over planet 4 in the 72,94 system.
+IA	T-134		In an intra family fight Biscuit defeated Zanharim and took control over planet 1 in the 90,100 system.
+IA	T-134		In an intra family fight Biscuit defeated Zanharim and took control over planet 12 in the 82,98 system.
+IA	T-134		In an intra family fight Biscuit defeated Zanharim and took control over planet 4 in the 82,98 system.
+IA	T-134		In an intra family fight Biscuit defeated Zanharim and took control over planet 7 in the 67,95 system.
+IA	T-134		In an intra family fight Biscuit defeated Zanharim and took control over planet 2 in the 72,94 system.
+IA	T-134		In an intra family fight Biscuit defeated Zanharim and took control over planet 1 in the 72,94 system.
+IA	T-134		In an intra family fight Biscuit defeated Zanharim and took control over planet 9 in the 82,98 system.
+A	T-134		In the name of family cooperation Zanharim has sent a shipment of 151202 Food 50399 Iron to TIF.
+IA	T-134		In an intra family fight Biscuit defeated Zanharim and took control over planet 2 in the 70,90 system.
+IA	T-134		In an intra family fight Biscuit defeated Zanharim and took control over planet 13 in the 75,91 system.
+IA	T-134		In an intra family fight Biscuit defeated Zanharim and took control over planet 3 in the 72,94 system.
+IA	T-134		In an intra family fight Biscuit defeated Zanharim and took control over planet 3 in the 82,98 system.
+IA	T-134		In an intra family fight Biscuit defeated Zanharim and took control over planet 4 in the 91,94 system.
+IA	T-134		In an intra family fight Biscuit defeated Zanharim and took control over planet 8 in the 82,98 system.
+IA	T-134		In an intra family fight Biscuit defeated Zanharim and took control over planet 1 in the 81,97 system.
+IA	T-134		In an intra family fight Biscuit defeated Zanharim and took control over planet 6 in the 82,98 system.
+IA	T-134		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 10 in the 92,90 system.
+IA	T-134		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 9 in the 92,90 system.
+IA	T-134		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 12 in the 92,90 system.
+IA	T-134		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 7 in the 92,90 system.
+IA	T-134		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 6 in the 92,90 system.
+IA	T-134		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 2 in the 92,90 system.
+IA	T-134		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 1 in the 92,90 system.
+IA	T-134		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 13 in the 92,90 system.
+IA	T-134		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 5 in the 92,90 system.
+IA	T-134		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 4 in the 92,90 system.
+IA	T-134		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 3 in the 92,90 system.
+IA	T-134		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 8 in the 92,90 system.
+EA	T-133		After a brave fight our family member Hoebagslutwhore had to flee the planet planet 10 in the 70,16 system which was attacked by Guldan of family 6369.
+A	T-131		In the name of family cooperation royal victorin has sent a shipment of 1710144 Cash 88208 Iron 15816 Octarine 4392 Endurium to TIF.
+IA	T-131		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 10 in the 88,87 system.
+IA	T-131		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 6 in the 88,87 system.
+IA	T-131		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 8 in the 88,87 system.
+IA	T-131		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 11 in the 88,87 system.
+IA	T-131		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 12 in the 88,87 system.
+IA	T-131		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 4 in the 88,87 system.
+IA	T-131		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 13 in the 88,87 system.
+IA	T-131		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 5 in the 88,87 system.
+IA	T-131		In an intra family fight TIF defeated Hoebagslutwhore and took control over planet 9 in the 88,87 system.
+A	T-130		In the name of family cooperation Who has sent a shipment of 1312 Cash 2638 Iron 24 Endurium to TIF.
+A	T-130		In the name of family cooperation TIF has sent a shipment of 42 Endurium to Who.
+A	T-130		In the name of family cooperation TIF has sent a shipment of 40000 Cash to Who.
+EA	T-129		An overwhelming force from Mr_Hinx, family 6360 attacked Who's planet 4 in the 93,83 system. The defenders for Who managed to set off a nuclear blast which made the planet uninhabitable.
+A	T-128		In the name of family cooperation royal victorin has sent a shipment of 400000 Food to TIF.
+A	T-128		In the name of family cooperation TIF has sent a shipment of 374 Iron 4089 Endurium to royal victorin.
+A	T-128		In the name of family cooperation Who has sent a shipment of 10221 Food 374 Iron 4089 Endurium to TIF.
+A	T-128		In the name of family cooperation TIF has sent a shipment of 2901 Cash 15193 Iron 452 Octarine 289 Endurium to royal victorin.
+A	T-128		In the name of family cooperation TIF has sent a shipment of 57230 Iron 15452 Octarine to royal victorin.
+A	T-128		In the name of family cooperation Zanharim has sent a shipment of 2901 Cash 52199 Food 15193 Iron 452 Octarine 289 Endurium to TIF.
+A	T-128		In the name of family cooperation TIF has sent a shipment of 157530 Cash 9369 Endurium to Who.
+A	T-128		In the name of family cooperation TIF has sent a shipment of 80000 Cash 60 Food 1500 Octarine 1000 Endurium to Zanharim.
+EA	T-127		After a brave fight our family member Hoebagslutwhore had to flee the planet planet 7 in the 65,22 system which was attacked by Silvio_Berlusconi of family 6362.
+EA	T-127		After a brave fight our family member Hoebagslutwhore had to flee the planet planet 10 in the 88,89 system which was attacked by Silvio_Berlusconi of family 6362.
+SA	T-126		The forces of Hoebagslutwhore took planet 7 in the 65,22 system from Guldan (6369).
+EA	T-126		Our family member Who managed to defend planet 4 in the 93,83 system against an attack by forces from Mr_Hinx, family 6360.
+EA	T-126		After a brave fight our family member Hoebagslutwhore had to flee the planet planet 5 in the 78,8 system which was attacked by Silvio_Berlusconi of family 6362.
+EA	T-126		After a brave fight our family member Hoebagslutwhore had to flee the planet planet 3 in the 91,14 system which was attacked by Justin_Bieber of family 6362.
+A	T-126		In the name of family cooperation Zanharim has sent a shipment of 26224 Food 8522 Iron 75 Octarine to TIF.
+EA	T-125		After a brave fight our family member Who had to flee the planet planet 6 in the 88,82 system which was attacked by Mr_Hinx of family 6360.
+A	T-125		In the name of family cooperation Zanharim has sent a shipment of 26276 Food 8522 Iron 75 Octarine to Blood Eagle.
+A	T-125		In the name of family cooperation TIF has sent a shipment of 223529 Cash to Blood Eagle.
+A	T-124		In the name of family cooperation Zanharim has sent a shipment of 26322 Food 8522 Iron 75 Octarine to royal victorin.
+EA	T-124		After a brave fight our family member royal victorin had to flee the planet planet 6 in the 88,89 system which was attacked by Silvio_Berlusconi of family 6362.
+EA	T-124		After a brave fight our family member royal victorin had to flee the planet planet 11 in the 88,89 system which was attacked by Silvio_Berlusconi of family 6362.
+EA	T-124		After a brave fight our family member royal victorin had to flee the planet planet 2 in the 88,89 system which was attacked by Silvio_Berlusconi of family 6362.
+EA	T-124		After a brave fight our family member royal victorin had to flee the planet planet 12 in the 88,89 system which was attacked by Silvio_Berlusconi of family 6362.
+EA	T-124		After a brave fight our family member royal victorin had to flee the planet planet 1 in the 88,89 system which was attacked by Silvio_Berlusconi of family 6362.
+EA	T-124		After a brave fight our family member royal victorin had to flee the planet planet 5 in the 88,89 system which was attacked by Silvio_Berlusconi of family 6362.
+EA	T-124		After a brave fight our family member royal victorin had to flee the planet planet 4 in the 87,91 system which was attacked by Silvio_Berlusconi of family 6362.
+EA	T-124		After a brave fight our family member royal victorin had to flee the planet planet 3 in the 87,91 system which was attacked by Silvio_Berlusconi of family 6362.
+EA	T-124		After a brave fight our family member royal victorin had to flee the planet planet 8 in the 87,91 system which was attacked by Silvio_Berlusconi of family 6362.
+EA	T-124		Our family member Zanharim managed to defend planet 4 in the 73,9 system against an attack by forces from Silvio_Berlusconi, family 6362.
+FA	T-124		Hoebagslutwhore made an attack against planet 1 in the 99,5 system owned by Justin_Bieber (6362), but the planet's defense was too strong.
+SA	T-124		The forces of Hoebagslutwhore took planet 4 in the 75,17 system from Silvio_Berlusconi (6362).
+SA	T-124		The forces of Hoebagslutwhore took planet 9 in the 75,17 system from Silvio_Berlusconi (6362).
+A	T-124		In the name of family cooperation TIF has sent a shipment of 222138 Cash to Hoebagslutwhore.
+A	T-123		In the name of family cooperation TIF has sent a shipment of 815 Cash to Hoebagslutwhore.
+A	T-123		In the name of family cooperation Zanharim has sent a shipment of 26369 Food 8522 Iron 75 Octarine to royal victorin.
+A	T-123		In the name of family cooperation royal victorin has sent a shipment of 815 Cash 78233 Iron 18299 Octarine 13451 Endurium to TIF.
+A	T-123		In the name of family cooperation TIF has sent a shipment of 21526 Octarine to royal victorin.
+A	T-123		In the name of family cooperation TIF has sent a shipment of 258544 Cash 80744 Iron 14141 Endurium to royal victorin.
+E	T-122		Who explored planet 11 in the 92,90 system.
+A	T-122		In the name of family cooperation Biscuit has sent a shipment of 435793 Cash 227482 Food 111721 Iron 1632 Octarine 16332 Endurium to TIF.
+A	T-122		In the name of family cooperation TIF has sent a shipment of 100000 Food 156951 Iron 18121 Endurium to Biscuit.
+A	T-122		In the name of family cooperation Zanharim has sent a shipment of 4052 Cash 93 Food 93 Iron 100 Octarine 102 Endurium to TIF.
+A	T-122		In the name of family cooperation TIF has sent a shipment of 100 Food 100 Iron 100 Octarine 100 Endurium to Zanharim.
+A	T-122		In the name of family cooperation TIF has sent a shipment of 1979868 Cash to Biscuit.
+A	T-122		In the name of family cooperation TIF has sent a shipment of 20000 Cash to Zanharim.
+A	T-122		In the name of family cooperation royal victorin has sent a shipment of 720716 Cash 149814 Iron 19904 Octarine 18024 Endurium to TIF.
+A	T-122		In the name of family cooperation Zanharim has sent a shipment of 26369 Food 75 Octarine to royal victorin.
+A	T-122		In the name of family cooperation Zanharim has sent a shipment of 8522 Iron to TIF.
+SA	T-121		The forces of Hoebagslutwhore took planet 5 in the 78,8 system from Silvio_Berlusconi (6362).
+A	T-121		In the name of family cooperation Zanharim has sent a shipment of 26410 Food 8522 Iron 75 Octarine to royal victorin.
+EA	T-120		Our family member Hoebagslutwhore managed to defend planet 3 in the 91,14 system against an attack by forces from Justin_Bieber, family 6362.
+A	T-120		In the name of family cooperation Zanharim has sent a shipment of 564 Cash 52797 Food 16733 Iron 150 Octarine to royal victorin.
+E	T-119		Hoebagslutwhore explored planet 9 in the 92,90 system.
+E	T-119		TIF explored planet 1 in the 90,87 system.
+E	T-119		Hoebagslutwhore explored planet 1 in the 93,89 system.
+E	T-119		Hoebagslutwhore explored planet 6 in the 92,90 system.
+E	T-119		Hoebagslutwhore explored planet 2 in the 92,90 system.
+E	T-119		TIF explored planet 3 in the 90,87 system.
+E	T-119		Hoebagslutwhore explored planet 1 in the 92,90 system.
+E	T-119		Hoebagslutwhore explored planet 13 in the 92,90 system.
+E	T-119		TIF explored planet 7 in the 90,87 system.
+E	T-119		Hoebagslutwhore explored planet 5 in the 92,90 system.
+E	T-119		TIF explored planet 12 in the 90,87 system.
+E	T-119		TIF explored planet 3 in the 88,87 system.
+E	T-119		TIF explored planet 2 in the 88,87 system.
+E	T-119		Hoebagslutwhore explored planet 4 in the 92,90 system.
+E	T-119		Hoebagslutwhore explored planet 3 in the 92,90 system.
+E	T-119		Hoebagslutwhore explored planet 6 in the 93,89 system.
+E	T-119		Hoebagslutwhore explored planet 5 in the 93,89 system.
+E	T-119		Hoebagslutwhore explored planet 7 in the 93,89 system.
+E	T-119		Hoebagslutwhore explored planet 12 in the 92,90 system.
+E	T-119		Hoebagslutwhore explored planet 10 in the 92,90 system.
+E	T-119		TIF explored planet 1 in the 88,87 system.
+E	T-119		Hoebagslutwhore explored planet 8 in the 93,89 system.
+E	T-119		Hoebagslutwhore explored planet 8 in the 92,90 system.
+E	T-119		Hoebagslutwhore explored planet 7 in the 92,90 system.
+E	T-119		Hoebagslutwhore explored planet 12 in the 93,89 system.
+E	T-119		Hoebagslutwhore explored planet 9 in the 93,89 system.
+EA	T-119		Our family member Hoebagslutwhore managed to defend planet 10 in the 70,16 system against an attack by forces from Silvio_Berlusconi, family 6362.
+A	T-119		In the name of family cooperation Who has sent a shipment of 181 Cash 126627 Iron 19901 Octarine 18265 Endurium to royal victorin.
+IA	T-119		In an intra family fight Hoebagslutwhore defeated royal victorin and took control over planet 10 in the 88,89 system.
+IA	T-119		In an intra family fight Hoebagslutwhore defeated royal victorin and took control over planet 9 in the 88,89 system.
+IA	T-119		In an intra family fight Hoebagslutwhore defeated royal victorin and took control over planet 9 in the 72,94 system.
+IA	T-119		In an intra family fight Hoebagslutwhore defeated royal victorin and took control over planet 7 in the 90,100 system.
+A	T-119		In the name of family cooperation royal victorin has sent a shipment of 520330 Cash 130021 Iron 20300 Octarine 20496 Endurium to Who.
+E	T-118		Hoebagslutwhore explored planet 13 in the 88,87 system.
+E	T-118		Hoebagslutwhore explored planet 6 in the 88,87 system.
+E	T-118		Hoebagslutwhore explored planet 12 in the 88,87 system.
+E	T-118		Hoebagslutwhore explored planet 11 in the 88,87 system.
+E	T-118		Hoebagslutwhore explored planet 9 in the 88,87 system.
+E	T-118		Hoebagslutwhore explored planet 5 in the 88,87 system.
+E	T-118		Hoebagslutwhore explored planet 4 in the 88,87 system.
+E	T-118		Hoebagslutwhore explored planet 10 in the 88,87 system.
+E	T-118		Hoebagslutwhore explored planet 8 in the 88,87 system.
+A	T-118		In the name of family cooperation Blood Eagle has sent a shipment of 514 Cash 625754 Food 66488 Iron 10152 Octarine 26402 Endurium to royal victorin.
+A	T-118		In the name of family cooperation Biscuit has sent a shipment of 625754 Food 27140 Iron 6745 Octarine 21633 Endurium to Blood Eagle.
+A	T-118		In the name of family cooperation royal victorin has sent a shipment of 623000 Cash 5947 Endurium to Blood Eagle.
+A	T-118		In the name of family cooperation royal victorin has sent a shipment of 200000 Cash to Hoebagslutwhore.
+A	T-118		In the name of family cooperation Hoebagslutwhore has sent a shipment of 150000 Cash to royal victorin.
+A	T-118		In the name of family cooperation Zanharim has sent a shipment of 432382 Cash 235094 Food 75166 Iron 12486 Octarine 5811 Endurium to royal victorin.
+A	T-117		In the name of family cooperation royal victorin has sent a shipment of 600000 Cash to Hoebagslutwhore.
+E	T-116		TIF explored planet 11 in the 94,93 system.
+E	T-116		TIF explored planet 9 in the 94,93 system.
+E	T-116		TIF explored planet 1 in the 94,93 system.
+E	T-116		Biscuit explored planet 12 in the 91,94 system.
+E	T-116		TIF explored planet 3 in the 94,93 system.
+E	T-116		TIF explored planet 4 in the 94,93 system.
+EA	T-115		After a brave fight our family member Hoebagslutwhore had to flee the planet planet 13 in the 100,10 system which was attacked by Justin_Bieber of family 6362.
+A	T-115		In the name of family cooperation TIF has sent a shipment of 488136 Cash 12000 Octarine 5901 Endurium to Zanharim.
+E	T-114		Who explored planet 3 in the 68,9 system.
+E	T-114		Who explored planet 9 in the 68,9 system.
+E	T-114		Who explored planet 6 in the 88,82 system.
+E	T-114		Who explored planet 8 in the 99,3 system.
+E	T-114		Who explored planet 4 in the 67,6 system.
+E	T-114		Who explored planet 11 in the 67,6 system.
+E	T-114		Who explored planet 1 in the 67,6 system.
+E	T-114		Who explored planet 4 in the 93,83 system.
+E	T-114		Who explored planet 10 in the 68,9 system.
+SA	T-114		The forces of Hoebagslutwhore took planet 3 in the 91,14 system from Justin_Bieber (6362).
+EA	T-114		Our family member Hoebagslutwhore managed to defend planet 1 in the 76,14 system against an attack by forces from Silvio_Berlusconi, family 6362.
+E	T-113		Who explored planet 7 in the 69,87 system.
+E	T-113		Who explored planet 11 in the 93,6 system.
+E	T-112		Biscuit explored planet 5 in the 74,90 system.
+E	T-112		Biscuit explored planet 6 in the 70,95 system.
+E	T-112		Biscuit explored planet 12 in the 72,94 system.
+E	T-112		Biscuit explored planet 10 in the 74,90 system.
+E	T-112		Biscuit explored planet 7 in the 72,94 system.
+E	T-112		Biscuit explored planet 12 in the 70,95 system.
+E	T-112		Biscuit explored planet 13 in the 74,90 system.
+E	T-112		Biscuit explored planet 8 in the 74,90 system.
+E	T-112		Biscuit explored planet 3 in the 74,90 system.
+E	T-112		Biscuit explored planet 11 in the 74,90 system.
+E	T-112		Biscuit explored planet 7 in the 74,90 system.
+E	T-112		Biscuit explored planet 6 in the 74,90 system.
+EA	T-112		Our family member Hoebagslutwhore managed to defend planet 1 in the 76,14 system against an attack by forces from Justin_Bieber, family 6362.
+A	T-112		In the name of family cooperation TIF has sent a shipment of 100000 Cash to Biscuit.
+EA	T-110		After a brave fight our family member Hoebagslutwhore had to flee the planet planet 1 in the 99,5 system which was attacked by Justin_Bieber of family 6362.
+EA	T-110		Our family member Hoebagslutwhore managed to defend planet 13 in the 100,10 system against an attack by forces from Justin_Bieber, family 6362.
+A	T-109		In the name of family cooperation Zanharim has sent a shipment of 185051 Food 31841 Iron 520 Octarine to TIF.
+FA	T-109		Hoebagslutwhore made an attack against planet 9 in the 75,17 system owned by Silvio_Berlusconi (6362), but the planet's defense was too strong.
+A	T-108		In the name of family cooperation Hoebagslutwhore has sent a shipment of 893984 Food to TIF.
+IA	T-108		In an intra family fight Hoebagslutwhore defeated TIF and took control over planet 2 in the 90,87 system.
+SA	T-107		The forces of Hoebagslutwhore took planet 8 in the 99,5 system from Silvio_Berlusconi (6362).
+SA	T-106		The forces of Hoebagslutwhore took planet 10 in the 70,16 system from Silvio_Berlusconi (6362).
+SA	T-106		The forces of Hoebagslutwhore took planet 1 in the 76,14 system from Silvio_Berlusconi (6362).
+A	T-105		In the name of family cooperation TIF has sent a shipment of 344776 Cash to Blood Eagle.
+A	T-104		In the name of family cooperation TIF has sent a shipment of 300000 Cash to Hoebagslutwhore.
+FA	T-104		Hoebagslutwhore made an attack against planet 3 in the 91,14 system owned by Justin_Bieber (6362), but the planet's defense was too strong.
+FA	T-104		Hoebagslutwhore made an attack against planet 3 in the 91,14 system owned by Justin_Bieber (6362), but the planet's defense was too strong.
+SA	T-103		The forces of Hoebagslutwhore took planet 8 in the 72,13 system from Justin_Bieber (6362).
+A	T-102		In the name of family cooperation TIF has sent a shipment of 10000 Cash to royal victorin.
+A	T-102		In the name of family cooperation royal victorin has sent a shipment of 210583 Cash 498 Iron 100 Octarine 10354 Endurium to TIF.
+A	T-102		In the name of family cooperation TIF has sent a shipment of 1171708 Cash 76070 Iron 100 Octarine 17936 Endurium to royal victorin.
+A	T-102		In the name of family cooperation Zanharim has sent a shipment of 1171708 Cash 110407 Food 76370 Iron 12966 Octarine 15936 Endurium to TIF.
+IA	T-102		In an intra family fight Zanharim defeated Biscuit and took control over planet 1 in the 90,100 system.
+IA	T-102		In an intra family fight Zanharim defeated Biscuit and took control over planet 4 in the 72,94 system.
+IA	T-102		In an intra family fight Zanharim defeated Biscuit and took control over planet 4 in the 91,94 system.
+IA	T-102		In an intra family fight Zanharim defeated Biscuit and took control over planet 13 in the 75,91 system.
+IA	T-102		In an intra family fight Zanharim defeated Biscuit and took control over planet 8 in the 82,98 system.
+IA	T-102		In an intra family fight Zanharim defeated Biscuit and took control over planet 1 in the 81,97 system.
+IA	T-102		In an intra family fight Zanharim defeated Biscuit and took control over planet 12 in the 82,98 system.
+IA	T-102		In an intra family fight Zanharim defeated Biscuit and took control over planet 4 in the 82,98 system.
+IA	T-102		In an intra family fight Zanharim defeated Biscuit and took control over planet 6 in the 82,98 system.
+IA	T-102		In an intra family fight Zanharim defeated Biscuit and took control over planet 3 in the 82,98 system.
+A	T-102		In the name of family cooperation TIF has sent a shipment of 2097912 Cash 70000 Food 72894 Iron 12150 Octarine 20362 Endurium to Zanharim.
+IA	T-102		In an intra family fight Zanharim defeated Biscuit and took control over planet 2 in the 72,94 system.
+IA	T-102		In an intra family fight Zanharim defeated Biscuit and took control over planet 3 in the 72,94 system.
+IA	T-102		In an intra family fight Zanharim defeated Biscuit and took control over planet 1 in the 72,94 system.
+IA	T-102		In an intra family fight Zanharim defeated Biscuit and took control over planet 9 in the 82,98 system.
+A	T-101		In the name of family cooperation Biscuit has sent a shipment of 11296 Cash 120612 Food 19357 Iron 373 Octarine 3433 Endurium to TIF.
+A	T-101		In the name of family cooperation TIF has sent a shipment of 30000 Cash to Biscuit.
+IA	T-101		In an intra family fight Biscuit defeated Zanharim and took control over planet 2 in the 74,90 system.
+IA	T-101		In an intra family fight Biscuit defeated Zanharim and took control over planet 9 in the 70,95 system.
+IA	T-101		In an intra family fight Biscuit defeated Zanharim and took control over planet 5 in the 72,99 system.
+IA	T-101		In an intra family fight Biscuit defeated Zanharim and took control over planet 4 in the 70,91 system.
+IA	T-101		In an intra family fight Biscuit defeated Zanharim and took control over planet 1 in the 87,91 system.
+IA	T-101		In an intra family fight Biscuit defeated Zanharim and took control over planet 6 in the 90,100 system.
+IA	T-101		In an intra family fight Biscuit defeated Zanharim and took control over planet 5 in the 90,100 system.
+IA	T-101		In an intra family fight Biscuit defeated Zanharim and took control over planet 9 in the 74,90 system.
+IA	T-101		In an intra family fight Biscuit defeated Zanharim and took control over planet 11 in the 72,94 system.
+IA	T-101		In an intra family fight Biscuit defeated Zanharim and took control over planet 3 in the 90,100 system.
+IA	T-101		In an intra family fight Biscuit defeated Zanharim and took control over planet 9 in the 75,91 system.
+SA	T-101		The forces of Hoebagslutwhore took planet 13 in the 100,10 system from Justin_Bieber (6362).
+A	T-100		In the name of family cooperation royal victorin has sent a shipment of 1602195 Cash 49813 Iron 11339 Octarine 19942 Endurium to TIF.
+A	T-100		In the name of family cooperation TIF has sent a shipment of 30000 Cash to Who.
+FA	T-100		Hoebagslutwhore made an attack against planet 8 in the 72,13 system owned by Justin_Bieber (6362), but the planet's defense was too strong.
+A	T-99		In the name of family cooperation Zanharim has sent a shipment of 1397 Cash 32254 Food 1487 Iron 411 Octarine 622 Endurium to royal victorin.
+A	T-99		In the name of family cooperation Blood Eagle has sent a shipment of 34 Cash 23 Food 4361 Iron 560 Octarine 825 Endurium to TIF.
+A	T-99		In the name of family cooperation TIF has sent a shipment of 80000 Cash 80 Food to Blood Eagle.
+A	T-99		In the name of family cooperation royal victorin has sent a shipment of 300000 Food to TIF.
+FA	T-99		Hoebagslutwhore made an attack against planet 3 in the 91,14 system owned by Justin_Bieber (6362), but the planet's defense was too strong.
+A	T-99		In the name of family cooperation TIF has sent a shipment of 50000 Cash to Zanharim.
+A	T-98		In the name of family cooperation TIF has sent a shipment of 100 Octarine to Who.
+A	T-98		In the name of family cooperation TIF has sent a shipment of 80 Food 80 Iron 40 Endurium to Who.
+A	T-98		In the name of family cooperation TIF has sent a shipment of 90000 Cash to Who.
+A	T-98		In the name of family cooperation Zanharim has sent a shipment of 2537 Cash 32316 Food 1500 Iron 411 Octarine 629 Endurium to royal victorin.
+A	T-98		In the name of family cooperation TIF has sent a shipment of 171967 Cash to royal victorin.
+EA	T-97		After a brave fight our family member Biscuit had to flee the planet planet 5 in the 87,11 system which was attacked by Silvio_Berlusconi of family 6362.
+A	T-97		In the name of family cooperation TIF has sent a shipment of 231444 Cash 277 Iron 2000 Endurium to royal victorin.
+A	T-97		In the name of family cooperation Zanharim has sent a shipment of 9084 Cash 32362 Food 1500 Iron 411 Octarine 629 Endurium to royal victorin.
+A	T-96		In the name of family cooperation Biscuit has sent a shipment of 26207 Cash 99016 Food 15568 Iron 299 Octarine to royal victorin.
+A	T-96		In the name of family cooperation Biscuit has sent a shipment of 2767 Endurium to TIF.
+A	T-96		In the name of family cooperation royal victorin has sent a shipment of 2000 Endurium to TIF.
+A	T-96		In the name of family cooperation TIF has sent a shipment of 20000 Cash to Biscuit.
+A	T-96		In the name of family cooperation royal victorin has sent a shipment of 20000 Cash to Biscuit.
+SA	T-96		The forces of Hoebagslutwhore took planet 1 in the 99,5 system from Justin_Bieber (6362).
+EA	T-96		After a brave fight our family member Hoebagslutwhore had to flee the planet planet 13 in the 100,10 system which was attacked by Justin_Bieber of family 6362.
+A	T-96		In the name of family cooperation Blood Eagle has sent a shipment of 31325 Iron 1323 Octarine 5485 Endurium to royal victorin.
+A	T-96		In the name of family cooperation Zanharim has sent a shipment of 9069 Cash 32407 Food 1500 Iron 411 Octarine 629 Endurium to royal victorin.
+A	T-95		In the name of family cooperation Zanharim has sent a shipment of 9055 Cash 32449 Food 1500 Iron 411 Octarine 629 Endurium to royal victorin.
+Universal News
+Silvio_Berlusconi took 18,36:1 from Queen_Marlena.
+Silvio_Berlusconi took 18,36:4 from Skeletor.
+Justin_Bieber took 10,11:8 from Queen_Marlena.
+Guldan took 17,73:9 from Donatello.
+Airwing took 39,64:2 from ThreeBearEmpire.
+Family Topics
+ 	Welcome to the Family #6370 forums!
+ 	Discord down, using this
+ 	#6360 NAP
+ 	Attacker expos
+ 
