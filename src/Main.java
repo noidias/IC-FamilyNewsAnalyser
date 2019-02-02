@@ -23,21 +23,29 @@ import java.util.stream.Stream;
 
 public class Main {
 
-	public static void main(String[] args) throws IOException {
-			
-	String famNews = readLineByLineJava8("famNews2.txt");
-	String planetScreen = readLineByLineJava8("planetList.txt");
-	String famCouncilScreen = readLineByLineJava8("famCouncil.txt");
+	//input files
+	static String famNews = readLineByLineJava8("famNews2.txt");
+	static String planetScreen = readLineByLineJava8("planetList.txt");
+	static String famCouncilScreen = readLineByLineJava8("famCouncil.txt");
 	
-	exploredPlanetSummary(famNews);
+	//Regex
+	static String playerNameRegex = "([\\w+\\s*\\w*]*)";
+	static String turnRegex = "[\\s]+T-\\d{1,4}[\\s]+";
+	static String planetRegex = " planet (\\d+) in the (\\d+),(\\d+) system";
+	
+	public static void main(String[] args) throws IOException {
+	
+	exploredPlanetSummary();
+	capturedPlanetSummary();
 	//planetScreenFormater(planetScreen);
 	}		
 
 			
-	public static void exploredPlanetSummary(String famNews) {
+	public static void exploredPlanetSummary() {
 		Multimap<String, String> exploredPlanets = ArrayListMultimap.create();
 		
-		Pattern planetPattern = Pattern.compile("(?s)E	T-\\d{1,4}		([\\w+\\s*\\w*]*) explored planet (\\d+) in the (\\d+),(\\d+) system.");
+		//Pattern planetPattern = Pattern.compile("(?s)E	T-\\d{1,4}		([\\w+\\s*\\w*]*) explored planet (\\d+) in the (\\d+),(\\d+) system.");
+		Pattern planetPattern = Pattern.compile("(?s)E"+turnRegex+playerNameRegex+" explored"+planetRegex);
 		Matcher planet = planetPattern.matcher(famNews);
 		
 		System.out.println("-------------------\r\n" + 
@@ -64,8 +72,44 @@ public class Main {
 		    }
 		   System.out.println("-------------------");
 		   System.out.println(exploredPlanets.size() +" planet(s) have been explored.");
-	    }
+	    }	
+	
+	public static void capturedPlanetSummary() {
+		Multimap<String, String> capturedPlanets = ArrayListMultimap.create();
+		ArrayList<String> families = new ArrayList<String>();
+		
+		//SA	T-657		The forces of Blood Eagle took planet 12 in the 65,83 system from Shredder (6368).
+		Pattern planetPattern = Pattern.compile("(?s)SA"+turnRegex+"The forces of "+playerNameRegex+" took"+planetRegex+" from "+playerNameRegex+" .(\\d+)+..");
+		Matcher planet = planetPattern.matcher(famNews);
+		
+		System.out.println("-------------------\r\n" + 
+				"-   CAPTURES      -\r\n" + 
+				"-------------------");
 
+		while (planet.find())	{
+				 String playerName = planet.group(1);	 
+				 int planetNo = Integer.parseInt(planet.group(2));
+				 int planetX = Integer.parseInt(planet.group(3));
+				 int planetY = Integer.parseInt(planet.group(4));
+				 String planetCoords = (planetX+","+planetY+":"+planetNo);				 
+				 capturedPlanets.put(playerName, planetCoords);				
+				 families.add(planet.group(6));
+				 //String family = planet.group(6);
+			 }
+		
+		   for (String key : capturedPlanets.keySet())
+		    {
+		        for (String value : capturedPlanets.get(key))
+		        {
+		            //System.out.printf("%s %s\n", key, value);
+		        }
+		        System.out.println(capturedPlanets.get(key).size() +" planet(s) captured by "+ key );
+		    }
+		   System.out.println("-------------------");
+		   System.out.println(capturedPlanets.size() +" planet(s) have been captured.");
+		   System.out.println("-------------------");
+		   countFrequencies(families);
+	    }
 	
 	
 	
@@ -119,6 +163,25 @@ public class Main {
 	    }
 	    return contentBuilder.toString();
 	}
+	
+	public static void countFrequencies(ArrayList<String> families) 
+    { 
+        // hashmap to store the frequency of element 
+        Map<String, Integer> hm = new HashMap<String, Integer>(); 
+  
+        for (String i : families) { 
+            Integer j = hm.get(i); 
+            hm.put(i, (j == null) ? 1 : j + 1); 
+        } 
+  
+        // displaying the occurrence of elements in the arraylist 
+        for (Map.Entry<String, Integer> val : hm.entrySet()) { 
+            System.out.println(val.getValue() + " "
+                               + "from "
+                               +"#"+ val.getKey()); 
+        } 
+    } 
+	
 			
 }
    
