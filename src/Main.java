@@ -12,13 +12,9 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Scanner;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
@@ -37,28 +33,24 @@ public class Main {
 	
 	exploredPlanetSummary();
 	capturedPlanetSummary();
+	defeatedPlanetSummary();
 	//planetScreenFormater(planetScreen);
 	}		
-
 			
 	public static void exploredPlanetSummary() {
 		Multimap<String, String> exploredPlanets = ArrayListMultimap.create();
 		
 		//Pattern planetPattern = Pattern.compile("(?s)E	T-\\d{1,4}		([\\w+\\s*\\w*]*) explored planet (\\d+) in the (\\d+),(\\d+) system.");
 		Pattern planetPattern = Pattern.compile("(?s)E"+turnRegex+playerNameRegex+" explored"+planetRegex);
-		Matcher planet = planetPattern.matcher(famNews);
+		Matcher news = planetPattern.matcher(famNews);
 		
 		System.out.println("-------------------\r\n" + 
 				"-   EXPLORATION   -\r\n" + 
 				"-------------------");
 
-		while (planet.find())	{
-				 String playerName = planet.group(1);	 
-				 int planetNo = Integer.parseInt(planet.group(2));
-				 int planetX = Integer.parseInt(planet.group(3));
-				 int planetY = Integer.parseInt(planet.group(4));
-				 String planetCoords = (planetX+","+planetY+":"+planetNo);
-				 
+		while (news.find())	{
+				 String playerName = news.group(1);	 
+				 String planetCoords= extractPlanet(news);
 				 exploredPlanets.put(playerName, planetCoords);				 			 
 			 }
 		
@@ -80,21 +72,18 @@ public class Main {
 		
 		//SA	T-657		The forces of Blood Eagle took planet 12 in the 65,83 system from Shredder (6368).
 		Pattern planetPattern = Pattern.compile("(?s)SA"+turnRegex+"The forces of "+playerNameRegex+" took"+planetRegex+" from "+playerNameRegex+" .(\\d+)+..");
-		Matcher planet = planetPattern.matcher(famNews);
+		Matcher news = planetPattern.matcher(famNews);
 		
 		System.out.println("-------------------\r\n" + 
 				"-   CAPTURES      -\r\n" + 
 				"-------------------");
 
-		while (planet.find())	{
-				 String playerName = planet.group(1);	 
-				 int planetNo = Integer.parseInt(planet.group(2));
-				 int planetX = Integer.parseInt(planet.group(3));
-				 int planetY = Integer.parseInt(planet.group(4));
-				 String planetCoords = (planetX+","+planetY+":"+planetNo);				 
+		while (news.find())	{
+				
+				 String playerName = news.group(1);	 
+				 String planetCoords= extractPlanet(news);
 				 capturedPlanets.put(playerName, planetCoords);				
-				 families.add(planet.group(6));
-				 //String family = planet.group(6);
+				 families.add(news.group(6));
 			 }
 		
 		   for (String key : capturedPlanets.keySet())
@@ -111,24 +100,39 @@ public class Main {
 		   countFrequencies(families);
 	    }
 	
-	
-	
-	public static void famCouncilScreenAnalyser(String famCouncilScreen) {
-		//Pattern PlanetPattern = Pattern.compile("(?s)empire=\\d{6}\\\">([\\w+\\s*\\w*]*)</a>.</td>\\s*<td><a href=..view_race.php.id=\\d+.>[\\w+\\s*\\w*!*'*$*\\.*]*</a></td>\\s*<td>((\\d{0,3},)?(\\d{3},)?\\d{0,3})</td>\\s{5,6}<td>(\\d*)</td> ");
-		int exploredPlanetCount = 0;
-		Pattern planetPattern = Pattern.compile("(?s)explored planet (\\d+) in the (\\d+),(\\d+) system.");
-		Matcher planet = planetPattern.matcher(famCouncilScreen);
-		System.out.println("Explored Planets");
-		while (planet.find())	{
-				 int planetNo = Integer.parseInt(planet.group(1));
-				 int planetX = Integer.parseInt(planet.group(2));;
-				 int planetY = Integer.parseInt(planet.group(3));; 
-				 System.out.println(planetX+","+planetY+":"+planetNo);
-				 exploredPlanetCount++;
+	public static void defeatedPlanetSummary() {
+		Multimap<String, String> defeatedPlanets = ArrayListMultimap.create();
+		ArrayList<String> families = new ArrayList<String>();
+		
+		//SA	T-657		The forces of Blood Eagle took planet 12 in the 65,83 system from Shredder (6368).
+		Pattern planetPattern = Pattern.compile("(?s)EA"+turnRegex+"After a brave fight our family member "+playerNameRegex+" had to flee the planet"+planetRegex+" which was attacked by "+playerNameRegex+" of family (\\d+)+.");
+		Matcher news = planetPattern.matcher(famNews);
+		
+		System.out.println("-------------------\r\n" + 
+				"-   DEFEATS       -\r\n" + 
+				"-------------------");
+
+		while (news.find())	{
+				
+				 String playerName = news.group(1);	 
+				 String planetCoords= extractPlanet(news);
+				 defeatedPlanets.put(playerName, planetCoords);				
+				 families.add(news.group(6));
 			 }
-		System.out.println("Total Explored = " + exploredPlanetCount);
+		
+		   for (String key : defeatedPlanets.keySet())
+		    {
+		        for (String value : defeatedPlanets.get(key))
+		        {
+		            //System.out.printf("%s %s\n", key, value);
+		        }
+		        System.out.println(defeatedPlanets.get(key).size() +" planet(s) lost by "+ key );
+		    }
+		   System.out.println("-------------------");
+		   System.out.println(defeatedPlanets.size() +" planet(s) have been lost.");
+		   System.out.println("-------------------");
+		   countFrequencies(families);
 	}
-	
 	
 	public static void planetScreenFormater(String planetScreen) {
 		int planetCount = 0;
@@ -147,8 +151,13 @@ public class Main {
 	
 	}
 	
-	
-	
+	public static String extractPlanet(Matcher result) {		 
+		 int planetNo = Integer.parseInt(result.group(2));
+		 int planetX = Integer.parseInt(result.group(3));
+		 int planetY = Integer.parseInt(result.group(4));
+		 String planetCoords = (planetX+","+planetY+":"+planetNo);	
+		 return planetCoords;
+	}
 	
 	private static String readLineByLineJava8(String filePath)
 	{
