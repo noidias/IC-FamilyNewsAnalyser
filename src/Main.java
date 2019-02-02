@@ -97,7 +97,7 @@ public class Main {
 		   System.out.println("-------------------");
 		   System.out.println(capturedPlanets.size() +" planet(s) have been captured.");
 		   System.out.println("-------------------");
-		   countFrequencies(families);
+		   countFrequencies(families, "from");
 	    }
 	
 	public static void defeatedPlanetSummary() {
@@ -131,7 +131,7 @@ public class Main {
 		   System.out.println("-------------------");
 		   System.out.println(defeatedPlanets.size() +" planet(s) have been lost.");
 		   System.out.println("-------------------");
-		   countFrequencies(families);
+		   countFrequencies(families, "to");
 	}
 	
 	public static void planetScreenFormater(String planetScreen) {
@@ -173,7 +173,7 @@ public class Main {
 	    return contentBuilder.toString();
 	}
 	
-	public static void countFrequencies(ArrayList<String> families) 
+	public static void countFrequencies(ArrayList<String> families, String fromto) 
     { 
         // hashmap to store the frequency of element 
         Map<String, Integer> hm = new HashMap<String, Integer>(); 
@@ -186,7 +186,7 @@ public class Main {
         // displaying the occurrence of elements in the arraylist 
         for (Map.Entry<String, Integer> val : hm.entrySet()) { 
             System.out.println(val.getValue() + " "
-                               + "from "
+                               + fromto+" "
                                +"#"+ val.getKey()); 
         } 
     } 
