@@ -1,11 +1,16 @@
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Multimap;
 
-
+import java.awt.List;
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -13,6 +18,7 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
@@ -23,63 +29,49 @@ public class Main {
 	String planetScreen = readLineByLineJava8("planetList.txt");
 	String famCouncilScreen = readLineByLineJava8("famCouncil.txt");
 	
-	exploredPlanetFormater(famNews);
+	exploredPlanetSummary(famNews);
 	//planetScreenFormater(planetScreen);
 	}		
 
 			
-	public static void exploredPlanetFormater(String famNews) {
-		//Pattern PlanetPattern = Pattern.compile("(?s)empire=\\d{6}\\\">([\\w+\\s*\\w*]*)</a>.</td>\\s*<td><a href=..view_race.php.id=\\d+.>[\\w+\\s*\\w*!*'*$*\\.*]*</a></td>\\s*<td>((\\d{0,3},)?(\\d{3},)?\\d{0,3})</td>\\s{5,6}<td>(\\d*)</td> ");
-		//int exploredPlanetCount = 0;
+	public static void exploredPlanetSummary(String famNews) {
+		Multimap<String, String> exploredPlanets = ArrayListMultimap.create();
 		
-		HashMap<String, String> exploredPlanets = new HashMap<String, String>();
-		
-		Pattern planetPattern = Pattern.compile("(?s)E	T-\\d{1,4}[ ]*([\\w+\\s*\\w*]*) explored planet (\\d+) in the (\\d+),(\\d+) system.");
+		Pattern planetPattern = Pattern.compile("(?s)E	T-\\d{1,4}		([\\w+\\s*\\w*]*) explored planet (\\d+) in the (\\d+),(\\d+) system.");
 		Matcher planet = planetPattern.matcher(famNews);
-		System.out.println("Explored Planets");
+		
+		System.out.println("-------------------\r\n" + 
+				"-   EXPLORATION   -\r\n" + 
+				"-------------------");
+
 		while (planet.find())	{
 				 String playerName = planet.group(1);	 
 				 int planetNo = Integer.parseInt(planet.group(2));
 				 int planetX = Integer.parseInt(planet.group(3));
 				 int planetY = Integer.parseInt(planet.group(4));
 				 String planetCoords = (planetX+","+planetY+":"+planetNo);
-				 exploredPlanets.put(playerName, planetCoords);
 				 
-				 //System.out.println(planetX+","+planetY+":"+planetNo);
-				 //exploredPlanetCount++;
+				 exploredPlanets.put(playerName, planetCoords);				 			 
 			 }
-	      Set set = exploredPlanets.entrySet();
-	      Iterator iterator = set.iterator();
-	      while(iterator.hasNext()) {
-	         Map.Entry mentry = (Map.Entry)iterator.next();
-	         System.out.print("key is: "+ mentry.getKey() + " & Value is: ");
-	         System.out.println(mentry.getValue());
-	         System.out.println(exploredPlanets.size());
-	      }
-		//System.out.println("Total Explored = " + exploredPlanetCount);
-	}
+		
+		   for (String key : exploredPlanets.keySet())
+		    {
+		        for (String value : exploredPlanets.get(key))
+		        {
+		            //System.out.printf("%s %s\n", key, value);
+		        }
+		        System.out.println(exploredPlanets.get(key).size() +" planet(s) explored by "+ key );
+		    }
+		   System.out.println("-------------------");
+		   System.out.println(exploredPlanets.size() +" planet(s) have been explored.");
+	    }
+
 	
 	
 	
 	public static void famCouncilScreenAnalyser(String famCouncilScreen) {
 		//Pattern PlanetPattern = Pattern.compile("(?s)empire=\\d{6}\\\">([\\w+\\s*\\w*]*)</a>.</td>\\s*<td><a href=..view_race.php.id=\\d+.>[\\w+\\s*\\w*!*'*$*\\.*]*</a></td>\\s*<td>((\\d{0,3},)?(\\d{3},)?\\d{0,3})</td>\\s{5,6}<td>(\\d*)</td> ");
 		int exploredPlanetCount = 0;
-		
-		/*
-		 * 
-		 * Income	+1,371,858
-TIF:	+689,588
-royal victorin:	+629,844
-Biscuit:	+33,369
-Who:	+6,842
-Zanharim:	+5,949
-Blood Eagle:	+5,916
-Gideon:	+350
-		 * 
-		 * 
-		 * 
-		 */
-		
 		Pattern planetPattern = Pattern.compile("(?s)explored planet (\\d+) in the (\\d+),(\\d+) system.");
 		Matcher planet = planetPattern.matcher(famCouncilScreen);
 		System.out.println("Explored Planets");
