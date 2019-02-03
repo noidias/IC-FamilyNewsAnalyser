@@ -22,9 +22,9 @@ import java.util.stream.Stream;
 public class Main {
 
 	//input files
-	static String famNews = readLineByLineJava8("famNews3.txt");
-	static String planetScreen = readLineByLineJava8("planetList.txt");
-	static String famCouncilScreen = readLineByLineJava8("famCouncil.txt");
+	static String famNews = readFileLineByLine("famNews3.txt");
+	static String planetScreen = readFileLineByLine("planetList.txt");
+	static String famCouncilScreen = readFileLineByLine("famCouncil.txt");
 	
 	static int i = 0;
 	
@@ -39,7 +39,7 @@ public class Main {
 	capturedPlanetSummary();
 	defeatedPlanetSummary();
 	openRetakes();
-	//planetScreenFormater(planetScreen);
+
 	}		
 			
 	public static void exploredPlanetSummary() {
@@ -174,24 +174,6 @@ public class Main {
 		   countFrequencies(families, "to");
 	}
 	
-	
-	public static void planetScreenFormater(String planetScreen) {
-		int planetCount = 0;
-		Pattern planetPattern = Pattern.compile("(?s)(\\d+),(\\d+):(\\d+)	\\d+ ");
-		
-		Matcher planet = planetPattern.matcher(planetScreen);
-		System.out.println("Planets Screen formatted");
-		while (planet.find())	{
-				 int planetX = Integer.parseInt(planet.group(1));
-				 int planetY = Integer.parseInt(planet.group(2));;
-				 int planetNo = Integer.parseInt(planet.group(3));; 
-				 System.out.println(planetX+","+planetY+":"+planetNo);
-				 planetCount++;
-			 }
-		System.out.println("Planet Screen Total = " + planetCount);
-	
-	}
-	
 	public static String extractPlanet(Matcher result) {		 
 		 int planetNo = Integer.parseInt(result.group(2));
 		 int planetX = Integer.parseInt(result.group(3));
@@ -200,7 +182,7 @@ public class Main {
 		 return planetCoords;
 	}
 	
-	private static String readLineByLineJava8(String filePath)
+	private static String readFileLineByLine(String filePath)
 	{
 		
 	    StringBuilder contentBuilder = new StringBuilder();
@@ -215,8 +197,7 @@ public class Main {
 	    return contentBuilder.toString();
 	}
 	
-	
-	public static void countFrequencies(ArrayList<String> families, String fromto) 
+	public static void countFrequencies(ArrayList<String> families, String text) 
     { 
         // hashmap to store the frequency of element 
         Map<String, Integer> hm = new HashMap<String, Integer>(); 
@@ -229,7 +210,7 @@ public class Main {
         // displaying the occurrence of elements in the arraylist 
         for (Map.Entry<String, Integer> val : hm.entrySet()) { 
             System.out.println(val.getValue() + " "
-                               + fromto+" "
+                               + text+" "
                                +"#"+ val.getKey()); 
         } 
     } 
