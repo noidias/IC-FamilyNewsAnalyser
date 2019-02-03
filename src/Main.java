@@ -2,7 +2,9 @@ import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 
 import java.awt.List;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.nio.charset.Charset;
@@ -20,9 +22,11 @@ import java.util.stream.Stream;
 public class Main {
 
 	//input files
-	static String famNews = readLineByLineJava8("famNews2.txt");
+	static String famNews = readLineByLineJava8("famNews3.txt");
 	static String planetScreen = readLineByLineJava8("planetList.txt");
 	static String famCouncilScreen = readLineByLineJava8("famCouncil.txt");
+	
+	static int i = 0;
 	
 	//Regex
 	static String playerNameRegex = "([\\w+\\s*\\w*]*)";
@@ -34,6 +38,7 @@ public class Main {
 	exploredPlanetSummary();
 	capturedPlanetSummary();
 	defeatedPlanetSummary();
+	openRetakes();
 	//planetScreenFormater(planetScreen);
 	}		
 			
@@ -104,6 +109,41 @@ public class Main {
 		Multimap<String, String> defeatedPlanets = ArrayListMultimap.create();
 		ArrayList<String> families = new ArrayList<String>();
 		
+		//Pattern planetPattern = Pattern.compile("(?s)SA"+turnRegex+"The forces of "+playerNameRegex+" took"+planetRegex+" from "+playerNameRegex+" .(\\d+)+..");
+		
+		Pattern planetPattern = Pattern.compile("(?s)EA"+turnRegex+"After a brave fight our family member "+playerNameRegex+" had to flee the planet"+planetRegex+" which was attacked by "+playerNameRegex+" of family (\\d+)+.");
+		Matcher news = planetPattern.matcher(famNews);
+		
+		System.out.println("-------------------\r\n" + 
+				"-   DEFEATS       -\r\n" + 
+				"-------------------");
+
+		while (news.find())	{
+				
+				 String playerName = news.group(1);	 
+				 String planetCoords= extractPlanet(news);
+				 defeatedPlanets.put(playerName, planetCoords);				
+				 families.add(news.group(6));
+			 }
+		
+		   for (String key : defeatedPlanets.keySet())
+		    {
+		        for (String value : defeatedPlanets.get(key))
+		        {
+		            //System.out.printf("%s %s\n", key, value);
+		        }
+		        System.out.println(defeatedPlanets.get(key).size() +" planet(s) lost by "+ key );
+		    }
+		   System.out.println("-------------------");
+		   System.out.println(defeatedPlanets.size() +" planet(s) have been lost.");
+		   System.out.println("-------------------");
+		   countFrequencies(families, "to");
+	}
+	
+	public static void openRetakes() {
+		Multimap<String, String> defeatedPlanets = ArrayListMultimap.create();
+		ArrayList<String> families = new ArrayList<String>();
+		
 		//SA	T-657		The forces of Blood Eagle took planet 12 in the 65,83 system from Shredder (6368).
 		Pattern planetPattern = Pattern.compile("(?s)EA"+turnRegex+"After a brave fight our family member "+playerNameRegex+" had to flee the planet"+planetRegex+" which was attacked by "+playerNameRegex+" of family (\\d+)+.");
 		Matcher news = planetPattern.matcher(famNews);
@@ -134,6 +174,7 @@ public class Main {
 		   countFrequencies(families, "to");
 	}
 	
+	
 	public static void planetScreenFormater(String planetScreen) {
 		int planetCount = 0;
 		Pattern planetPattern = Pattern.compile("(?s)(\\d+),(\\d+):(\\d+)	\\d+ ");
@@ -161,10 +202,11 @@ public class Main {
 	
 	private static String readLineByLineJava8(String filePath)
 	{
+		
 	    StringBuilder contentBuilder = new StringBuilder();
 	    try (Stream<String> stream = Files.lines( Paths.get(filePath), StandardCharsets.UTF_8))
 	    {
-	        stream.forEach(s -> contentBuilder.append(s).append("\n"));
+	    	stream.forEach(s -> contentBuilder.append(i++).append(" "+s).append("\n"));
 	    }
 	    catch (IOException e)
 	    {
@@ -172,6 +214,7 @@ public class Main {
 	    }
 	    return contentBuilder.toString();
 	}
+	
 	
 	public static void countFrequencies(ArrayList<String> families, String fromto) 
     { 
