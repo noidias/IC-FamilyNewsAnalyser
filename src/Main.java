@@ -27,18 +27,25 @@ public class Main {
 	static String famCouncilScreen = readFileLineByLine("famCouncil.txt");
 	
 	static int i = 0;
+	static ArrayList<NewsItem> newsArray = new ArrayList<NewsItem>();
+	static NewsItem nextLineOfNews;
 	
 	//Regex
 	static String playerNameRegex = "([\\w+\\s*\\w*]*)";
 	static String turnRegex = "[\\s]+T-\\d{1,4}[\\s]+";
 	static String planetRegex = " planet (\\d+) in the (\\d+),(\\d+) system";
+	static String lineRegx = "(\\d+) ";
+	
+	
+	
+	
 	
 	public static void main(String[] args) throws IOException {
 	
-	exploredPlanetSummary();
-	capturedPlanetSummary();
-	defeatedPlanetSummary();
-	openRetakes();
+	//exploredPlanetSummary();
+	//capturedPlanetSummary();
+	//defeatedPlanetSummary();
+		defeatedPlanetSummaryV2();
 
 	}		
 			
@@ -59,14 +66,7 @@ public class Main {
 				 exploredPlanets.put(playerName, planetCoords);				 			 
 			 }
 		
-		   for (String key : exploredPlanets.keySet())
-		    {
-		        for (String value : exploredPlanets.get(key))
-		        {
-		            //System.out.printf("%s %s\n", key, value);
-		        }
-		        System.out.println(exploredPlanets.get(key).size() +" planet(s) explored by "+ key );
-		    }
+		printSummary(exploredPlanets," planet(s) explored by ");
 		   System.out.println("-------------------");
 		   System.out.println(exploredPlanets.size() +" planet(s) have been explored.");
 	    }	
@@ -91,14 +91,8 @@ public class Main {
 				 families.add(news.group(6));
 			 }
 		
-		   for (String key : capturedPlanets.keySet())
-		    {
-		        for (String value : capturedPlanets.get(key))
-		        {
-		            //System.out.printf("%s %s\n", key, value);
-		        }
-		        System.out.println(capturedPlanets.get(key).size() +" planet(s) captured by "+ key );
-		    }
+		   printSummary(capturedPlanets," planet(s) captured by ");
+		   
 		   System.out.println("-------------------");
 		   System.out.println(capturedPlanets.size() +" planet(s) have been captured.");
 		   System.out.println("-------------------");
@@ -109,9 +103,7 @@ public class Main {
 		Multimap<String, String> defeatedPlanets = ArrayListMultimap.create();
 		ArrayList<String> families = new ArrayList<String>();
 		
-		//Pattern planetPattern = Pattern.compile("(?s)SA"+turnRegex+"The forces of "+playerNameRegex+" took"+planetRegex+" from "+playerNameRegex+" .(\\d+)+..");
-		
-		Pattern planetPattern = Pattern.compile("(?s)EA"+turnRegex+"After a brave fight our family member "+playerNameRegex+" had to flee the planet"+planetRegex+" which was attacked by "+playerNameRegex+" of family (\\d+)+.");
+		Pattern planetPattern = Pattern.compile("(?s)(EA"+turnRegex+"After a brave fight our family member "+playerNameRegex+" had to flee the planet"+planetRegex+" which was attacked by "+playerNameRegex+" of family (\\d+)+.");
 		Matcher news = planetPattern.matcher(famNews);
 		
 		System.out.println("-------------------\r\n" + 
@@ -124,54 +116,40 @@ public class Main {
 				 String planetCoords= extractPlanet(news);
 				 defeatedPlanets.put(playerName, planetCoords);				
 				 families.add(news.group(6));
-			 }
-		
-		   for (String key : defeatedPlanets.keySet())
-		    {
-		        for (String value : defeatedPlanets.get(key))
-		        {
-		            //System.out.printf("%s %s\n", key, value);
-		        }
-		        System.out.println(defeatedPlanets.get(key).size() +" planet(s) lost by "+ key );
-		    }
+			 }		
+		   printSummary(defeatedPlanets," planet(s) lost by ");
 		   System.out.println("-------------------");
 		   System.out.println(defeatedPlanets.size() +" planet(s) have been lost.");
 		   System.out.println("-------------------");
 		   countFrequencies(families, "to");
 	}
 	
-	public static void openRetakes() {
-		Multimap<String, String> defeatedPlanets = ArrayListMultimap.create();
-		ArrayList<String> families = new ArrayList<String>();
+	public static void defeatedPlanetSummaryV2() {
 		
-		//SA	T-657		The forces of Blood Eagle took planet 12 in the 65,83 system from Shredder (6368).
-		Pattern planetPattern = Pattern.compile("(?s)EA"+turnRegex+"After a brave fight our family member "+playerNameRegex+" had to flee the planet"+planetRegex+" which was attacked by "+playerNameRegex+" of family (\\d+)+.");
+		Pattern planetPattern = Pattern.compile("(?s)(\\d+) (\\w+)[\\s]+T-(\\d{1,4})[\\s]+After a brave fight our family member "+playerNameRegex+" had to flee the planet"+planetRegex+" which was attacked by "+playerNameRegex+" of family (\\d+)+.");
 		Matcher news = planetPattern.matcher(famNews);
-		
 		System.out.println("-------------------\r\n" + 
 				"-   DEFEATS       -\r\n" + 
 				"-------------------");
-
-		while (news.find())	{
-				
-				 String playerName = news.group(1);	 
-				 String planetCoords= extractPlanet(news);
-				 defeatedPlanets.put(playerName, planetCoords);				
-				 families.add(news.group(6));
-			 }
 		
-		   for (String key : defeatedPlanets.keySet())
-		    {
-		        for (String value : defeatedPlanets.get(key))
-		        {
-		            //System.out.printf("%s %s\n", key, value);
-		        }
-		        System.out.println(defeatedPlanets.get(key).size() +" planet(s) lost by "+ key );
-		    }
-		   System.out.println("-------------------");
-		   System.out.println(defeatedPlanets.size() +" planet(s) have been lost.");
-		   System.out.println("-------------------");
-		   countFrequencies(families, "to");
+		while (news.find())	{
+				 int line = Integer.parseInt(news.group(1));
+				 String event = news.group(2);
+				 int turn = Integer.parseInt(news.group(3));
+				 String player = news.group(4);
+				 
+				 int planetNo = Integer.parseInt(news.group(5));
+				 int planetX = Integer.parseInt(news.group(6));
+				 int planetY = Integer.parseInt(news.group(7));
+				 String planetCoords = (planetX+","+planetY+":"+planetNo);
+				 String enemy = news.group(8);
+				 String family = news.group(9);
+				 nextLineOfNews = new  NewsItem(line, event, turn, player, planetCoords,family,enemy);
+				 newsArray.add(nextLineOfNews);
+
+		}
+		nextLineOfNews.printSummaryByEvent("Defeats",newsArray);
+
 	}
 	
 	public static String extractPlanet(Matcher result) {		 
@@ -180,6 +158,19 @@ public class Main {
 		 int planetY = Integer.parseInt(result.group(4));
 		 String planetCoords = (planetX+","+planetY+":"+planetNo);	
 		 return planetCoords;
+	}
+	
+	public static void printSummary(Multimap<String, String> multimap, String text)
+	{
+		 for (String key : multimap.keySet())
+		    {
+		        for (String value : multimap.get(key))
+		        {
+		        	//code if want list of planets
+		            //System.out.printf("%s %s\n", key, value);
+		        }
+		        System.out.println(multimap.get(key).size() +text+ key );
+		    }
 	}
 	
 	private static String readFileLineByLine(String filePath)
