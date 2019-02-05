@@ -1,3 +1,4 @@
+import java.awt.List;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -128,4 +129,76 @@ public class NewsItem {
 		}
 	}
 
+	
+	public static void openRetakes() {
+		int i = maxLineNumber();
+		ArrayList<String> retakeList = new ArrayList<String>();
+		Boolean match = false;
+		for (NewsItem newsItemi : newsArray) {
+			
+			String currentPlanet = newsItemi.planetCoords;
+			int currentLine = newsItemi.lineNumber;
+			
+			//System.out.println("line i " + currentLine);
+			
+			
+			if (newsItemi.newsEvent.equals("EA")) {
+				
+				//System.out.println("defeat Line Number " + currentLine + " " + currentPlanet);
+				
+				for (NewsItem newsItemj : newsArray) {
+					//System.out.println("line j " + newsItemj.lineNumber);
+					if (newsItemj.newsEvent.equals("SA") && newsItemj.planetCoords.equals(currentPlanet)
+							&& newsItemj.lineNumber < currentLine) {
+						
+						//System.out.println("retake " + newsItemj.lineNumber + " "  + newsItemj.planetCoords);
+						match = true;
+					}
+
+				}
+				if (match) {
+					//System.out.println("retake ");
+				}		
+				else {
+					retakeList.add(currentPlanet);
+					//System.out.println("open retake " + newsItemi.lineNumber + " " + currentPlanet);
+				}
+				match = false;
+
+			}
+		}
+		int k = 0;
+		System.out.println("--------------------\r\n" + 
+				"-   OPEN RETAKES   -\r\n" + 
+				"--------------------");
+		for (String planet : retakeList) {
+			System.out.println(retakeList.get(k));
+			k++;
+		}
+			
+		//logic to find open retakes
+		//get max row number
+		//first find planet lost add to retake list
+		//check rest of file for retake remove from retake list if id is lower
+		//check next planet lost
+		
+		//optiopns to create a new array storing planet, tick
+		//or jsut record line number and print from main listarray
+	}
+	
+	public static int maxLineNumber() {
+		int maxLine = 0;
+		int currentLine = 0;
+		for (NewsItem newsItem : newsArray) {
+			currentLine = newsItem.lineNumber;
+			if (currentLine > maxLine) {
+				maxLine = newsItem.lineNumber;
+			}
+		}
+		return maxLine;
+	}
+	
+	
+	
+	
 }
