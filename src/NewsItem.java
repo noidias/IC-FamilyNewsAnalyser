@@ -35,14 +35,17 @@ public class NewsItem {
 		ArrayList<String> families = new ArrayList<String>();
 		ArrayList<String> players = new ArrayList<String>();
 		switch(event) {
-		   case "Defeats" :
+		   case "EA" :
 			   for (NewsItem newsItem : newsArray) {
 				   if (newsItem.newsEvent.equals("EA")) {
 					   families.add(newsItem.enemyFam);
 					   players.add(newsItem.famMember);
 				   }
 			   }
-			   countFrequencies(players, "lost by");
+			   System.out.println("-------------------\r\n" + 
+						"-   DEFEATS       -\r\n" + 
+						"-------------------");
+			   countFrequencies(players, "planet(s) lost by");
 			   System.out.println("-------------------");
 			   countFrequencies(families, "to");
 			   System.out.println("-------------------");

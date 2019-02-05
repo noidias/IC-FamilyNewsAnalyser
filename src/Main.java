@@ -44,7 +44,7 @@ public class Main {
 	
 	//exploredPlanetSummary();
 	//capturedPlanetSummary();
-	//defeatedPlanetSummary();
+	defeatedPlanetSummary();
 		defeatedPlanetSummaryV2();
 
 	}		
@@ -103,7 +103,7 @@ public class Main {
 		Multimap<String, String> defeatedPlanets = ArrayListMultimap.create();
 		ArrayList<String> families = new ArrayList<String>();
 		
-		Pattern planetPattern = Pattern.compile("(?s)(EA"+turnRegex+"After a brave fight our family member "+playerNameRegex+" had to flee the planet"+planetRegex+" which was attacked by "+playerNameRegex+" of family (\\d+)+.");
+		Pattern planetPattern = Pattern.compile("(?s)EA"+turnRegex+"After a brave fight our family member "+playerNameRegex+" had to flee the planet"+planetRegex+" which was attacked by "+playerNameRegex+" of family (\\d+)+.");
 		Matcher news = planetPattern.matcher(famNews);
 		
 		System.out.println("-------------------\r\n" + 
@@ -126,11 +126,9 @@ public class Main {
 	
 	public static void defeatedPlanetSummaryV2() {
 		
-		Pattern planetPattern = Pattern.compile("(?s)(\\d+) (\\w+)[\\s]+T-(\\d{1,4})[\\s]+After a brave fight our family member "+playerNameRegex+" had to flee the planet"+planetRegex+" which was attacked by "+playerNameRegex+" of family (\\d+)+.");
+		Pattern planetPattern = Pattern.compile("(?s)"+lineRegx+"(\\w+)[\\s]+T-(\\d{1,4})[\\s]+After a brave fight our family member "+playerNameRegex+" had to flee the planet"+planetRegex+" which was attacked by "+playerNameRegex+" of family (\\d+)+.");
 		Matcher news = planetPattern.matcher(famNews);
-		System.out.println("-------------------\r\n" + 
-				"-   DEFEATS       -\r\n" + 
-				"-------------------");
+
 		
 		while (news.find())	{
 				 int line = Integer.parseInt(news.group(1));
@@ -148,7 +146,7 @@ public class Main {
 				 newsArray.add(nextLineOfNews);
 
 		}
-		nextLineOfNews.printSummaryByEvent("Defeats",newsArray);
+		nextLineOfNews.printSummaryByEvent("EA",newsArray);
 
 	}
 	
