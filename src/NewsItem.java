@@ -129,7 +129,7 @@ public class NewsItem {
 		}
 	}
 
-	
+	//TODO remove blown planets after adding
 	public static void openRetakes() {
 		int i = maxLineNumber();
 		ArrayList<String> retakeList = new ArrayList<String>();
@@ -175,15 +175,10 @@ public class NewsItem {
 			System.out.println(retakeList.get(k));
 			k++;
 		}
+		System.out.println("-------------------");
+		System.out.println(retakeList.size() + " planet(s) missing in action");
 			
-		//logic to find open retakes
-		//get max row number
-		//first find planet lost add to retake list
-		//check rest of file for retake remove from retake list if id is lower
-		//check next planet lost
-		
-		//optiopns to create a new array storing planet, tick
-		//or jsut record line number and print from main listarray
+
 	}
 	
 	public static int maxLineNumber() {
