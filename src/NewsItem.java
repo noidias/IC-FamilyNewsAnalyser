@@ -1,11 +1,13 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import com.google.common.collect.Multimap;
 
 public class NewsItem {
-	
+
 	private String planetCoords;
 	private String famMember;
 	private String enemyFam;
@@ -14,8 +16,11 @@ public class NewsItem {
 	private int lineNumber;
 	private String enemyPlayer;
 	
-	public NewsItem(int line, String event,int turn, String player, String coords, String family, String enemy ) {
-	
+	private static NewsItem nextLineOfNews;
+	static ArrayList<NewsItem> newsArray = new ArrayList<NewsItem>();
+
+	public NewsItem(int line, String event, int turn, String player, String coords, String family, String enemy) {
+
 		planetCoords = coords;
 		famMember = player;
 		enemyFam = family;
@@ -24,62 +29,103 @@ public class NewsItem {
 		lineNumber = line;
 		enemyPlayer = enemy;
 	}
-	
-	public void printArray(ArrayList<NewsItem> newsArray) {
+
+	public static void printArray(ArrayList<NewsItem> newsArray) {
 		for (NewsItem newsItem : newsArray) {
-			System.out.println(newsItem.lineNumber+" "+newsItem.newsEvent+" "+newsItem.turnOccurred+" "+newsItem.famMember+" "+newsItem.planetCoords+" "+newsItem.enemyFam+" "+newsItem.enemyPlayer);
+			System.out.println(newsItem.lineNumber + " " + newsItem.newsEvent + " " + newsItem.turnOccurred + " "
+					+ newsItem.famMember + " " + newsItem.planetCoords + " " + newsItem.enemyFam + " "
+					+ newsItem.enemyPlayer);
 		}
 	}
-	
-	public void printSummaryByEvent(String event, ArrayList<NewsItem> newsArray) {
+
+	public static ArrayList<NewsItem> extractAttackDefenceData(Pattern planetPattern, String famNews) {
+		Matcher news = planetPattern.matcher(famNews);
+		while (news.find()) {
+			int line = Integer.parseInt(news.group(1));
+			String event = news.group(2);
+			int turn = Integer.parseInt(news.group(3));
+			String player = news.group(4);
+
+			int planetNo = Integer.parseInt(news.group(5));
+			int planetX = Integer.parseInt(news.group(6));
+			int planetY = Integer.parseInt(news.group(7));
+			String planetCoords = (planetX + "," + planetY + ":" + planetNo);
+			String enemy = news.group(8);
+			String family = news.group(9);
+			nextLineOfNews = new NewsItem(line, event, turn, player, planetCoords, family, enemy);
+			newsArray.add(nextLineOfNews);
+		}
+		return newsArray;
+	}
+
+	public static void printSummaryByEvent(String event) {
 		ArrayList<String> families = new ArrayList<String>();
 		ArrayList<String> players = new ArrayList<String>();
-		switch(event) {
-		   case "EA" :
-			   for (NewsItem newsItem : newsArray) {
-				   if (newsItem.newsEvent.equals("EA")) {
-					   families.add(newsItem.enemyFam);
-					   players.add(newsItem.famMember);
-				   }
-			   }
-			   System.out.println("-------------------\r\n" + 
-						"-   DEFEATS       -\r\n" + 
-						"-------------------");
-			   countFrequencies(players, "planet(s) lost by");
-			   System.out.println("-------------------");
-			   countFrequencies(families, "to");
-			   System.out.println("-------------------");
-			   System.out.println(players.size() +" planet(s) have been lost.");
-			   
-		      break; 
-		   
-		   case "Captures" :
-		      // Statements
-		      break; 
-		   
-		   default : // explored
-		      // Statements
+		switch (event) {
 		
+		case "E":
+			for (NewsItem newsItem : newsArray) {
+				if (newsItem.newsEvent.equals("E")) {
+					players.add(newsItem.famMember);
+				}
+			}
+			System.out.println("-------------------\r\n" + "-    EXPLORATION     -\r\n" + "-------------------");
+			countFrequencies(players, " planet(s) explored by ");
+			System.out.println("-------------------");
+			System.out.println(players.size() + " planet(s) have been explored.");
+		   			
+			break;
 		
-			   }
+		case "EA":
+			for (NewsItem newsItem : newsArray) {
+				if (newsItem.newsEvent.equals("EA")) {
+					families.add(newsItem.enemyFam);
+					players.add(newsItem.famMember);
+				}
+			}
+			System.out.println("-------------------\r\n" + "-   DEFEATS       -\r\n" + "-------------------");
+			countFrequencies(players, "planet(s) lost by");
+			System.out.println("-------------------");
+			countFrequencies(families, "to");
+			System.out.println("-------------------");
+			System.out.println(players.size() + " planet(s) have been lost.");
+
+			break;
+
+		case "SA":
+			for (NewsItem newsItem : newsArray) {
+				if (newsItem.newsEvent.equals("SA")) {
+					families.add(newsItem.enemyFam);
+					players.add(newsItem.famMember);
+				}
+			}
+			System.out.println("-------------------\r\n" + "-   CAPTURES       -\r\n" + "-------------------");
+			countFrequencies(players, "planet(s) captured by");
+			System.out.println("-------------------");
+			countFrequencies(families, "from");
+			System.out.println("-------------------");
+			System.out.println(players.size() + " planet(s) have been captured.");
+			break;
+
+		default: // explored
+			// Statements
+
 		}
-		
-		public static void countFrequencies(ArrayList<String> families, String text) 
-			    { 
-			        Map<String, Integer> hm = new HashMap<String, Integer>(); 
-			  
-			        for (String i : families) { 
-			            Integer j = hm.get(i); 
-			            hm.put(i, (j == null) ? 1 : j + 1); 
-			        } 
-			  
-			        // displaying the occurrence of elements in the arraylist 
-			        for (Map.Entry<String, Integer> val : hm.entrySet()) {
-			        	
-			            System.out.println(val.getValue() + " "
-			                               + text+" "
-			                               +"#"+ val.getKey()); 
-			        } 
-			    } 
-		
+	}
+
+	public static void countFrequencies(ArrayList<String> families, String text) {
+		Map<String, Integer> hm = new HashMap<String, Integer>();
+
+		for (String i : families) {
+			Integer j = hm.get(i);
+			hm.put(i, (j == null) ? 1 : j + 1);
+		}
+
+		// displaying the occurrence of elements in the arraylist
+		for (Map.Entry<String, Integer> val : hm.entrySet()) {
+
+			System.out.println(val.getValue() + " " + text + " " + "#" + val.getKey());
+		}
+	}
+
 }

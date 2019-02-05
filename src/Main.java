@@ -27,26 +27,36 @@ public class Main {
 	static String famCouncilScreen = readFileLineByLine("famCouncil.txt");
 	
 	static int i = 0;
-	static ArrayList<NewsItem> newsArray = new ArrayList<NewsItem>();
-	static NewsItem nextLineOfNews;
 	
 	//Regex
 	static String playerNameRegex = "([\\w+\\s*\\w*]*)";
 	static String turnRegex = "[\\s]+T-\\d{1,4}[\\s]+";
 	static String planetRegex = " planet (\\d+) in the (\\d+),(\\d+) system";
 	static String lineRegx = "(\\d+) ";
-	
+	static String eventTick = "(\\w+)[\\s]+T-(\\d{1,4})[\\s]+";
 	
 	
 	
 	
 	public static void main(String[] args) throws IOException {
+		
+	//Pattern planetPattern = Pattern.compile("(?s)E	T-\\d{1,4}		([\\w+\\s*\\w*]*) explored planet (\\d+) in the (\\d+),(\\d+) system.");
+	Pattern explorePattern = Pattern.compile("(?s)"+lineRegx+eventTick+playerNameRegex+" explored"+planetRegex+"()()");		
+	Pattern capturePattern = Pattern.compile("(?s)"+lineRegx+eventTick+"The forces of "+playerNameRegex+" took"+planetRegex+" from "+playerNameRegex+" .(\\d+)+..");	
+	Pattern defeatPattern = Pattern.compile("(?s)"+lineRegx+eventTick+"After a brave fight our family member "+playerNameRegex+" had to flee the planet"+planetRegex+" which was attacked by "+playerNameRegex+" of family (\\d+)+.");
 	
-	//exploredPlanetSummary();
-	//capturedPlanetSummary();
-	defeatedPlanetSummary();
-		defeatedPlanetSummaryV2();
-
+	//explored
+	NewsItem.extractAttackDefenceData(explorePattern, famNews);
+	NewsItem.printSummaryByEvent("E");
+	
+	//Capture
+	ArrayList<NewsItem> newsArray = NewsItem.extractAttackDefenceData(capturePattern, famNews);
+	NewsItem.printSummaryByEvent("SA");
+	
+	//Defeat
+	newsArray = NewsItem.extractAttackDefenceData(defeatPattern, famNews);
+	NewsItem.printSummaryByEvent("EA");
+	NewsItem.printArray(newsArray);
 	}		
 			
 	public static void exploredPlanetSummary() {
@@ -71,84 +81,6 @@ public class Main {
 		   System.out.println(exploredPlanets.size() +" planet(s) have been explored.");
 	    }	
 	
-	public static void capturedPlanetSummary() {
-		Multimap<String, String> capturedPlanets = ArrayListMultimap.create();
-		ArrayList<String> families = new ArrayList<String>();
-		
-		//SA	T-657		The forces of Blood Eagle took planet 12 in the 65,83 system from Shredder (6368).
-		Pattern planetPattern = Pattern.compile("(?s)SA"+turnRegex+"The forces of "+playerNameRegex+" took"+planetRegex+" from "+playerNameRegex+" .(\\d+)+..");
-		Matcher news = planetPattern.matcher(famNews);
-		
-		System.out.println("-------------------\r\n" + 
-				"-   CAPTURES      -\r\n" + 
-				"-------------------");
-
-		while (news.find())	{
-				
-				 String playerName = news.group(1);	 
-				 String planetCoords= extractPlanet(news);
-				 capturedPlanets.put(playerName, planetCoords);				
-				 families.add(news.group(6));
-			 }
-		
-		   printSummary(capturedPlanets," planet(s) captured by ");
-		   
-		   System.out.println("-------------------");
-		   System.out.println(capturedPlanets.size() +" planet(s) have been captured.");
-		   System.out.println("-------------------");
-		   countFrequencies(families, "from");
-	    }
-	
-	public static void defeatedPlanetSummary() {
-		Multimap<String, String> defeatedPlanets = ArrayListMultimap.create();
-		ArrayList<String> families = new ArrayList<String>();
-		
-		Pattern planetPattern = Pattern.compile("(?s)EA"+turnRegex+"After a brave fight our family member "+playerNameRegex+" had to flee the planet"+planetRegex+" which was attacked by "+playerNameRegex+" of family (\\d+)+.");
-		Matcher news = planetPattern.matcher(famNews);
-		
-		System.out.println("-------------------\r\n" + 
-				"-   DEFEATS       -\r\n" + 
-				"-------------------");
-
-		while (news.find())	{
-				
-				 String playerName = news.group(1);	 
-				 String planetCoords= extractPlanet(news);
-				 defeatedPlanets.put(playerName, planetCoords);				
-				 families.add(news.group(6));
-			 }		
-		   printSummary(defeatedPlanets," planet(s) lost by ");
-		   System.out.println("-------------------");
-		   System.out.println(defeatedPlanets.size() +" planet(s) have been lost.");
-		   System.out.println("-------------------");
-		   countFrequencies(families, "to");
-	}
-	
-	public static void defeatedPlanetSummaryV2() {
-		
-		Pattern planetPattern = Pattern.compile("(?s)"+lineRegx+"(\\w+)[\\s]+T-(\\d{1,4})[\\s]+After a brave fight our family member "+playerNameRegex+" had to flee the planet"+planetRegex+" which was attacked by "+playerNameRegex+" of family (\\d+)+.");
-		Matcher news = planetPattern.matcher(famNews);
-
-		
-		while (news.find())	{
-				 int line = Integer.parseInt(news.group(1));
-				 String event = news.group(2);
-				 int turn = Integer.parseInt(news.group(3));
-				 String player = news.group(4);
-				 
-				 int planetNo = Integer.parseInt(news.group(5));
-				 int planetX = Integer.parseInt(news.group(6));
-				 int planetY = Integer.parseInt(news.group(7));
-				 String planetCoords = (planetX+","+planetY+":"+planetNo);
-				 String enemy = news.group(8);
-				 String family = news.group(9);
-				 nextLineOfNews = new  NewsItem(line, event, turn, player, planetCoords,family,enemy);
-				 newsArray.add(nextLineOfNews);
-
-		}
-		nextLineOfNews.printSummaryByEvent("EA",newsArray);
-
-	}
 	
 	public static String extractPlanet(Matcher result) {		 
 		 int planetNo = Integer.parseInt(result.group(2));
