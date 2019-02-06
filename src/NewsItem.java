@@ -1,13 +1,14 @@
-import java.awt.List;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.google.common.collect.Multimap;
 
-public class NewsItem {
+public class NewsItem implements Comparable<NewsItem> {
 
 	private String planetCoords;
 	private String famMember;
@@ -20,16 +21,71 @@ public class NewsItem {
 	private static NewsItem nextLineOfNews;
 	static ArrayList<NewsItem> newsArray = new ArrayList<NewsItem>();
 
-	public NewsItem(int line, String event, int turn, String player, String coords, String family, String enemy) {
-
-		planetCoords = coords;
-		famMember = player;
-		enemyFam = family;
-		newsEvent = event;
-		turnOccurred = turn;
-		lineNumber = line;
-		enemyPlayer = enemy;
+	public NewsItem(int lineNumber, String newsEvent, int turnOccurred, String famMember, String planetCoords, String enemyFam, String enemyPlayer) {
+		super();
+		this.planetCoords = planetCoords;
+		this.famMember = famMember;
+		this.enemyFam = enemyFam;
+		this.newsEvent = newsEvent;
+		this.turnOccurred = turnOccurred;
+		this.lineNumber = lineNumber;
+		this.enemyPlayer = enemyPlayer;
 	}
+		
+	public String getFamMember() {
+		return famMember;
+	}
+	public void setFamMember(String famMember) {
+		this.famMember = famMember;
+	}
+	public String getPlanetCoords() {
+		return planetCoords;
+	}
+	public void setNewsItem(String planetCoords) {
+		this.planetCoords = planetCoords;
+	}
+	public String getEnemyFam() {
+		return enemyFam;
+	}
+	public void setEnemyFam(String enemyFam) {
+		this.enemyFam = enemyFam;
+	}
+	public String getNewsEvent() {
+		return newsEvent;
+	}
+	public void setNewsEvent(String newsEvent) {
+		this.newsEvent = newsEvent;
+	}
+	public int getTurnOccurred() {
+		return turnOccurred;
+	}
+	public void setTurnOccurred(int turnOccurred) {
+		this.turnOccurred = turnOccurred;
+	}
+	public int getLineNumber() {
+		return lineNumber;
+	}
+	public void setLineNumber(int lineNumber) {
+		this.lineNumber = lineNumber;
+	}
+	public String getenemyPlayer() {
+		return enemyPlayer;
+	}
+	public void setEnemyPlayer(String enemyPlayer) {
+		this.enemyPlayer = enemyPlayer;
+	}
+	
+	public int compareTo(NewsItem compareLine) {
+		
+		int compareQuantity = ((NewsItem) compareLine).getLineNumber(); 
+		
+		//ascending order
+		return this.lineNumber - compareQuantity;
+		//descending order
+		//return compareQuantity - this.lineNumber;
+	}
+	
+	
 
 	public static void printArray(ArrayList<NewsItem> newsArray) {
 		for (NewsItem newsItem : newsArray) {
@@ -56,12 +112,24 @@ public class NewsItem {
 			nextLineOfNews = new NewsItem(line, event, turn, player, planetCoords, family, enemy);
 			newsArray.add(nextLineOfNews);
 		}
+		
 		return newsArray;
 	}
 
 	public static void printSummaryByEvent(String event) {
 		ArrayList<String> families = new ArrayList<String>();
 		ArrayList<String> players = new ArrayList<String>();
+
+		Collections.sort(newsArray);
+
+		
+		int i=0;
+		for(NewsItem temp: newsArray){
+		   System.out.println("line: " + temp.getLineNumber() + 
+			", turn : " + temp.getTurnOccurred());
+		}
+		
+		
 		switch (event) {
 		
 		case "E":
