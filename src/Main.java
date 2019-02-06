@@ -45,15 +45,15 @@ public class Main {
 	Pattern defeatPattern = Pattern.compile("(?s)"+lineRegx+eventTick+"After a brave fight our family member "+playerNameRegex+" had to flee the planet"+planetRegex+" which was attacked by "+playerNameRegex+" of family (\\d+)+.");
 	
 	//explored
-	NewsItem.extractAttackDefenceData(explorePattern, famNews);
+	NewsItem.extractData(explorePattern, famNews);
 	NewsItem.printSummaryByEvent("E");
 	
 	//Capture
-	ArrayList<NewsItem> newsArray = NewsItem.extractAttackDefenceData(capturePattern, famNews);
+	ArrayList<NewsItem> newsArray = NewsItem.extractData(capturePattern, famNews);
 	NewsItem.printSummaryByEvent("SA");
 	
 	//Defeat
-	newsArray = NewsItem.extractAttackDefenceData(defeatPattern, famNews);
+	newsArray = NewsItem.extractData(defeatPattern, famNews);
 	NewsItem.printSummaryByEvent("EA");
 	//NewsItem.printArray(newsArray);
 	

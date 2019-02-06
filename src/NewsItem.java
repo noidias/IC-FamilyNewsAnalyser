@@ -95,7 +95,7 @@ public class NewsItem implements Comparable<NewsItem> {
 		}
 	}
 
-	public static ArrayList<NewsItem> extractAttackDefenceData(Pattern planetPattern, String famNews) {
+	public static ArrayList<NewsItem> extractData(Pattern planetPattern, String famNews) {
 		Matcher news = planetPattern.matcher(famNews);
 		while (news.find()) {
 			int line = Integer.parseInt(news.group(1));
@@ -122,13 +122,13 @@ public class NewsItem implements Comparable<NewsItem> {
 
 		Collections.sort(newsArray);
 
-		
+		/*
 		int i=0;
 		for(NewsItem temp: newsArray){
 		   System.out.println("line: " + temp.getLineNumber() + 
 			", turn : " + temp.getTurnOccurred());
 		}
-		
+		*/
 		
 		switch (event) {
 		
@@ -182,6 +182,23 @@ public class NewsItem implements Comparable<NewsItem> {
 		}
 	}
 
+	//TODO replace previous method
+	public static void countFrequenciesObject(ArrayList<NewsItem> newsArray, String text) {
+		Map<String, Integer> hm = new HashMap<String, Integer>();
+
+		for (NewsItem i : newsArray) {
+			Integer j = hm.get(i.famMember);
+			hm.put(i.famMember, (j == null) ? 1 : j + 1);
+		}
+
+		// displaying the occurrence of elements in the arraylist
+		for (Map.Entry<String, Integer> val : hm.entrySet()) {
+
+			System.out.println(val.getValue() + " " + text + " " + "#" + val.getKey());
+		}
+	}
+	
+	
 	public static void countFrequencies(ArrayList<String> families, String text) {
 		Map<String, Integer> hm = new HashMap<String, Integer>();
 
