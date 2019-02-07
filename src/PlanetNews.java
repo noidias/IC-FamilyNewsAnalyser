@@ -4,14 +4,22 @@ public class PlanetNews  extends News implements Comparable<PlanetNews> {
 
 	private String enemyFam;
 	private String enemyPlayer;
+	protected String planetCoords;
 
 	public PlanetNews(int lineNumber, String newsEvent, int turnOccurred, String famMember, String planetCoords, String enemyFam, String enemyPlayer) {
-		super(lineNumber, newsEvent, turnOccurred, famMember, planetCoords);
+		super(lineNumber, newsEvent, turnOccurred, famMember);
 		this.enemyFam = enemyFam;
 		this.enemyPlayer = enemyPlayer;
+		this.planetCoords = planetCoords;
 	}
 	
 	//get set
+	public String getPlanetCoords() {
+		return planetCoords;
+	}
+	public void setNewsItem(String planetCoords) {
+		this.planetCoords = planetCoords;
+	}
 	public String getEnemyFam() {
 		return enemyFam;
 	}
