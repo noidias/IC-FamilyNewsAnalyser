@@ -1,12 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 
 public class NewsItem implements Comparable<NewsItem> {
 
@@ -28,7 +20,6 @@ public class NewsItem implements Comparable<NewsItem> {
 		this.lineNumber = lineNumber;
 		this.enemyPlayer = enemyPlayer;
 	}
-
 	
 	//get set
 	public String getFamMember() {
@@ -79,9 +70,17 @@ public class NewsItem implements Comparable<NewsItem> {
 		int compareQuantity = ((NewsItem) compareLine).getLineNumber(); 
 		
 		//ascending order
-		return this.lineNumber - compareQuantity;
+		//return this.lineNumber - compareQuantity;
 		//descending order
-		//return compareQuantity - this.lineNumber;
+		return compareQuantity - this.lineNumber;
+	}
+	
+	public void printArray(ArrayList<NewsItem> newsArray) {
+		for (NewsItem newsItem : newsArray) {
+			System.out.println(newsItem.getLineNumber() + " " + newsItem.getNewsEvent() + " " + newsItem.getTurnOccurred() + " "
+					+ newsItem.getFamMember() + " " + newsItem.getPlanetCoords() + " " + newsItem.getEnemyFam()+ " "
+					+ newsItem.getenemyPlayer());
+		}
 	}
 	
 	
