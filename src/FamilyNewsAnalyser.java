@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 
 public class FamilyNewsAnalyser {
 	//input file
-	static String famNews = readFileLineByLine("famNews3.txt");
+	static String famNews = readFileLineByLine("famNewsCash.txt");
 	static int i = 0;
 	//Regex for extracting data
 	static String playerNameRegex = "([\\w+\\s*\\w*]*)";
@@ -39,38 +39,51 @@ public class FamilyNewsAnalyser {
 		
 		//explored
 		exploreArray = extractData(explorePattern, famNews);
-		printSummary(exploreArray, "Explored");
+		printSummaryPlanets(exploreArray, "Explored");
 		
 		//Capture
 		captureArray = extractData(capturePattern, famNews);
-		printSummary(captureArray, "Captures");
+		printSummaryPlanets(captureArray, "Captures");
 		
 		//blow ups
 		blownArray =extractDataBlown(blownSAPattern, famNews);
-		printSummary(blownArray, "blow up");
+		printSummaryPlanets(blownArray, "blow up");
 		
 		//Defeat
 		defeatsArray = extractData(defeatPattern, famNews);
-		printSummary(defeatsArray, "Defeats");
+		printSummaryPlanets(defeatsArray, "Defeats");
 		
 		if (blownArray != null)
 			captureArray.addAll( blownArray );
 
 		retakesArray = findOpenRetakes(captureArray, defeatsArray);
 		Collections.sort(retakesArray);
-		printSummary(retakesArray, "missing");
+		printSummaryPlanets(retakesArray, "missing");
 		printOpenRetakes(retakesArray);
 		
 	}
 	
 	//todo
 	public static void reportAidSections() {
-		ArrayList<AidNews> aidArray = new ArrayList<AidNews>();
+		ArrayList<AidNews> aidArray1 = new ArrayList<AidNews>();
+		ArrayList<AidNews> aidArray2 = new ArrayList<AidNews>();
 		
 		//A	T-690		In the name of family cooperation TIF has sent a shipment of 20000000 Cash to Blood Eagle.
-		Pattern aidPattern = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation  "+playerNameRegex+"has sent a shipment of (\\d+) (\\w+) to "+playerNameRegex+".");	
-		aidArray = extractAid(aidPattern, famNews);
-		//printSummaryAid(aidArray, "aid");
+		//A	T-667		In the name of family cooperation TIF has sent a shipment of 4019148 Cash 263956 Octarine to Biscuit.
+		//A	T-666		In the name of family cooperation Who has sent a shipment of 10608984 Food 217158 Iron 67233 Octarine 85800 Endurium to TIF.
+		//A	T-643		In the name of family cooperation TIF has sent a shipment of 15077245 Cash 12495581 Iron 8776 Octarine to Biscuit.
+		
+		Pattern aidPattern1 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+"has sent a shipment of (\\d+) (\\w+) to "+playerNameRegex+".");
+		Pattern aidPattern2 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+"has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
+		Pattern aidPattern3 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+"has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
+		Pattern aidPattern4 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+"has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
+		Pattern aidPattern5 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+"has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
+		aidArray1 = extractAid1(aidPattern1, famNews);
+		//aidArray.addAll(extractAid2(aidPattern2, famNews));
+		aidArray2 = extractAid2(aidPattern2, famNews);
+		aidArray1.addAll(aidArray2);
+		
+		printSummaryAid(aidArray1, "aid");
 	}
 
 	public static void printOpenRetakes(ArrayList<PlanetNews> retakesArray) {
@@ -106,23 +119,55 @@ public class FamilyNewsAnalyser {
 		return newsArray;
 	}
 	
-	public static ArrayList<AidNews> extractAid(Pattern aidPattern, String famNews) {
+	public static ArrayList<AidNews> extractAid1(Pattern aidPattern, String famNews) {
 		ArrayList<AidNews> newsArray = new ArrayList<AidNews>();
 		Matcher news = aidPattern.matcher(famNews);
 		while (news.find()) {
-			int line = Integer.parseInt(news.group(1));
-			String event = news.group(2);
-			int turn = Integer.parseInt(news.group(3));
-			String player = news.group(4);
-			int amount = Integer.parseInt(news.group(5));
-			String resource = news.group(6);
-			String receipient = news.group(6);
+			int line = getIntValue(news, 1);
+			String event = getStringValue(news, 2);
+			int turn = getIntValue(news, 3);
+			String player = getStringValue(news, 4);
+			int amount = getIntValue(news, 5);
+			String resource = getStringValue(news, 6);
+			String receipient = getStringValue(news, 7);
 			AidNews nextLineOfNews = new AidNews(line, event, turn, player, amount, resource, receipient);
 			newsArray.add(nextLineOfNews);
 		}
 		return newsArray;
 	}
+	
+	public static ArrayList<AidNews> extractAid2(Pattern aidPattern, String famNews) {
+		ArrayList<AidNews> newsArray = new ArrayList<AidNews>();
+		Matcher news = aidPattern.matcher(famNews);
+		while (news.find()) {
+			int line = getIntValue(news, 1);
+			String event = getStringValue(news, 2);
+			int turn = getIntValue(news, 3);
+			String player = getStringValue(news, 4);
+			int amount = getIntValue(news, 5);
+			String resource = getStringValue(news, 6);
+			int amount2 = getIntValue(news, 7);
+			String resource2 = getStringValue(news, 8);
+			String receipient = getStringValue(news, 9);
+			AidNews nextLineOfNews = new AidNews(line, event, turn, player, amount, resource, receipient);
+			newsArray.add(nextLineOfNews);
+			nextLineOfNews = new AidNews(line, event, turn, player, amount2, resource2, receipient);
+			newsArray.add(nextLineOfNews);
+		}
+		return newsArray;
+	}
+	
 
+	public static int getIntValue(Matcher news, int groupNumber) {
+		int value = Integer.parseInt(news.group(groupNumber));
+		return value;
+	}
+	
+	public static String getStringValue(Matcher news, int groupNumber) {
+		String value = news.group(groupNumber);
+		return value;
+	}
+	
 	public static ArrayList<PlanetNews> extractDataBlown(Pattern planetPattern, String famNews) {
 		ArrayList<PlanetNews> newsArray = new ArrayList<PlanetNews>();
 		Matcher news = planetPattern.matcher(famNews);
@@ -143,12 +188,18 @@ public class FamilyNewsAnalyser {
 		return newsArray;
 	}
 	
-	
-	public static void printSummary(ArrayList<PlanetNews> news, String text) {		
+	public static void printSummaryPlanets(ArrayList<PlanetNews> news, String text) {		
 		System.out.println("-------------------\r\n" + "-    "+text+"    -\r\n" + "-------------------");
-		countAndPrintFrequencies(news, " planet(s) "+text);
+		countAndPrintFrequenciesPlanets(news, " planet(s) "+text);
 		System.out.println("-------------------");
 		System.out.println(news.size() + " planet(s) "+text+".");
+	}
+	
+	public static void printSummaryAid(ArrayList<AidNews> news, String text) {		
+		System.out.println("-------------------\r\n" + "-    "+text+"    -\r\n" + "-------------------");
+		countAndPrintFrequenciesAid(news, " sent "+text);
+		System.out.println("-------------------");
+		System.out.println(news.size() + " sent "+text+".");
 	}
 
 	public static ArrayList<PlanetNews> findOpenRetakes(ArrayList<PlanetNews> captureArray, ArrayList<PlanetNews> defeatsArray) {
@@ -169,7 +220,7 @@ public class FamilyNewsAnalyser {
 		return retakesArray;
 	}	
 
-	public static void countAndPrintFrequencies(ArrayList<PlanetNews> newsArray, String text) {
+	public static void countAndPrintFrequenciesPlanets(ArrayList<PlanetNews> newsArray, String text) {
 		Map<String, Integer> hm = new HashMap<String, Integer>();
 
 		for (PlanetNews i : newsArray) {
@@ -178,6 +229,22 @@ public class FamilyNewsAnalyser {
 		}
 		// displaying the occurrence of elements in the arraylist
 		for (Map.Entry<String, Integer> val : hm.entrySet()) {
+			System.out.println(val.getValue() + " " + text + " " + "#" + val.getKey());
+		}
+	}
+	
+	public static void countAndPrintFrequenciesAid(ArrayList<AidNews> newsArray, String text) {
+		Map<String, Integer> cash = new HashMap<String, Integer>();
+		int cashAid = 0;
+		for (AidNews i : newsArray) {
+			if (i.getResource().equals("Cash")) {
+			Integer j = cash.get(i.getFamMember());
+			cashAid = cashAid + i.getAmount();
+			cash.put(i.getFamMember(), cashAid);
+			}
+		}
+		// displaying the occurrence of elements in the arraylist
+		for (Map.Entry<String, Integer> val : cash.entrySet()) {
 			System.out.println(val.getValue() + " " + text + " " + "#" + val.getKey());
 		}
 	}
