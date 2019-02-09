@@ -1,4 +1,13 @@
+import static java.util.stream.Collectors.*;
+
+import java.awt.List;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.Optional;
+import java.util.TreeMap;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class AidNews  extends News implements Comparable<AidNews> {
 
@@ -43,4 +52,20 @@ public class AidNews  extends News implements Comparable<AidNews> {
 		//descending order
 		return compareQuantity - this.lineNumber;
 	}
+	
+	
+	public static void sumAndPrintSentAid(ArrayList<AidNews> newsArray) {
+		ArrayList<List> summary = new ArrayList<List>();
+		List line = new List();
+		newsArray.stream().collect(groupingBy(Function.identity(),
+				  ()->new TreeMap<>(
+
+				    Comparator.<AidNews,String>comparing(aid->aid.famMember).thenComparing(aid->aid.resource)
+				  ), 
+				  Collectors.summingInt(aid->aid.amount)))
+				.forEach((group,targetCostSum) ->	
+					System.out.println(group.famMember+" sent "+targetCostSum+" "+group.resource));
+		
+	}
+	
 }
