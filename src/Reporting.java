@@ -31,8 +31,14 @@ public class Reporting {
 	}
 	
 	public static void printSummaryAid(ArrayList<AidNews> news, String text) {		
+		ArrayList<AidSummary> summary = new ArrayList<AidSummary>();
 		System.out.println("-------------------\r\n" + "-    "+text+"    -\r\n" + "-------------------");
-		AidNews.sumAndPrintSentAid(news);
+		summary = AidNews.sumSentAid(news);
+		
+//		Print aid summary, for loop read first name, print name and first resource and and amount, read next line 
+//		compare name if same add to same line
+	// if different add new line print name repeat
+		
 		System.out.println("-------------------");
 		System.out.println(news.size() + " sent "+text+".");
 	}

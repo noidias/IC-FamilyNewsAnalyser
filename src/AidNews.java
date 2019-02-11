@@ -14,6 +14,7 @@ public class AidNews  extends News implements Comparable<AidNews> {
 	private String resource;
 	private String receipient;
 	private int amount;
+	public static ArrayList<AidSummary> summaryAidSent = new ArrayList<AidSummary>();
 
 	public AidNews(int lineNumber, String newsEvent, int turnOccurred, String famMember, int amount, String resource, String receipient) {
 		super(lineNumber, newsEvent, turnOccurred, famMember);
@@ -54,9 +55,8 @@ public class AidNews  extends News implements Comparable<AidNews> {
 	}
 	
 	
-	public static void sumAndPrintSentAid(ArrayList<AidNews> newsArray) {
-		ArrayList<List> summary = new ArrayList<List>();
-		List line = new List();
+	public static ArrayList<AidSummary> sumSentAid(ArrayList<AidNews> newsArray) {
+	
 		newsArray.stream().collect(groupingBy(Function.identity(),
 				  ()->new TreeMap<>(
 
@@ -64,8 +64,9 @@ public class AidNews  extends News implements Comparable<AidNews> {
 				  ), 
 				  Collectors.summingInt(aid->aid.amount)))
 				.forEach((group,targetCostSum) ->	
-					System.out.println(group.famMember+" sent "+targetCostSum+" "+group.resource));
-		
+					//System.out.println(group.famMember+" sent "+targetCostSum+" "+group.resource));
+				summaryAidSent = AidSummary.addSummary(group.famMember,group.resource,targetCostSum));
+		return summaryAidSent;
 	}
 	
 }
