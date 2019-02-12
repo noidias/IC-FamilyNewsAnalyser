@@ -6,13 +6,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
 public class FamilyNewsAnalyser {
 	//input file
-	static String famNews = readFileLineByLine("famNewsCash.txt");
+	static String famNews = readFileLineByLine("famNews4.txt");
 	static int i = 0;
 	//Regex for extracting data
 	static String playerNameRegex = "([\\w+\\s*\\w*]*)";
@@ -36,6 +37,8 @@ public class FamilyNewsAnalyser {
 		Pattern capturePattern = Pattern.compile("(?s)"+lineRegx+eventTick+"The forces of "+playerNameRegex+" took"+planetRegex+" from "+playerNameRegex+" .(\\d+)+..");	
 		Pattern defeatPattern = Pattern.compile("(?s)"+lineRegx+eventTick+"After a brave fight our family member "+playerNameRegex+" had to flee the planet"+planetRegex+" which was attacked by "+playerNameRegex+" of family (\\d+)+.");
 		Pattern blownSAPattern = Pattern.compile("(?s)"+lineRegx+eventTick+playerNameRegex+" attacked "+playerNameRegex+" .(\\d+). on"+planetRegex+", and the heavy battle made the planet uninhabitable; an exploration ship will have to be sent there.");
+		//EA	T-907		An overwhelming force from Justin_Bieber, family 6362 attacked Biscuit's planet 1 in the 87,11 system. The defenders for Biscuit managed to set off a nuclear blast which made the planet uninhabitable.
+		Pattern blownEAPattern = Pattern.compile("(?s)"+lineRegx+eventTick+playerNameRegex+" attacked "+playerNameRegex+" .(\\d+). on"+planetRegex+", and the heavy battle made the planet uninhabitable; an exploration ship will have to be sent there.");
 		
 		//explored
 		exploreArray = ExtractData.extractPlanetData(explorePattern, famNews);
@@ -94,10 +97,11 @@ public class FamilyNewsAnalyser {
 	
 	private static String readFileLineByLine(String filePath)
 	{
+		AtomicInteger i = new AtomicInteger();
   	    StringBuilder contentBuilder = new StringBuilder();
 	    try (Stream<String> stream = Files.lines( Paths.get(filePath), StandardCharsets.UTF_8))
 	    {
-	    	stream.forEach(s -> contentBuilder.append(i++).append(" "+s).append("\n"));
+	    	stream.forEach(s -> contentBuilder.append(i.getAndIncrement()).append(" "+s).append("\n"));
 	    }
 	    catch (IOException e)
 	    {
