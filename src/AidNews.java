@@ -13,10 +13,11 @@ public class AidNews  extends News implements Comparable<AidNews> {
 
 	private String resource;
 	private String receipient;
-	private int amount;
+	private long amount;
 	public static ArrayList<AidSummary> summaryAidSent = new ArrayList<AidSummary>();
+	public static ArrayList<AidSummary> summaryAidReceived = new ArrayList<AidSummary>();
 
-	public AidNews(int lineNumber, String newsEvent, int turnOccurred, String famMember, int amount, String resource, String receipient) {
+	public AidNews(int lineNumber, String newsEvent, int turnOccurred, String famMember, long amount, String resource, String receipient) {
 		super(lineNumber, newsEvent, turnOccurred, famMember);
 		this.resource = resource;
 		this.receipient = receipient;
@@ -37,10 +38,10 @@ public class AidNews  extends News implements Comparable<AidNews> {
 		this.receipient = receipient;
 	}
 	
-	public int getAmount() {
+	public long getAmount() {
 		return amount;
 	}
-	public void setAmount(int amount) {
+	public void setAmount(long amount) {
 		this.amount = amount;
 	}
 	
@@ -62,11 +63,25 @@ public class AidNews  extends News implements Comparable<AidNews> {
 
 				    Comparator.<AidNews,String>comparing(aid->aid.famMember).thenComparing(aid->aid.resource)
 				  ), 
-				  Collectors.summingInt(aid->aid.amount)))
+				  Collectors.summingLong(aid->aid.amount)))
 				.forEach((group,targetCostSum) ->	
 					//System.out.println(group.famMember+" sent "+targetCostSum+" "+group.resource));
-				summaryAidSent = AidSummary.addSummary(group.famMember,group.resource,targetCostSum));
+				summaryAidSent = AidSummary.addSummary(group.famMember,group.resource,targetCostSum,summaryAidSent));
 		return summaryAidSent;
+	}
+	
+	public static ArrayList<AidSummary> sumAidReceived(ArrayList<AidNews> newsArray) {
+		
+		newsArray.stream().collect(groupingBy(Function.identity(),
+				  ()->new TreeMap<>(
+
+				    Comparator.<AidNews,String>comparing(aid->aid.receipient).thenComparing(aid->aid.resource)
+				  ), 
+				  Collectors.summingLong(aid->aid.amount)))
+				.forEach((group,targetCostSum) ->	
+					//System.out.println(group.famMember+" sent "+targetCostSum+" "+group.resource));
+				summaryAidReceived = AidSummary.addSummary(group.receipient,group.resource,targetCostSum,summaryAidReceived));
+		return summaryAidReceived;
 	}
 	
 }

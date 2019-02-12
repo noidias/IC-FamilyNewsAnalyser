@@ -76,11 +76,11 @@ public class FamilyNewsAnalyser {
 		//A	T-666		In the name of family cooperation Who has sent a shipment of 10608984 Food 217158 Iron 67233 Octarine 85800 Endurium to TIF.
 		//A	T-643		In the name of family cooperation TIF has sent a shipment of 15077245 Cash 12495581 Iron 8776 Octarine to Biscuit.
 		
-		Pattern aidPattern1 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+"has sent a shipment of (\\d+) (\\w+) to "+playerNameRegex+".");
-		Pattern aidPattern2 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+"has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
-		Pattern aidPattern3 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+"has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
-		Pattern aidPattern4 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+"has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
-		Pattern aidPattern5 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+"has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
+		Pattern aidPattern1 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+" has sent a shipment of (\\d+) (\\w+) to "+playerNameRegex+".");
+		Pattern aidPattern2 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+" has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
+		Pattern aidPattern3 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+" has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
+		Pattern aidPattern4 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+" has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
+		Pattern aidPattern5 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+" has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
 		aidArray   = ExtractData.extractAid1(aidPattern1, famNews);
 		//aidArray.addAll(extractAid2(aidPattern2, famNews));
 		//aidArray2 = ExtractData.extractAid2(aidPattern2, famNews);
@@ -90,7 +90,9 @@ public class FamilyNewsAnalyser {
 		aidArray.addAll(ExtractData.extractAid5(aidPattern5, famNews));
 		
 		
-		Reporting.printSummaryAid(aidArray, "aid");
+		Reporting.printSummaryAidSent(aidArray, "aid");
+		Reporting.printSummaryAidReceived(aidArray, "aid");
+		
 	}
 
 

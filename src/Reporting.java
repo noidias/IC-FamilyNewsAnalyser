@@ -30,15 +30,10 @@ public class Reporting {
 		System.out.println(news.size() + " planet(s) "+text+".");
 	}
 	
-	public static void printSummaryAid(ArrayList<AidNews> news, String text) {		
+	public static void printSummaryAidSent(ArrayList<AidNews> news, String text) {		
 		ArrayList<AidSummary> summary = new ArrayList<AidSummary>();
-		System.out.println("-------------------\r\n" + "-    "+text+"    -\r\n" + "-------------------");
+		System.out.println("-------------------\r\n" + "-    Aid Sent     -\r\n" + "-------------------");
 		summary = AidNews.sumSentAid(news);
-		
-		
-//		Print aid summary, for loop read first name, print name and first resource and and amount, read next line 
-//		compare name if same add to same line
-	// if different add new line print name repeat
 		System.out.print(summary.get(0).getFamMember()+ " sent "+summary.get(0).getResource()+ " "+summary.get(0).getAmount());
 		for (int x = 1; x < summary.size(); x++) {
 			if (summary.get(x).getFamMember().equals(summary.get(x-1).getFamMember())) {
@@ -47,8 +42,22 @@ public class Reporting {
 			else {
 				System.out.print("\n"+summary.get(x).getFamMember()+ " sent "+summary.get(x).getResource()+ " "+summary.get(x).getAmount());
 			}
-				
 		}
+	}
+		
+		public static void printSummaryAidReceived(ArrayList<AidNews> news, String text) {		
+			ArrayList<AidSummary> receivedSummary = new ArrayList<AidSummary>();
+			System.out.println("\r\n-------------------\r\n" + "-  Aid Received   -\r\n" + "-------------------");
+			receivedSummary = AidNews.sumAidReceived(news);
+			System.out.print(receivedSummary.get(0).getFamMember()+ " received "+receivedSummary.get(0).getResource()+ " "+receivedSummary.get(0).getAmount());
+			for (int x = 1; x < receivedSummary.size(); x++) {
+				if (receivedSummary.get(x).getFamMember().equals(receivedSummary.get(x-1).getFamMember())) {
+					System.out.print(" "+receivedSummary.get(x).getResource()+ " "+receivedSummary.get(x).getAmount());
+				}
+				else {
+					System.out.print("\n"+receivedSummary.get(x).getFamMember()+ " received "+receivedSummary.get(x).getResource()+ " "+receivedSummary.get(x).getAmount());
+				}
+			}
 	}
 
 	public static ArrayList<PlanetNews> findOpenRetakes(ArrayList<PlanetNews> captureArray, ArrayList<PlanetNews> defeatsArray) {

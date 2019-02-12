@@ -5,10 +5,10 @@ public class AidSummary {
 
 	private String famMember;
 	private String resource;
-	private int amount;
-	static ArrayList<AidSummary> summary = new ArrayList<AidSummary>();
+	private long amount;
+	//static ArrayList<AidSummary> summary = new ArrayList<AidSummary>();
 	
-	public AidSummary(String famMember, String resource, int amount) {
+	public AidSummary(String famMember, String resource, long amount) {
 		this.famMember = famMember;
 		this.resource = resource;
 		this.amount = amount;
@@ -21,10 +21,10 @@ public class AidSummary {
 	public void setresource(String resource) {
 		this.resource = resource;
 	}	
-	public int getAmount() {
+	public long getAmount() {
 		return amount;
 	}
-	public void setAmount(int amount) {
+	public void setAmount(long amount) {
 		this.amount = amount;
 	}
 	
@@ -35,7 +35,8 @@ public class AidSummary {
 		this.famMember = famMember;
 	}
 	
-	public static ArrayList<AidSummary> addSummary(String famMember, String resource, int amount) {
+	public static ArrayList<AidSummary> addSummary(String famMember, String resource, long amount, ArrayList<AidSummary> summary) {
+		//ArrayList<AidSummary> summary = new ArrayList<AidSummary>();
 		AidSummary summaryLine = new AidSummary(famMember,resource,amount);
 		summary.add(summaryLine);
 		return summary;
