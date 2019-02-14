@@ -22,6 +22,25 @@ public class Reporting {
 	System.out.println(retakesArray.size() + " planet(s) missing in action");		
 	
 	}
+	
+	public static void printOpenRetakesClean(ArrayList<PlanetNews> retakesArray) {
+	System.out.println("--------------------\r\n" + 
+			"-   OPEN RETAKES Clean List   -\r\n" + 
+			"--------------------");
+	int i = 0;
+	for (PlanetNews retake : retakesArray) {
+		System.out.println(retake.getPlanetCoords()+" ");
+		i++;
+		//if ( (i % 6) == 0 ) {
+		    //System.out.println("");
+		//System.out.println(retake.getPlanetCoords()+" (#"+retake.getEnemyFam()+", "+retake.getTurnOccurred()+" week(s) ago)");
+		//}
+	}
+	System.out.println("");
+	System.out.println("-------------------");
+	System.out.println(retakesArray.size() + " planet(s) missing in action");		
+	
+	}
 		
 	public static void printSummaryPlanets(ArrayList<PlanetNews> news, String text) {		
 		System.out.println("-------------------\r\n" + "-    "+text+"    -\r\n" + "-------------------");

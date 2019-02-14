@@ -79,6 +79,8 @@ public class FamilyNewsAnalyser {
 		
 		Reporting.printSummaryPlanets(missingArray, "missing");
 		Reporting.printOpenRetakes(retakesArray);
+		
+		Reporting.printOpenRetakesClean(retakesArray);
 		}
 	
 	//todo
