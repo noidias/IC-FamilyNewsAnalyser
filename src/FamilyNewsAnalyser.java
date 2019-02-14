@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 public class FamilyNewsAnalyser {
 	//input file
-	static String famNews = readFileLineByLine("famNews4.txt");
+	static String famNews = readFileLineByLine("famNews5.txt");
 	static int i = 0;
 	//Regex for extracting data
 	static String playerNameRegex = "([\\w+\\s*\\w*]*)";
@@ -28,17 +28,19 @@ public class FamilyNewsAnalyser {
 	
 	public static void reportPlanetSections() {
 		ArrayList<PlanetNews> captureArray = new ArrayList<PlanetNews>();
-		ArrayList<PlanetNews> blownArray = new ArrayList<PlanetNews>();
+		ArrayList<PlanetNews> blownSaArray = new ArrayList<PlanetNews>();
+		ArrayList<PlanetNews> blownEaArray = new ArrayList<PlanetNews>();
 		ArrayList<PlanetNews> defeatsArray = new ArrayList<PlanetNews>();
 		ArrayList<PlanetNews> exploreArray = new ArrayList<PlanetNews>();
 		ArrayList<PlanetNews> retakesArray = new ArrayList<PlanetNews>();
+		ArrayList<PlanetNews> lostBlownArray = new ArrayList<PlanetNews>();
+		ArrayList<PlanetNews> missingArray = new ArrayList<PlanetNews>();
 		
 		Pattern explorePattern = Pattern.compile("(?s)"+lineRegx+eventTick+playerNameRegex+" explored"+planetRegex+"()()");		
 		Pattern capturePattern = Pattern.compile("(?s)"+lineRegx+eventTick+"The forces of "+playerNameRegex+" took"+planetRegex+" from "+playerNameRegex+" .(\\d+)+..");	
 		Pattern defeatPattern = Pattern.compile("(?s)"+lineRegx+eventTick+"After a brave fight our family member "+playerNameRegex+" had to flee the planet"+planetRegex+" which was attacked by "+playerNameRegex+" of family (\\d+)+.");
 		Pattern blownSAPattern = Pattern.compile("(?s)"+lineRegx+eventTick+playerNameRegex+" attacked "+playerNameRegex+" .(\\d+). on"+planetRegex+", and the heavy battle made the planet uninhabitable; an exploration ship will have to be sent there.");
-		//EA	T-907		An overwhelming force from Justin_Bieber, family 6362 attacked Biscuit's planet 1 in the 87,11 system. The defenders for Biscuit managed to set off a nuclear blast which made the planet uninhabitable.
-		Pattern blownEAPattern = Pattern.compile("(?s)"+lineRegx+eventTick+playerNameRegex+" attacked "+playerNameRegex+" .(\\d+). on"+planetRegex+", and the heavy battle made the planet uninhabitable; an exploration ship will have to be sent there.");
+		Pattern blownEAPattern = Pattern.compile("(?s)"+lineRegx+eventTick+"An overwhelming force from "+playerNameRegex+", family (\\d+) attacked "+playerNameRegex+"'s"+planetRegex+". The defenders for "+playerNameRegex+" managed to set off a nuclear blast which made the planet uninhabitable.");
 		
 		//explored
 		exploreArray = ExtractData.extractPlanetData(explorePattern, famNews);
@@ -48,33 +50,40 @@ public class FamilyNewsAnalyser {
 		captureArray = ExtractData.extractPlanetData(capturePattern, famNews);
 		Reporting.printSummaryPlanets(captureArray, "Captures");
 		
-		//blow ups
-		blownArray =ExtractData.extractDataBlown(blownSAPattern, famNews);
-		Reporting.printSummaryPlanets(blownArray, "blow up");
-		
-		//Defeat
+		//blow ups Attacks
+		blownSaArray =ExtractData.extractDataBlownSA(blownSAPattern, famNews);
+		Reporting.printSummaryPlanets(blownSaArray, "blow ups");
+	
+		//
 		defeatsArray = ExtractData.extractPlanetData(defeatPattern, famNews);
 		Reporting.printSummaryPlanets(defeatsArray, "Defeats");
 		
-		if (blownArray != null)
-			captureArray.addAll( blownArray );
-
-		retakesArray = Reporting.findOpenRetakes(captureArray, defeatsArray);
-		Collections.sort(retakesArray);
-		Reporting.printSummaryPlanets(retakesArray, "missing");
-		Reporting.printOpenRetakes(retakesArray);
+		//blow ups defeats
+		blownEaArray =ExtractData.extractDataBlownEA(blownEAPattern, famNews);
+		lostBlownArray = Reporting.findOutstandingBlowPLanets(captureArray, blownEaArray, exploreArray);
 		
-	}
+		Reporting.printSummaryPlanets(blownEaArray, "blow ups lost");
+		Reporting.printArray(lostBlownArray);
+		if (lostBlownArray != null)
+			missingArray.addAll( lostBlownArray );
+		
+		if (blownSaArray != null)
+			captureArray.addAll( blownSaArray );
+		
+		Collections.sort(retakesArray);
+		retakesArray = Reporting.findOpenRetakes(captureArray, defeatsArray);
+
+		if (retakesArray != null)
+			missingArray.addAll( retakesArray );
+		
+		
+		Reporting.printSummaryPlanets(missingArray, "missing");
+		Reporting.printOpenRetakes(retakesArray);
+		}
 	
 	//todo
 	public static void reportAidSections() {
 		ArrayList<AidNews> aidArray = new ArrayList<AidNews>();
-		//ArrayList<AidNews> aidArray2 = new ArrayList<AidNews>();
-		
-		//A	T-690		In the name of family cooperation TIF has sent a shipment of 20000000 Cash to Blood Eagle.
-		//A	T-667		In the name of family cooperation TIF has sent a shipment of 4019148 Cash 263956 Octarine to Biscuit.
-		//A	T-666		In the name of family cooperation Who has sent a shipment of 10608984 Food 217158 Iron 67233 Octarine 85800 Endurium to TIF.
-		//A	T-643		In the name of family cooperation TIF has sent a shipment of 15077245 Cash 12495581 Iron 8776 Octarine to Biscuit.
 		
 		Pattern aidPattern1 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+" has sent a shipment of (\\d+) (\\w+) to "+playerNameRegex+".");
 		Pattern aidPattern2 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+" has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
@@ -82,17 +91,13 @@ public class FamilyNewsAnalyser {
 		Pattern aidPattern4 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+" has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
 		Pattern aidPattern5 = Pattern.compile("(?s)"+lineRegx+eventTick+"In the name of family cooperation "+playerNameRegex+" has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
 		aidArray   = ExtractData.extractAid1(aidPattern1, famNews);
-		//aidArray.addAll(extractAid2(aidPattern2, famNews));
-		//aidArray2 = ExtractData.extractAid2(aidPattern2, famNews);
 		aidArray.addAll(ExtractData.extractAid2(aidPattern2, famNews));
 		aidArray.addAll(ExtractData.extractAid3(aidPattern3, famNews));
 		aidArray.addAll(ExtractData.extractAid4(aidPattern4, famNews));
 		aidArray.addAll(ExtractData.extractAid5(aidPattern5, famNews));
 		
-		
 		Reporting.printSummaryAidSent(aidArray, "aid");
 		Reporting.printSummaryAidReceived(aidArray, "aid");
-		
 	}
 
 

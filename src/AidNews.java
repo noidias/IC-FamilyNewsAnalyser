@@ -11,11 +11,10 @@ import java.util.stream.Collectors;
 
 public class AidNews  extends News implements Comparable<AidNews> {
 
+	static AidSummary aidSummary;
 	private String resource;
 	private String receipient;
 	private long amount;
-	public static ArrayList<AidSummary> summaryAidSent = new ArrayList<AidSummary>();
-	public static ArrayList<AidSummary> summaryAidReceived = new ArrayList<AidSummary>();
 
 	public AidNews(int lineNumber, String newsEvent, int turnOccurred, String famMember, long amount, String resource, String receipient) {
 		super(lineNumber, newsEvent, turnOccurred, famMember);
@@ -46,42 +45,32 @@ public class AidNews  extends News implements Comparable<AidNews> {
 	}
 	
 	public int compareTo(AidNews compareLine) {
-		
 		int compareQuantity = ((AidNews) compareLine).getLineNumber(); 
-		
-		//ascending order
-		//return this.lineNumber - compareQuantity;
 		//descending order
 		return compareQuantity - this.lineNumber;
 	}
 	
 	
 	public static ArrayList<AidSummary> sumSentAid(ArrayList<AidNews> newsArray) {
-	
+		ArrayList<AidSummary> summaryAidSent = new ArrayList<>(newsArray.size());
 		newsArray.stream().collect(groupingBy(Function.identity(),
 				  ()->new TreeMap<>(
-
 				    Comparator.<AidNews,String>comparing(aid->aid.famMember).thenComparing(aid->aid.resource)
 				  ), 
 				  Collectors.summingLong(aid->aid.amount)))
-				.forEach((group,targetCostSum) ->	
-					//System.out.println(group.famMember+" sent "+targetCostSum+" "+group.resource));
-				summaryAidSent = AidSummary.addSummary(group.famMember,group.resource,targetCostSum,summaryAidSent));
+				.forEach((group,targetCostSum) ->
+		AidSummary.addSummary(group.famMember, group.resource, targetCostSum, summaryAidSent));
 		return summaryAidSent;
 	}
 	
 	public static ArrayList<AidSummary> sumAidReceived(ArrayList<AidNews> newsArray) {
-		
-		newsArray.stream().collect(groupingBy(Function.identity(),
-				  ()->new TreeMap<>(
-
-				    Comparator.<AidNews,String>comparing(aid->aid.receipient).thenComparing(aid->aid.resource)
-				  ), 
-				  Collectors.summingLong(aid->aid.amount)))
-				.forEach((group,targetCostSum) ->	
-					//System.out.println(group.famMember+" sent "+targetCostSum+" "+group.resource));
-				summaryAidReceived = AidSummary.addSummary(group.receipient,group.resource,targetCostSum,summaryAidReceived));
-		return summaryAidReceived;
-	}
-	
+        ArrayList<AidSummary> summaryAidReceived = new ArrayList<>(newsArray.size());
+        newsArray.stream().collect(groupingBy(Function.identity(),
+                () -> new TreeMap<>(
+                        Comparator.<AidNews, String> comparing(aid -> aid.receipient).thenComparing(aid -> aid.resource)),
+                Collectors.summingLong(aid -> aid.amount)))
+                .forEach((group, targetCostSum) ->
+        AidSummary.addSummary(group.receipient, group.resource, targetCostSum, summaryAidReceived));
+        return summaryAidReceived;
+    }
 }

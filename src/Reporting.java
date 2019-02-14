@@ -77,6 +77,30 @@ public class Reporting {
 			}
 		return retakesArray;
 	}	
+	
+	public static ArrayList<PlanetNews> findOutstandingBlowPLanets(ArrayList<PlanetNews> captureArray, ArrayList<PlanetNews> blownEaArray, ArrayList<PlanetNews> exploreArray) {
+		Boolean match = false;
+		ArrayList<PlanetNews> retakesArray = new ArrayList<PlanetNews>();
+		for (PlanetNews defeats : blownEaArray) {
+				for (PlanetNews captures : captureArray) {
+					if (defeats.getPlanetCoords().equals(captures.getPlanetCoords()) && captures.getLineNumber() < defeats.getLineNumber()) {
+						match = true;
+						break;
+						}					
+					}
+				for (PlanetNews expo : exploreArray) {
+					if (defeats.getPlanetCoords().equals(expo.getPlanetCoords()) && expo.getLineNumber() < defeats.getLineNumber()) {
+						match = true;
+						break;
+						}
+				}
+				if (!match) {
+					retakesArray.add(defeats);
+				}		
+				match = false;
+			}
+		return retakesArray;
+	}	
 
 	public static void countAndPrintFrequenciesPlanets(ArrayList<PlanetNews> newsArray, String text) {
 		Map<String, Integer> hm = new HashMap<String, Integer>();
@@ -90,6 +114,15 @@ public class Reporting {
 			System.out.println(val.getValue() + " " + text + " " + "#" + val.getKey());
 		}
 	}
+	
+	public static void printArray(ArrayList<PlanetNews> newsArray) {
+		System.out.println("-------------------");
+		System.out.println("List of destroyed planets, not re-explored or retaken:");
+		for (PlanetNews planetNews : newsArray) {
+			System.out.println(planetNews.getPlanetCoords());
+		}
+	}
+	
 	
 
 	

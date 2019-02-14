@@ -160,7 +160,7 @@ public class ExtractData {
 		return value;
 	}
 	
-	public static ArrayList<PlanetNews> extractDataBlown(Pattern planetPattern, String famNews) {
+	public static ArrayList<PlanetNews> extractDataBlownSA(Pattern planetPattern, String famNews) {
 		ArrayList<PlanetNews> newsArray = new ArrayList<PlanetNews>();
 		Matcher news = planetPattern.matcher(famNews);
 		while (news.find()) {
@@ -174,6 +174,27 @@ public class ExtractData {
 			String planetCoords = (planetX + "," + planetY + ":" + planetNo);
 			String enemy = news.group(5);
 			String family = news.group(6);
+			PlanetNews nextLineOfNews = new PlanetNews(line, event, turn, player, planetCoords, family, enemy);
+			newsArray.add(nextLineOfNews);
+		}
+		return newsArray;
+	}
+	
+	public static ArrayList<PlanetNews> extractDataBlownEA(Pattern planetPattern, String famNews) {
+		//Pattern blownEAPattern = Pattern.compile("(?s)"+lineRegx+eventTick+"An overwhelming force from "+playerNameRegex+", family (\\d+) attacked "+playerNameRegex+planetRegex+". The defenders for "+playerNameRegex+" managed to set off a nuclear blast which made the planet uninhabitable.");
+		ArrayList<PlanetNews> newsArray = new ArrayList<PlanetNews>();
+		Matcher news = planetPattern.matcher(famNews);
+		while (news.find()) {
+			int line = Integer.parseInt(news.group(1));
+			String event = news.group(2);
+			int turn = Integer.parseInt(news.group(3));
+			String player = news.group(10);
+			int planetNo = Integer.parseInt(news.group(7));
+			int planetX = Integer.parseInt(news.group(8));
+			int planetY = Integer.parseInt(news.group(9));
+			String planetCoords = (planetX + "," + planetY + ":" + planetNo);
+			String enemy = news.group(5);
+			String family = news.group(4);
 			PlanetNews nextLineOfNews = new PlanetNews(line, event, turn, player, planetCoords, family, enemy);
 			newsArray.add(nextLineOfNews);
 		}
