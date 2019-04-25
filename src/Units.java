@@ -3,6 +3,8 @@ import static java.util.stream.Collectors.groupingBy;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.TreeMap;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -47,22 +49,8 @@ public class Units  implements Comparable<Units> {
 		return compareQuantity - this.lineNumber;
 	}
 	
-	public void printArray(ArrayList<Units> unitArray) {
-		for (Units unitNews : unitArray) {
-			System.out.println(unitNews.getLineNumber() + " " + unitNews.getUnitType() + " " + unitNews.getAmount());
-		}
-	}
+
 	
-	public static ArrayList sumAidReceived(ArrayList unitArray) {
-        ArrayList summaryAidReceived = new ArrayList<>(unitArray.size());
-        unitArray.stream().collect(groupingBy(Function.identity(),
-                () -> new TreeMap<>(
-                        Comparator.<AidNews, String> comparing(aid -> aid.receipient).thenComparing(aid -> aid.resource)),
-                Collectors.summingLong(aid -> aid.amount)))
-                .forEach((group, targetCostSum) ->
-        AidSummary.addSummary(group.receipient, group.resource, targetCostSum, summaryAidReceived));
-        return summaryAidReceived;
-    }
 	
 	
 	

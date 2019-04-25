@@ -22,11 +22,11 @@ public class NewsAnalyser {
 	public static void main(String[] args) throws IOException {
 		//sample reports for debug only
 		String famNews = readFileLineByLine("famNews5.txt");
-		String infil = readFileLineByLine("infil2.txt");
+		String infil = readFileLineByLine("infil4.txt");
 		
 		//print results in Console
 		//String debugConsole = runFamNewsAnalyser(famNews);
-		String debugConsole = runInfilAnalyser(infil);
+		String debugConsole = runRecentReportAnalyser(infil);
 		debugConsole = debugConsole.replace("<br>","\r\n");
 		debugConsole = debugConsole.replace("&nbsp","\t");
 		System.out.println(debugConsole);
@@ -43,40 +43,22 @@ public class NewsAnalyser {
 		return report;
 	}
 	
-	public static String runInfilAnalyser(String infil) {
+	public static String runRecentReportAnalyser(String infil) {
 		
 		infil = addLineNumber(infil);
-		String report = reportInfiltration(infil);
+		String report = reportRecentReport(infil);
 		
 		return report;
 	}
 	
-	public static String reportInfiltration(String infil) {
+	public static String reportRecentReport(String infil) {
 		String report = "";
 		ArrayList<Units> unitArray = new ArrayList<Units>();
-		
-		//T-557: Construction completed
-		//We have built 7500 Wizards.
-		//
-		//Pattern explorePattern = Pattern.compile("(?s)"+lineRegx+eventTick+playerNameRegex+" explored"+planetRegex+"()()");		
-		Pattern unitPattern = Pattern.compile("(?s)\\w+"+lineRegx+"T-\\d+: Construction completed[\\s]+We have built (\\d+) (\\w+).");		
-	
-		//unit summary
-		
+		Pattern unitPattern = Pattern.compile("(?s)\\s(\\d+) T-\\d+: Construction completed[\\s]+We have built (\\d+) (\\w+).");		
 		unitArray = ExtractData.extractUnitData(unitPattern, infil);
-		Units units = new Units(1,1,"dfg");
-		units.printArray(unitArray);
-		
-		
-		/*
-		exploreArray = ExtractData.extractPlanetData(explorePattern, famNews);
-		String exploreReport = Reporting.printSummaryPlanets(exploreArray, "Explored");
-		System.out.println(exploreReport);
-		report = Reporting.appendString(report,exploreReport);
-		*/
-		
-		
-		
+		Reporting.printArrayUnits(unitArray);
+		String unitReport = Reporting.countAndPrintFrequenciesUnits(unitArray);
+		report = Reporting.appendString(report,unitReport);
 		return report;
 		}
 	
