@@ -202,7 +202,7 @@ public class Reporting {
 		String outReport = "";
 		outReport = appendString(outReport,"--------------------<br>- List of explored planets ");
 		for (PlanetNews planetNews : newsArray) {
-			outReport = appendString(outReport,"<br>"+planetNews.getPlanetCoords()+" "+planetNews.getFamMember());
+			outReport = appendString(outReport,"<br>"+planetNews.getPlanetCoords()+" "+planetNews.getFamMember()+" tick "+ planetNews.getTurnOccurred());
 		}
 		return outReport;
 	}

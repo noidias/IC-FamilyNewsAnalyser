@@ -9,9 +9,13 @@ public class ExtractData {
 		ArrayList<PlanetNews> newsArray = new ArrayList<PlanetNews>();
 		Matcher news = planetPattern.matcher(famNews);
 		while (news.find()) {
-			int line = Integer.parseInt(news.group(2));
+			
+			
+			//int line = Integer.parseInt(news.group(2));
+			int line = getIntValue(news,2);
 			String event = news.group(1);
-			int turn = Integer.parseInt(news.group(3));
+			//int turn = Integer.parseInt(news.group(3));
+			int turn = getIntValue(news,3);
 			String player = news.group(4);
 			int planetNo = Integer.parseInt(news.group(5));
 			int planetX = Integer.parseInt(news.group(6));
@@ -152,7 +156,13 @@ public class ExtractData {
 	
 	
 	public static int getIntValue(Matcher news, int groupNumber) {
-		int value = Integer.parseInt(news.group(groupNumber));
+		int value;
+		if (news.group(groupNumber) == "")
+			{value = 0;}
+		else {
+			value = Integer.parseInt(news.group(groupNumber));
+			}
+		
 		return value;
 	}
 	
@@ -214,6 +224,10 @@ public class ExtractData {
 		}
 		return newsArray;
 	}
+	
+	
+
+		
 	
 	
 	

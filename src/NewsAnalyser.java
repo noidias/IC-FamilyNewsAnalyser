@@ -21,8 +21,10 @@ public class NewsAnalyser {
 	
 	public static void main(String[] args) throws IOException {
 		//sample reports for debug only
-		String famNews = readFileLineByLine("famNews5.txt");
-		String infil = readFileLineByLine("infil4.txt");
+		//String famNews = readFileLineByLine("famNews5.txt");
+		//String infil = readFileLineByLine("infil3.txt");
+		String infil = readFileLineByLine("RecentReport.txt");
+		
 		
 		//print results in Console
 		//String debugConsole = runFamNewsAnalyser(famNews);
@@ -54,11 +56,31 @@ public class NewsAnalyser {
 	public static String reportRecentReport(String infil) {
 		String report = "";
 		ArrayList<Units> unitArray = new ArrayList<Units>();
-		Pattern unitPattern = Pattern.compile("(?s)\\s(\\d+) T-\\d+: Construction completed[\\s]+We have built (\\d+) (\\w+).");		
+		ArrayList<PlanetNews> exploreArray = new ArrayList<PlanetNews>();
+		//units
+		//Pattern unitPattern = Pattern.compile("(?s)\\s(\\d+) T-\\d+: Construction completed[\\s]+We have built (\\d+) (\\w+).");	//works infil
+		//Pattern unitPattern = Pattern.compile("(?s)\\s(\\d+)[\\s]+T-\\d+\\w[\\s]+Construction completed[\\s]+We have built (\\d+) (\\w+).");	//works recent report
+		Pattern unitPattern = Pattern.compile("(?s)\\s(\\d+) +T-\\d+.[\\s]+Construction completed[\\s]+We have built (\\d+) (\\w+).");	//works with both
+		
+		//exploration
+		//T-424	Exploration	We have explored the planet 1 in the 232:226 system.
+		//T-604: Explored a planet
+		//We have explored the planet 2 in the 157:28 system.
+		//Pattern explorePattern = Pattern.compile("(?s)\\s()(\\d+) +T-(\\d+)()[\\s]+Exploration[\\s]+We have explored the planet (\\d+) in the (\\d+):(\\d+) system.()()"); //works recent report
+		//Pattern explorePattern = Pattern.compile("(?s)\\s()(\\d+) +T-(\\d+).()[\\s]+Explored a planet[\\s]+We have explored the planet (\\d+) in the (\\d+):(\\d+) system.()()"); //works infil
+		Pattern explorePattern = Pattern.compile("(?s)\\s()(\\d+) +T-(\\d+)()[:\\s]+[Exploration|Explored a planet]+[\\s]+We have explored the planet (\\d+) in the (\\d+):(\\d+) system.()()"); //works with both
 		unitArray = ExtractData.extractUnitData(unitPattern, infil);
-		Reporting.printArrayUnits(unitArray);
 		String unitReport = Reporting.countAndPrintFrequenciesUnits(unitArray);
 		report = Reporting.appendString(report,unitReport);
+		
+		exploreArray = ExtractData.extractPlanetData(explorePattern, infil);
+		Reporting.printArray(exploreArray);
+		String exploreReport = Reporting.printSummaryPlanets(exploreArray, "Explored");
+		report = Reporting.appendString(report,exploreReport);
+		String exploreList = Reporting.printArrayExplored(exploreArray);	
+		report = Reporting.appendString(report,exploreList);
+		
+		
 		return report;
 		}
 	
