@@ -1,3 +1,4 @@
+package FamilyNews;
 
 import static java.util.stream.Collectors.*;
 
@@ -8,7 +9,11 @@ import java.util.Iterator;
 import java.util.Optional;
 import java.util.TreeMap;
 import java.util.function.Function;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+
+import Application.ExtractData;
+import Application.Reporting;
 
 public class AidNews  extends News implements Comparable<AidNews> {
 
@@ -74,4 +79,33 @@ public class AidNews  extends News implements Comparable<AidNews> {
         AidSummary.addSummary(group.receipient, group.resource, targetCostSum, summaryAidReceived));
         return summaryAidReceived;
     }
+	
+	public static String reportAidSections(String famNews) {
+		String report = "";
+		ArrayList<AidNews> aidArray = new ArrayList<AidNews>();
+		
+		Pattern aidPattern1 = Pattern.compile("(?s)"+eventTick+"In the name of family cooperation "+playerNameRegex+" has sent a shipment of (\\d+) (\\w+) to "+playerNameRegex+".");
+		Pattern aidPattern2 = Pattern.compile("(?s)"+eventTick+"In the name of family cooperation "+playerNameRegex+" has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
+		Pattern aidPattern3 = Pattern.compile("(?s)"+eventTick+"In the name of family cooperation "+playerNameRegex+" has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
+		Pattern aidPattern4 = Pattern.compile("(?s)"+eventTick+"In the name of family cooperation "+playerNameRegex+" has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
+		Pattern aidPattern5 = Pattern.compile("(?s)"+eventTick+"In the name of family cooperation "+playerNameRegex+" has sent a shipment of (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) to "+playerNameRegex+".");
+		aidArray   = ExtractData.extractAid1(aidPattern1, famNews);
+		aidArray.addAll(ExtractData.extractAid2(aidPattern2, famNews));
+		aidArray.addAll(ExtractData.extractAid3(aidPattern3, famNews));
+		aidArray.addAll(ExtractData.extractAid4(aidPattern4, famNews));
+		aidArray.addAll(ExtractData.extractAid5(aidPattern5, famNews));
+		
+		String aidSentReport = Reporting.printSummaryAidSent(aidArray, "aid");
+		report = Reporting.appendString(report,aidSentReport);
+		//System.out.println(aidSentReport);
+		
+		
+		String aidReceivedReport = Reporting.printSummaryAidReceived(aidArray, "aid");
+		report = Reporting.appendString(report,aidReceivedReport);
+		//System.out.println(aidReceivedReport);
+		
+		return report;
+	}
+
+	
 }

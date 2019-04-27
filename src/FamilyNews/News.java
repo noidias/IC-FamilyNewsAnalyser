@@ -1,6 +1,8 @@
+package FamilyNews;
 
+import Application.CoreInfo;
 
-public class News {
+public class News extends CoreInfo {
 	protected int lineNumber;
 	protected String newsEvent;
 	protected int turnOccurred;
@@ -8,6 +10,7 @@ public class News {
 	
 	
 	public News(int lineNumber, String newsEvent, int turnOccurred, String famMember) {
+		super(lineNumber, turnOccurred);
 		this.famMember = famMember;
 		this.newsEvent = newsEvent;
 		this.turnOccurred = turnOccurred;
@@ -22,23 +25,13 @@ public class News {
 		this.famMember = famMember;
 	}
 	
-	
 	public String getNewsEvent() {
 		return newsEvent;
 	}
 	public void setNewsEvent(String newsEvent) {
 		this.newsEvent = newsEvent;
 	}
-	public int getTurnOccurred() {
-		return turnOccurred;
-	}
-	public void setTurnOccurred(int turnOccurred) {
-		this.turnOccurred = turnOccurred;
-	}
-	public int getLineNumber() {
-		return lineNumber;
-	}
-	public void setLineNumber(int lineNumber) {
-		this.lineNumber = lineNumber;
-	}
+	
+	
+
 }
