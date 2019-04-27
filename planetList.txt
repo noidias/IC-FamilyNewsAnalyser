@@ -117,6 +117,114 @@ Planet	Built / Max / (%)	Pop / Max / (%)	Bonus	Units	Lasers	Portal	Build
 94,93:11	1054 / 265 (298%)	10,600 / 10,600			11	Portal	Build	
 84 Planets	37880 / 18651 (104%)	2,510,385 / 3,001,540 (83%)				6 Portals		
    
+Imperial Conflict
+  T 493   4,450,168   87,418,861   40,044   83,957   144,918
+ToT
+ HQ
+ Messages
+ Map
+ Family
+ Family Forum
+ Foreign Relations
+ Military
+ Planets
+ Market
+ Rankings
+ Bookmarks
+ Tools
+ Empire Settings
+ Switch Empire
+Family #
+ 
+x,y or x,y:num
+ Store
+ Donate
+ Forum
+ Family Forum
+ Chat
+ Rules
+ Guide
+ Contact
+Your Family
+Overview
+News
+Defense
+Options
+The Family News: Ticks 393-493
+empire
+type
+time desc
+time asc
+E	T-483		TIF explored planet 3 in the 106,299 system.
+E	T-483		TIF explored planet 5 in the 106,299 system.
+E	T-483		TIF explored planet 13 in the 99,296 system.
+E	T-483		TIF explored planet 1 in the 106,299 system.
+E	T-483		TIF explored planet 6 in the 106,299 system.
+E	T-483		TIF explored planet 10 in the 106,299 system.
+E	T-483		TIF explored planet 8 in the 106,299 system.
+E	T-483		TIF explored planet 7 in the 106,299 system.
+E	T-483		TIF explored planet 13 in the 106,299 system.
+E	T-483		TIF explored planet 11 in the 106,299 system.
+E	T-472		TIF explored planet 2 in the 105,223 system.
+E	T-463		TIF explored planet 2 in the 123,214 system.
+E	T-458		TIF explored planet 9 in the 99,296 system.
+E	T-458		TIF explored planet 7 in the 99,296 system.
+E	T-458		TIF explored planet 1 in the 99,296 system.
+E	T-458		TIF explored planet 5 in the 99,296 system.
+E	T-458		TIF explored planet 12 in the 99,296 system.
+E	T-458		TIF explored planet 4 in the 99,296 system.
+E	T-458		TIF explored planet 10 in the 99,296 system.
+E	T-458		TIF explored planet 11 in the 99,296 system.
+E	T-458		TIF explored planet 6 in the 99,296 system.
+E	T-428		TIF explored planet 12 in the 119,258 system.
+E	T-424		TIF explored planet 2 in the 232,226 system.
+E	T-424		TIF explored planet 8 in the 232,226 system.
+E	T-424		TIF explored planet 5 in the 232,226 system.
+E	T-424		TIF explored planet 1 in the 232,226 system.
+E	T-424		TIF explored planet 11 in the 4,154 system.
+E	T-424		TIF explored planet 13 in the 232,226 system.
+E	T-424		TIF explored planet 12 in the 232,226 system.
+E	T-424		TIF explored planet 11 in the 232,226 system.
+E	T-424		TIF explored planet 9 in the 232,226 system.
+E	T-424		TIF explored planet 4 in the 232,226 system.
+E	T-423		TIF explored planet 9 in the 251,196 system.
+EA	T-415		After a brave fight our family member TIF had to flee the planet planet 3 in the 84,282 system which was attacked by WhoFlungDung of family 6976.
+EA	T-415		Our family member TIF managed to defend planet 3 in the 84,282 system against an attack by forces from WhoFlungDung, family 6976.
+EA	T-413		Our family member TIF managed to defend planet 3 in the 84,282 system against an attack by forces from WhoFlungDung, family 6976.
+EA	T-413		Our family member TIF managed to defend planet 3 in the 84,282 system against an attack by forces from WhoFlungDung, family 6976.
+EA	T-413		Our family member TIF managed to defend planet 3 in the 84,282 system against an attack by forces from WhoFlungDung, family 6976.
+EA	T-413		Our family member TIF managed to defend planet 3 in the 84,282 system against an attack by forces from WhoFlungDung, family 6976.
+EA	T-413		Our family member TIF managed to defend planet 3 in the 84,282 system against an attack by forces from WhoFlungDung, family 6976.
+EA	T-413		Our family member TIF managed to defend planet 3 in the 84,282 system against an attack by forces from WhoFlungDung, family 6976.
+EA	T-413		Our family member TIF managed to defend planet 3 in the 84,282 system against an attack by forces from WhoFlungDung, family 6976.
+EA	T-413		Our family member TIF managed to defend planet 3 in the 84,282 system against an attack by forces from WhoFlungDung, family 6976.
+EA	T-413		Our family member TIF managed to defend planet 3 in the 84,282 system against an attack by forces from WhoFlungDung, family 6976.
+EA	T-413		Our family member TIF managed to defend planet 3 in the 84,282 system against an attack by forces from WhoFlungDung, family 6976.
+EA	T-413		Our family member TIF managed to defend planet 3 in the 84,282 system against an attack by forces from WhoFlungDung, family 6976.
+EA	T-413		Our family member TIF managed to defend planet 3 in the 84,282 system against an attack by forces from WhoFlungDung, family 6976.
+FA	T-413		TIF made an attack against planet 9 in the 84,282 system owned by WhoFlungDung (6976), but the planet's defense was too strong.
+E	T-412		TIF explored planet 4 in the 213,218 system.
+EA	T-410		Our family member TIF managed to defend planet 3 in the 84,282 system against an attack by forces from WhoFlungDung, family 6976.
+E	T-404		TIF explored planet 9 in the 142,247 system.
+FA	T-403		TIF made an attack against planet 9 in the 84,282 system owned by WhoFlungDung (6976), but the planet's defense was too strong.
+FA	T-403		TIF made an attack against planet 4 in the 78,292 system owned by WhoFlungDung (6976), but the planet's defense was too strong.
+EA	T-403		Our family member TIF managed to defend planet 3 in the 84,282 system against an attack by forces from WhoFlungDung, family 6976.
+EA	T-403		Our family member TIF managed to defend planet 3 in the 84,282 system against an attack by forces from WhoFlungDung, family 6976.
+E	T-397		TIF explored planet 13 in the 4,154 system.
+E	T-393		TIF explored planet 2 in the 81,270 system.
+Universal News
+Thundercade took 46,200:9 from Stars.
+HellRaizeR took 77,19:8 from Protoss.
+Illusionate took 64,271:9 from UIA.
+Protoss took 79,34:7 from Oranos.
+hoit took 204,49:1 from Luker8969.
+Community Topics
+ 	Weekend Plans
+ 	Pretenders vs Contenders MW 69
+ 	10,17 vs 14,08
+ 	Rotating Galaxies!
+ 	Issue with verification e-mail
+
 
 Statuses
 Having space to construct new buildings on is vital for your empire's expansion. Therefore it makes me quite disturbed to see that your planets are running out on free space to build. Maybe you should consider getting new land by exploring a new planet or conquer one owned by another ruler.

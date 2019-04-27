@@ -21,14 +21,18 @@ public class NewsAnalyser {
 	
 	public static void main(String[] args) throws IOException {
 		//sample reports for debug only
-		//String famNews = readFileLineByLine("famNews5.txt");
+		String famNews = readFileLineByLine("famNews5.txt");
 		//String infil = readFileLineByLine("infil3.txt");
 		String infil = readFileLineByLine("RecentReport.txt");
+		String planetList = readFileLineByLine("planetList2.txt");
 		
 		
 		//print results in Console
 		//String debugConsole = runFamNewsAnalyser(famNews);
-		String debugConsole = runRecentReportAnalyser(infil);
+		//String debugConsole = runRecentReportAnalyser(infil);
+		String debugConsole=  PlanetFormaterr.runPlanetFormaterr(planetList); 
+		
+		
 		debugConsole = debugConsole.replace("<br>","\r\n");
 		debugConsole = debugConsole.replace("&nbsp","\t");
 		System.out.println(debugConsole);
