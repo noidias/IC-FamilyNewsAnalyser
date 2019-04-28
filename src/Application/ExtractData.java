@@ -6,6 +6,7 @@ import java.util.regex.Pattern;
 
 import FamilyNews.AidNews;
 import FamilyNews.PlanetNews;
+import recentReports.Buildings;
 import recentReports.Units;
 
 public class ExtractData {
@@ -225,6 +226,24 @@ public class ExtractData {
 			int amount = Integer.parseInt(news.group(2));
 			String units = news.group(3);
 			Units nextLineOfNews = new Units(line, amount, units);
+			newsArray.add(nextLineOfNews);
+		}
+		return newsArray;
+	}
+	//"(?s)\\s(\\d+) +T-(\\d+)[:\\s]+[Infrastructure|Buildings complete]+[\\s]+We have built (\\d+) (\\w+) on (\\d+) in the (\\d+):(\\d+) system."); //works with both
+	public static ArrayList<Buildings> extractBuildingData(Pattern buildingPattern, String infil) {
+		ArrayList<Buildings> newsArray = new ArrayList<Buildings>();
+		Matcher news = buildingPattern.matcher(infil);
+		while (news.find()) {
+			int line = Integer.parseInt(news.group(1));
+			int turn = Integer.parseInt(news.group(2));
+			int amount = Integer.parseInt(news.group(3));
+			String buildings = news.group(4);
+			String planetCoords = news.group(5);
+			//int planetX = Integer.parseInt(news.group(6));
+			//int planetY = Integer.parseInt(news.group(7));
+			//String planetCoords = (planetX + "," + planetY + ":" + planetNo);
+			Buildings nextLineOfNews = new Buildings(line, turn, amount, buildings, planetCoords);
 			newsArray.add(nextLineOfNews);
 		}
 		return newsArray;

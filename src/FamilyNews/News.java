@@ -3,9 +3,7 @@ package FamilyNews;
 import Application.CoreInfo;
 
 public class News extends CoreInfo {
-	protected int lineNumber;
 	protected String newsEvent;
-	protected int turnOccurred;
 	protected String famMember;
 	
 	

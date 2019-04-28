@@ -1,16 +1,15 @@
 package recentReports;
 
-import static java.util.stream.Collectors.groupingBy;
 
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.function.Function;
-import java.util.stream.Collectors;
+import java.util.regex.Pattern;
 
-public class Units  implements Comparable<Units> {
+import Application.CoreInfo;
+import Application.ExtractData;
+import Application.Reporting;
+import FamilyNews.PlanetNews;
+
+public class Units extends CoreInfo implements Comparable<Units> {
 
 	protected int lineNumber;
 	protected int amount;
@@ -18,6 +17,7 @@ public class Units  implements Comparable<Units> {
 	
 	
 	public Units(int lineNumber, int amount, String unitType) {
+		super(lineNumber, 0);
 		this.lineNumber = lineNumber;
 		this.amount = amount;
 		this.unitType = unitType;
@@ -33,22 +33,15 @@ public class Units  implements Comparable<Units> {
 	public String getUnitType() {
 		return unitType;
 	}
-	public void setsetEnemyFam(String unitType) {
+	public void setUnitType(String unitType) {
 		this.unitType = unitType;
 	}	
-	
-	public int getLineNumber() {
-		return lineNumber;
-	}
-	public void setLineNumber(int lineNumber) {
-		this.lineNumber = lineNumber;
-	}
-	
 	
 	public int compareTo(Units compareLine) {
 		int compareQuantity = ((Units) compareLine).getLineNumber(); 
 		return compareQuantity - this.lineNumber;
 	}
+	
 	
 
 	

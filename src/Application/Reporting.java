@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 import FamilyNews.AidNews;
 import FamilyNews.AidSummary;
 import FamilyNews.PlanetNews;
+import recentReports.Buildings;
 import recentReports.Units;
 
 import static java.util.stream.Collectors.*;
@@ -169,8 +170,7 @@ public class Reporting {
 	
 	public static String countAndPrintFrequenciesUnits(ArrayList<Units> newsArray) {
 		String outReport = "";
-		//outReport = appendString(outReport,"<br>--------------------");
-		
+		outReport = appendString(outReport,"<br>--------------------<br>-     Unit Summary     -<br>--------------------<br>");
 		
 		Map<String, Integer> hm = new HashMap<String, Integer>();
 
@@ -185,6 +185,38 @@ public class Reporting {
 		}
 		return outReport;
 	}
+	
+	public static String countAndPrintFrequenciesBuildings(ArrayList<Buildings> newsArray) {
+		String outReport = "";
+		outReport = appendString(outReport,"<br>--------------------<br>-     Building Summary     -<br>--------------------<br>");
+		
+		Map<String, Integer> hm = new HashMap<String, Integer>();
+
+		for (Buildings i : newsArray) {
+			Integer j = hm.get(i.getBuildingType());
+			hm.put(i.getBuildingType(), (j == null) ? i.getAmount() : j + i.getAmount());
+		}
+		// displaying the occurrence of elements in the arraylist
+		for (Map.Entry<String, Integer> val : hm.entrySet()) {
+			outReport = appendString(outReport,"<br>"+val.getValue() + " " + val.getKey() + " built");
+			//System.out.println(val.getValue() + " " + text + " " + "#" + val.getKey());
+		}
+		return outReport;
+	}
+	
+	public static String laserReport(ArrayList<Buildings> newsArray) {
+		String outReport = "";
+		outReport = appendString(outReport,"<br>--------------------<br>-     Laser Report     -<br>--------------------<br>");
+		
+		for (Buildings i : newsArray) {
+			if (i.getBuildingType().equals("Laser")) {
+				outReport = appendString(outReport,"<br>"+i.getAmount()+ " Laser built on "+i.getPlanetCoords() +" T-" + i.getTurnOccurred());
+			}
+		}
+		return outReport;
+	}
+	
+	
 	
 	public static void printArrayUnits(ArrayList<Units> unitArray) {
 		for (Units unitNews : unitArray) {
@@ -206,7 +238,7 @@ public class Reporting {
 	
 	public static String printArrayExplored(ArrayList<PlanetNews> newsArray) {
 		String outReport = "";
-		outReport = appendString(outReport,"--------------------<br>- List of explored planets ");
+		outReport = appendString(outReport,"<br><br>--------------------<br>- List of explored planets - <br>--------------------<br>");
 		for (PlanetNews planetNews : newsArray) {
 			outReport = appendString(outReport,"<br>"+planetNews.getPlanetCoords()+" "+planetNews.getFamMember()+" tick "+ planetNews.getTurnOccurred());
 		}

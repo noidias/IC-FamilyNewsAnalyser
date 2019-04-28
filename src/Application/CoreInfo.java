@@ -5,7 +5,7 @@ public class CoreInfo {
 	protected int turnOccurred;
 	
 	public static String playerNameRegex = "([\\w+\\s*\\w*]*)";
-	public static String planetRegex = " planet (\\d+) in the (\\d+),(\\d+) system";
+	public static String planetRegex = " planet (\\d+) in the (\\d+)[,:](\\d+) system";
 	public static String lineRegx = "(\\d+) ";
 	public static String eventTick = "(\\w+)[\\s]+"+lineRegx+"T-(\\d{1,4})[\\s]+";
 	

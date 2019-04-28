@@ -8,7 +8,7 @@ import Application.ExtractData;
 import Application.Reporting;
 import Application.NewsAnalyser;
 
-public class PlanetNews  extends News implements Comparable<PlanetNews> {
+public class PlanetNews extends News implements Comparable<PlanetNews> {
 
 	private String enemyFam;
 	private String enemyPlayer;
