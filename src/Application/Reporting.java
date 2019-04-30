@@ -188,7 +188,7 @@ public class Reporting {
 	
 	public static String countAndPrintFrequenciesBuildings(ArrayList<Buildings> newsArray) {
 		String outReport = "";
-		outReport = appendString(outReport,"<br>--------------------<br>-     Building Summary     -<br>--------------------<br>");
+		outReport = appendString(outReport,"<br><br>--------------------<br>-     Building Summary     -<br>--------------------<br>");
 		
 		Map<String, Integer> hm = new HashMap<String, Integer>();
 
@@ -210,7 +210,7 @@ public class Reporting {
 		
 		for (Buildings i : newsArray) {
 			if (i.getBuildingType().equals("Laser")) {
-				outReport = appendString(outReport,"<br>"+i.getAmount()+ " Laser built on "+i.getPlanetCoords() +" T-" + i.getTurnOccurred());
+				outReport = appendString(outReport,"<br>"+i.getAmount()+ " Laser(s) built on "+i.getPlanetCoords() +" b  Tick " + i.getTurnOccurred());
 			}
 		}
 		return outReport;
