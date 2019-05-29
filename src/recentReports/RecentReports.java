@@ -20,6 +20,7 @@ public class RecentReports extends CoreInfo {
 		ArrayList<Units> unitArray = new ArrayList<Units>();
 		ArrayList<PlanetNews> exploreArray = new ArrayList<PlanetNews>();
 		ArrayList<Buildings> buildingArray = new ArrayList<Buildings>();
+		ArrayList<Buildings> portalArray = new ArrayList<Buildings>();
 		//units
 		//Pattern unitPattern = Pattern.compile("(?s)\\s(\\d+) T-\\d+: Construction completed[\\s]+We have built (\\d+) (\\w+).");	//works infil
 		//Pattern unitPattern = Pattern.compile("(?s)\\s(\\d+)[\\s]+T-\\d+\\w[\\s]+Construction completed[\\s]+We have built (\\d+) (\\w+).");	//works recent report
@@ -53,6 +54,18 @@ public class RecentReports extends CoreInfo {
 		report = Reporting.appendString(report,buildingReport);
 		String laserReport = Reporting.laserReport(buildingArray);
 		report = Reporting.appendString(report,laserReport);
+		
+		//T-629: Portal completed
+		//Our workers have finished constructing a portal on planet 2 in the 30,183 system.
+		//T-372	Portal completed	Our workers have finished constructing a portal on planet 5 in the 235,217 system.	
+		Pattern portalPattern = Pattern.compile("(?s)\\s(\\d+) +T-(\\d+)[:\\s]+[Portal completed]+[\\s]+Our workers have finished constructing a portal on"+planetRegex+"."); //works with both
+		portalArray = ExtractData.extractPortalData(portalPattern, infil);
+		//report = Reporting.appendString(report,buildingReport);
+		String portalReport = Reporting.portalReport(portalArray);
+		String unportaledPlanets = Reporting.unportaledPlanets(portalArray,exploreArray);
+		report = Reporting.appendString(report,portalReport);
+		report = Reporting.appendString(report,unportaledPlanets);
+		
 		
 		
 		return report;

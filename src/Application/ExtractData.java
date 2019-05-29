@@ -249,6 +249,23 @@ public class ExtractData {
 		return newsArray;
 	}
 	
+	public static ArrayList<Buildings> extractPortalData(Pattern buildingPattern, String infil) {
+		ArrayList<Buildings> newsArray = new ArrayList<Buildings>();
+		Matcher news = buildingPattern.matcher(infil);
+		while (news.find()) {
+			int line = Integer.parseInt(news.group(1));
+			int turn = Integer.parseInt(news.group(2));
+			int planetNo = Integer.parseInt(news.group(3));
+			//String buildings = news.group(4);
+			//String planetCoords = news.group(5);
+			int planetX = Integer.parseInt(news.group(4));
+			int planetY = Integer.parseInt(news.group(5));
+			String planetCoords = (planetX + "," + planetY + ":" + planetNo);
+			Buildings nextLineOfNews = new Buildings(line, turn, 1, "Portal", planetCoords);
+			newsArray.add(nextLineOfNews);
+		}
+		return newsArray;
+	}
 	
 
 		

@@ -210,7 +210,19 @@ public class Reporting {
 		
 		for (Buildings i : newsArray) {
 			if (i.getBuildingType().equals("Laser")) {
-				outReport = appendString(outReport,"<br>"+i.getAmount()+ " Laser(s) built on "+i.getPlanetCoords() +" b  Tick " + i.getTurnOccurred());
+				outReport = appendString(outReport,"<br>"+i.getAmount()+ " Laser(s) built on "+i.getPlanetCoords() +"   (T-" + i.getTurnOccurred()+")");
+			}
+		}
+		return outReport;
+	}
+	
+	public static String portalReport(ArrayList<Buildings> newsArray) {
+		String outReport = "";
+		outReport = appendString(outReport,"<br>--------------------<br>-     Portal Report     -<br>--------------------<br>");
+		
+		for (Buildings i : newsArray) {
+			if (i.getBuildingType().equals("Portal")) {
+				outReport = appendString(outReport,"<br>Portal built on "+i.getPlanetCoords() +"  (T-" + i.getTurnOccurred()+")");
 			}
 		}
 		return outReport;
@@ -250,6 +262,25 @@ public class Reporting {
 		String combinedText = text1 + text2;
 		return combinedText;
 	}
+	
+	
+	public static String unportaledPlanets(ArrayList<Buildings> portalList, ArrayList<PlanetNews> exploreArray) {
+		Boolean match = false;
+		String outReport = "<br><br>--------------------<br>- List of unportalled planets (explored only) - <br>--------------------<br>";		
+		for (PlanetNews explored : exploreArray) {
+				for (Buildings portals : portalList) {
+					if (portals.getPlanetCoords().equals(explored.getPlanetCoords()) && portals.getLineNumber() < explored.getLineNumber()) {
+						match = true;
+						break;
+						}
+				}
+				if (!match) {
+					outReport = appendString(outReport,"<br>" + explored.getPlanetCoords() +" - Explored Tick "+ explored.getTurnOccurred());
+				}		
+				match = false;
+			}
+		return outReport;
+	}	
 	
 
 	
