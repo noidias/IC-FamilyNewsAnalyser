@@ -18,6 +18,7 @@ public class RecentReports extends CoreInfo {
 	public static String reportRecentReport(String infil) {
 		String report = "";
 		ArrayList<Units> unitArray = new ArrayList<Units>();
+		ArrayList<Units> unitsLostPatternArray = new ArrayList<Units>();
 		ArrayList<PlanetNews> exploreArray = new ArrayList<PlanetNews>();
 		ArrayList<Buildings> buildingArray = new ArrayList<Buildings>();
 		ArrayList<Buildings> portalArray = new ArrayList<Buildings>();
@@ -25,6 +26,8 @@ public class RecentReports extends CoreInfo {
 		//Pattern unitPattern = Pattern.compile("(?s)\\s(\\d+) T-\\d+: Construction completed[\\s]+We have built (\\d+) (\\w+).");	//works infil
 		//Pattern unitPattern = Pattern.compile("(?s)\\s(\\d+)[\\s]+T-\\d+\\w[\\s]+Construction completed[\\s]+We have built (\\d+) (\\w+).");	//works recent report
 		Pattern unitPattern = Pattern.compile("(?s)\\s(\\d+) +T-\\d+.[\\s]+Construction completed[\\s]+We have built (\\d+) (\\w+).");	//works with both
+		
+		
 		
 		//exploration
 		//T-424	Exploration	We have explored the planet 1 in the 232:226 system.
@@ -43,6 +46,16 @@ public class RecentReports extends CoreInfo {
 		//report = Reporting.appendString(report,exploreReport);
 		String exploreList = Reporting.printArrayExplored(exploreArray);	
 		report = Reporting.appendString(report,exploreList);
+		
+		//unitsLost
+		//Our planet 12 at x:79, y:42 was attacked by Atomic_Tangerine of family 7074. Our defending forces fought bravely but I am sorry to say, after a long and bloody fight, they had to flee the planet.
+		//In the fight we also lost 762 soldiers 457 droids 11 laser turrets
+		Pattern unitsLostPattern = Pattern.compile("(?s)\\s(\\d+) +T-\\d+.[\\s]+[Defense Report]+[\\s]+Our planet \\d+ at x:\\d+, y:\\d+ was attacked by [\\w+\\s*\\w*]* of family \\d+. Our defending forces fought bravely but I am sorry to say, after a long and bloody fight, they had to flee the planet.[\\s]+In the fight we also lost (\\d+) ([\\w+ ]+)"); //works with both
+		unitsLostPatternArray = ExtractData.extractUnitData(unitsLostPattern, infil);
+		String unitsLostReport = Reporting.countAndPrintFrequenciesUnitsLost(unitsLostPatternArray);
+		report = Reporting.appendString(report,unitsLostReport);
+		
+		
 		
 		
 		//T-552: Buildings complete

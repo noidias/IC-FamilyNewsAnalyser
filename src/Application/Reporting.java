@@ -186,6 +186,24 @@ public class Reporting {
 		return outReport;
 	}
 	
+	public static String countAndPrintFrequenciesUnitsLost(ArrayList<Units> newsArray) {
+		String outReport = "";
+		outReport = appendString(outReport,"<br>--------------------<br>-     Unit Lost Summary     -<br>--------------------<br>");
+		
+		Map<String, Integer> hm = new HashMap<String, Integer>();
+
+		for (Units i : newsArray) {
+			Integer j = hm.get(i.getUnitType());
+			hm.put(i.getUnitType(), (j == null) ? i.getAmount() : j + i.getAmount());
+		}
+		// displaying the occurrence of elements in the arraylist
+		for (Map.Entry<String, Integer> val : hm.entrySet()) {
+			outReport = appendString(outReport,"<br>"+val.getValue() + " " + val.getKey());
+			//System.out.println(val.getValue() + " " + text + " " + "#" + val.getKey());
+		}
+		return outReport;
+	}
+	
 	public static String countAndPrintFrequenciesBuildings(ArrayList<Buildings> newsArray) {
 		String outReport = "";
 		outReport = appendString(outReport,"<br><br>--------------------<br>-     Building Summary     -<br>--------------------<br>");

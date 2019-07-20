@@ -1,5 +1,8 @@
 package Application;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -27,7 +30,7 @@ public class NewsAnalyser {
 	public static void main(String[] args) throws IOException {
 		//sample reports for debug only
 		String famNews = readFileLineByLine("famNews5.txt");
-		String infil = readFileLineByLine("infil1.txt");
+		String infil = readFileLineByLine("infil4.txt");
 		//String infil = readFileLineByLine("RecentReport.txt");
 		String planetList = readFileLineByLine("planetList2.txt");
 		
@@ -63,7 +66,7 @@ public class NewsAnalyser {
 	
 	
 		
-	private static String readFileLineByLine(String filePath)
+	private static String readFileLineByLineZOLD(String filePath)
 	{
 		//AtomicInteger i = new AtomicInteger();
   	    StringBuilder contentBuilder = new StringBuilder();
@@ -78,7 +81,27 @@ public class NewsAnalyser {
 	    }
 	    return contentBuilder.toString();
 	}
-	
+	private static String readFileLineByLine(String filePath)
+		{
+		try {
+			File file = new File(filePath);
+			FileReader fileReader = new FileReader(file);
+			BufferedReader bufferedReader = new BufferedReader(fileReader);
+			StringBuffer stringBuffer = new StringBuffer();
+			String line;
+			while ((line = bufferedReader.readLine()) != null) {
+				stringBuffer.append(line);
+				stringBuffer.append("\n");
+			}
+			fileReader.close();
+			//System.out.println("Contents of file:");
+			return stringBuffer.toString();
+		} catch (IOException e) {
+			e.printStackTrace();
+			return e.toString();
+		}
+		
+	}
 	public static String addLineNumber(String famNews) {		
 		int count = 1;
 		String[] lines = famNews.replace("T-","# T-").split("#");
