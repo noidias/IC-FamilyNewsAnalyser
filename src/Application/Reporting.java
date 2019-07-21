@@ -186,7 +186,30 @@ public class Reporting {
 		return outReport;
 	}
 	
-	public static String countAndPrintFrequenciesUnitsLost(ArrayList<Units> newsArray) {
+	public static String countAndPrintFrequenciesUnitsLost(ArrayList<Units> unitArray) {
+		String outReport = "";
+		outReport = appendString(outReport,"<br>--------------------<br>-     Unit Lost Detailed Report     -<br>--------------------<br>");
+		
+		for (Units i : unitArray) {
+			if (i.getUnitType().equals("soldiers")) {
+				outReport = appendString(outReport,"<br>"+i.getAmount()+ " Soldiers Lost (T-" + i.getTurnOccurred()+")");
+			}
+		}
+		for (Units i : unitArray) {
+			if (i.getUnitType().equals("droids")) {
+				outReport = appendString(outReport,"<br>"+i.getAmount()+ " Droids Lost (T-" + i.getTurnOccurred()+")");
+			}
+		}
+		for (Units i : unitArray) {
+			if (i.getUnitType().equals("fighters")) {
+				outReport = appendString(outReport,"<br>"+i.getAmount()+ " Fighters Lost (T-" + i.getTurnOccurred()+")");
+			}
+		}
+		return outReport;
+	}
+	
+	
+	public static String countAndPrintFrequenciesUnitsLostSummary(ArrayList<Units> newsArray) {
 		String outReport = "";
 		outReport = appendString(outReport,"<br>--------------------<br>-     Unit Lost Summary     -<br>--------------------<br>");
 		
@@ -203,6 +226,8 @@ public class Reporting {
 		}
 		return outReport;
 	}
+	
+	
 	
 	public static String countAndPrintFrequenciesBuildings(ArrayList<Buildings> newsArray) {
 		String outReport = "";

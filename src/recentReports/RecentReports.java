@@ -50,12 +50,37 @@ public class RecentReports extends CoreInfo {
 		//unitsLost
 		//Our planet 12 at x:79, y:42 was attacked by Atomic_Tangerine of family 7074. Our defending forces fought bravely but I am sorry to say, after a long and bloody fight, they had to flee the planet.
 		//In the fight we also lost 762 soldiers 457 droids 11 laser turrets
-		Pattern unitsLostPattern = Pattern.compile("(?s)\\s(\\d+) +T-\\d+.[\\s]+[Defense Report]+[\\s]+Our planet \\d+ at x:\\d+, y:\\d+ was attacked by [\\w+\\s*\\w*]* of family \\d+. Our defending forces fought bravely but I am sorry to say, after a long and bloody fight, they had to flee the planet.[\\s]+In the fight we also lost (\\d+) ([\\w+ ]+)"); //works with both
-		unitsLostPatternArray = ExtractData.extractUnitData(unitsLostPattern, infil);
-		String unitsLostReport = Reporting.countAndPrintFrequenciesUnitsLost(unitsLostPatternArray);
+		
+		//Our planet 12 at x:119, y:50 was attacked by Outrageous_Orange of family 7074, I am pleased to say that we with our forces extraordinary fighting skill were able to fight the attackers off our planet.
+		//In the fight we lost 326 fighters 197 laser turrets
+		
+		//Our planet 1 at x:108, y:64 was attacked by Outrageous_Orange of family 7074. When we first spotted the overwhelming enemy force approaching we already suspected defeat and managed to prepare a nuclear blast which made the planet uninhabitable when we left.
+		//In the fight we also lost 522 fighters 18 soldiers 1466 droids
+		infil = infil.replace(" turrets", "");
+		
+		String attackedText = "was attacked by [\\w+\\s*\\w*]* of family \\d+";
+		String lostPLanetText = attackedText+". Our defending forces fought bravely but I am sorry to say, after a long and bloody fight, they had to flee the planet";
+		String LostPlanetBlownText = attackedText+". When we first spotted the overwhelming enemy force approaching we already suspected defeat and managed to prepare a nuclear blast which made the planet uninhabitable when we left";
+		String foughtOffText = attackedText+", I am pleased to say that we with our forces extraordinary fighting skill were able to fight the attackers off our planet";		
+		String unitsLostCommon ="(?s)\\s(\\d+) +T-(\\d+).[\\s]+[Defense Report]+[\\s]+Our planet \\d+ at x:\\d+, y:\\d+ ["+lostPLanetText+"|"+foughtOffText+"|"+LostPlanetBlownText+"]+";
+		
+		Pattern unitsLostPattern1 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (\\w+)\n()()()()()()()()");
+		Pattern unitsLostPattern2 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (\\w+) (\\d+) (\\w+)\n()()()()()()");
+		Pattern unitsLostPattern3 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+)\n()()()()");
+		Pattern unitsLostPattern4 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+)\n()()");
+		Pattern unitsLostPattern5 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+)\n");
+		
+		unitsLostPatternArray = ExtractData.extractLostUnitData(unitsLostPattern1, infil);
+		unitsLostPatternArray.addAll(ExtractData.extractLostUnitData(unitsLostPattern2, infil));
+		unitsLostPatternArray.addAll(ExtractData.extractLostUnitData(unitsLostPattern3, infil));
+		unitsLostPatternArray.addAll(ExtractData.extractLostUnitData(unitsLostPattern4, infil));
+		unitsLostPatternArray.addAll(ExtractData.extractLostUnitData(unitsLostPattern5, infil));
+
+		String unitsLostReport = Reporting.countAndPrintFrequenciesUnitsLostSummary(unitsLostPatternArray);
 		report = Reporting.appendString(report,unitsLostReport);
 		
-		
+		unitsLostReport = Reporting.countAndPrintFrequenciesUnitsLost(unitsLostPatternArray);
+		report = Reporting.appendString(report,unitsLostReport);
 		
 		
 		//T-552: Buildings complete

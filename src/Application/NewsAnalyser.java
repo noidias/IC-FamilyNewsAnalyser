@@ -30,7 +30,7 @@ public class NewsAnalyser {
 	public static void main(String[] args) throws IOException {
 		//sample reports for debug only
 		String famNews = readFileLineByLine("famNews5.txt");
-		String infil = readFileLineByLine("infil4.txt");
+		String infil = readFileLineByLine("infil5.txt");
 		//String infil = readFileLineByLine("RecentReport.txt");
 		String planetList = readFileLineByLine("planetList2.txt");
 		

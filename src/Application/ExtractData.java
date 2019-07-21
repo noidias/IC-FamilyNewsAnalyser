@@ -1,6 +1,7 @@
 package Application;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -236,11 +237,24 @@ public class ExtractData {
 		Matcher news = unitPattern.matcher(infil);
 		while (news.find()) {
 			int line = Integer.parseInt(news.group(1));
-			int amount = Integer.parseInt(news.group(2));
-			String units = news.group(3);
-			Units nextLineOfNews = new Units(line, amount, units);
-			newsArray.add(nextLineOfNews);
+			int turn = Integer.parseInt(news.group(2));
+			
+			for(int i=1;i<=10;i = i+2){
+				String checkAmount = news.group(i+2);
+				if (checkAmount.isEmpty())
+					{}
+				else {
+					int amount = Integer.parseInt(checkAmount);
+					String units = news.group(i+3);
+					Units nextLineOfNews = new Units(line, turn, amount, units);
+					newsArray.add(nextLineOfNews);
+				}
+
+				
+			}
+				
 		}
+		Collections.sort(newsArray);
 		return newsArray;
 	}
 	
