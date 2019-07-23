@@ -188,30 +188,60 @@ public class Reporting {
 	
 	public static String countAndPrintFrequenciesUnitsLost(ArrayList<Units> unitArray) {
 		String outReport = "";
-		outReport = appendString(outReport,"<br>--------------------<br>-     Unit Lost Detailed Report     -<br>--------------------<br>");
+		outReport = appendString(outReport,"<br><br>--------------------<br>- Unit Lost Detailed Report  -<br>--------------------<br>");
 		
+		int previousTurn = 0;
+		int soldiers = 0;
+		int droids = 0;
+		int fighter = 0;
 		for (Units i : unitArray) {
-			if (i.getUnitType().equals("soldiers")) {
-				outReport = appendString(outReport,"<br>"+i.getAmount()+ " Soldiers Lost (T-" + i.getTurnOccurred()+")");
+			if (previousTurn == i.getTurnOccurred())
+			{	
+					if (i.getUnitType().equals("soldiers")) {
+						soldiers = soldiers + i.getAmount();
+					}
+					if (i.getUnitType().equals("droids")) {
+						droids = droids + i.getAmount();
+					}
+					if (i.getUnitType().equals("fighters")) {
+						fighter = fighter + i.getAmount();
+					}
 			}
+			else
+			{
+				if (soldiers > 0 || fighter > 0 || droids > 0)
+				{
+					outReport = appendString(outReport,"<br>"+fighter+ " Fighters Lost, "+soldiers+" Soldiers Lost "+droids+ " Droids Lost (T-" + previousTurn+")");
+				}
+				
+				soldiers = 0;
+				droids = 0;
+				fighter = 0;
+				previousTurn = i.getTurnOccurred();
+				if (i.getUnitType().equals("soldiers")) {	
+					soldiers = soldiers + i.getAmount();
+				//outReport = appendString(outReport,"<br>"+i.getAmount()+ " Soldiers Lost (T-" + i.getTurnOccurred()+")");
+				}
+				if (i.getUnitType().equals("droids")) {
+					droids = droids + i.getAmount();
+				//outReport = appendString(outReport,"<br>"+i.getAmount()+ " Droids Lost (T-" + i.getTurnOccurred()+")");
+				}
+				if (i.getUnitType().equals("fighters")) {
+					fighter = fighter + i.getAmount();
+				//outReport = appendString(outReport,"<br>"+i.getAmount()+ " Fighters Lost (T-" + i.getTurnOccurred()+")");
+				}
+			}			
 		}
-		for (Units i : unitArray) {
-			if (i.getUnitType().equals("droids")) {
-				outReport = appendString(outReport,"<br>"+i.getAmount()+ " Droids Lost (T-" + i.getTurnOccurred()+")");
-			}
-		}
-		for (Units i : unitArray) {
-			if (i.getUnitType().equals("fighters")) {
-				outReport = appendString(outReport,"<br>"+i.getAmount()+ " Fighters Lost (T-" + i.getTurnOccurred()+")");
-			}
-		}
-		return outReport;
+		if (soldiers > 0 || fighter > 0 || droids > 0)
+			{outReport = appendString(outReport,"<br>"+fighter+ " Fighters Lost, "+soldiers+" Soldiers Lost "+droids+ " Droids Lost (T-" + previousTurn+")");}
+		
+			return outReport;
 	}
 	
 	
 	public static String countAndPrintFrequenciesUnitsLostSummary(ArrayList<Units> newsArray) {
 		String outReport = "";
-		outReport = appendString(outReport,"<br>--------------------<br>-     Unit Lost Summary     -<br>--------------------<br>");
+		outReport = appendString(outReport,"<br><br>--------------------<br>-  Unit Lost Summary  -<br>--------------------<br>");
 		
 		Map<String, Integer> hm = new HashMap<String, Integer>();
 

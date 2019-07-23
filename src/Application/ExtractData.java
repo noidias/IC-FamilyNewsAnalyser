@@ -249,12 +249,8 @@ public class ExtractData {
 					Units nextLineOfNews = new Units(line, turn, amount, units);
 					newsArray.add(nextLineOfNews);
 				}
-
-				
 			}
-				
-		}
-		Collections.sort(newsArray);
+		}		
 		return newsArray;
 	}
 	

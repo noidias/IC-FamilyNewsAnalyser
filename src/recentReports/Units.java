@@ -12,7 +12,6 @@ import FamilyNews.PlanetNews;
 public class Units extends CoreInfo implements Comparable<Units> {
 
 	protected int lineNumber;
-	protected int turn;
 	protected int amount;
 	protected String unitType;
 	
@@ -47,15 +46,15 @@ public class Units extends CoreInfo implements Comparable<Units> {
 	}	
 	
 	public int getTurn() {
-		return turn;
+		return turnOccurred;
 	}
 	
 	public void setTurn(int turn) {
-		this.turn = turn;
+		this.turnOccurred = turn;
 	}	
-	public int compareTo(Units compareLine) {
-		int compareQuantity = ((Units) compareLine).getLineNumber(); 
-		return compareQuantity - this.lineNumber;
+	public int compareTo(Units compareTurn) {
+		int compareQuantity = ((Units) compareTurn).getTurnOccurred(); 
+		return compareQuantity - this.turnOccurred;
 	}
 	
 	

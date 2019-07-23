@@ -1,6 +1,7 @@
 package recentReports;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.regex.Pattern;
 
 import Application.ExtractData;
@@ -23,18 +24,11 @@ public class RecentReports extends CoreInfo {
 		ArrayList<Buildings> buildingArray = new ArrayList<Buildings>();
 		ArrayList<Buildings> portalArray = new ArrayList<Buildings>();
 		//units
-		//Pattern unitPattern = Pattern.compile("(?s)\\s(\\d+) T-\\d+: Construction completed[\\s]+We have built (\\d+) (\\w+).");	//works infil
-		//Pattern unitPattern = Pattern.compile("(?s)\\s(\\d+)[\\s]+T-\\d+\\w[\\s]+Construction completed[\\s]+We have built (\\d+) (\\w+).");	//works recent report
-		Pattern unitPattern = Pattern.compile("(?s)\\s(\\d+) +T-\\d+.[\\s]+Construction completed[\\s]+We have built (\\d+) (\\w+).");	//works with both
+		Pattern unitPattern = Pattern.compile("(?s)\\s(\\d+) +T-\\d+.[\\s]+Construction completed[\\s]+We have built (\\d+) (\\w+).");	
 		
 		
 		
 		//exploration
-		//T-424	Exploration	We have explored the planet 1 in the 232:226 system.
-		//T-604: Explored a planet
-		//We have explored the planet 2 in the 157:28 system.
-		//Pattern explorePattern = Pattern.compile("(?s)\\s()(\\d+) +T-(\\d+)()[\\s]+Exploration[\\s]+We have explored the planet (\\d+) in the (\\d+):(\\d+) system.()()"); //works recent report
-		//Pattern explorePattern = Pattern.compile("(?s)\\s()(\\d+) +T-(\\d+).()[\\s]+Explored a planet[\\s]+We have explored the planet (\\d+) in the (\\d+):(\\d+) system.()()"); //works infil
 		Pattern explorePattern = Pattern.compile("(?s)\\s()(\\d+) +T-(\\d+)()[:\\s]+[Exploration|Explored a planet]+[\\s]+We have explored the"+planetRegex+".()()"); //works with both
 		unitArray = ExtractData.extractUnitData(unitPattern, infil);
 		String unitReport = Reporting.countAndPrintFrequenciesUnits(unitArray);
@@ -64,18 +58,18 @@ public class RecentReports extends CoreInfo {
 		String foughtOffText = attackedText+", I am pleased to say that we with our forces extraordinary fighting skill were able to fight the attackers off our planet";		
 		String unitsLostCommon ="(?s)\\s(\\d+) +T-(\\d+).[\\s]+[Defense Report]+[\\s]+Our planet \\d+ at x:\\d+, y:\\d+ ["+lostPLanetText+"|"+foughtOffText+"|"+LostPlanetBlownText+"]+";
 		
-		Pattern unitsLostPattern1 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (\\w+)\n()()()()()()()()");
-		Pattern unitsLostPattern2 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (\\w+) (\\d+) (\\w+)\n()()()()()()");
-		Pattern unitsLostPattern3 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+)\n()()()()");
-		Pattern unitsLostPattern4 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+)\n()()");
-		Pattern unitsLostPattern5 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+) (\\d+) (\\w+)\n");
+		Pattern unitsLostPattern1 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (fighters|soldiers|droids|laser)[^ ]+()()()()()()()()");
+		Pattern unitsLostPattern2 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (fighters|soldiers|droids|laser) (\\d+) (soldiers|droids|laser)[^ ]+()()()()()()");
+		Pattern unitsLostPattern3 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (fighters|soldiers|droids|laser) (\\d+) (soldiers|droids|laser) (\\d+) (droids|laser)[^ |]()()()()");
+		Pattern unitsLostPattern4 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (fighters|soldiers|droids|laser) (\\d+) (soldiers|droids|laser) (\\d+) (droids|laser) (\\d+) (laser)()()");
 		
 		unitsLostPatternArray = ExtractData.extractLostUnitData(unitsLostPattern1, infil);
 		unitsLostPatternArray.addAll(ExtractData.extractLostUnitData(unitsLostPattern2, infil));
 		unitsLostPatternArray.addAll(ExtractData.extractLostUnitData(unitsLostPattern3, infil));
 		unitsLostPatternArray.addAll(ExtractData.extractLostUnitData(unitsLostPattern4, infil));
-		unitsLostPatternArray.addAll(ExtractData.extractLostUnitData(unitsLostPattern5, infil));
 
+		Collections.sort(unitsLostPatternArray);
+		
 		String unitsLostReport = Reporting.countAndPrintFrequenciesUnitsLostSummary(unitsLostPatternArray);
 		report = Reporting.appendString(report,unitsLostReport);
 		
@@ -84,8 +78,6 @@ public class RecentReports extends CoreInfo {
 		
 		
 		//T-552: Buildings complete
-		//We have built 2868 Cash factory on 183,85:4.
-		//T-430	Infrastructure	We have built 1 Laser on 251,196:9.	
 		Pattern buildingPattern = Pattern.compile("(?s)\\s(\\d+) +T-(\\d+)[:\\s]+[Infrastructure|Buildings complete]+[\\s]+We have built (\\d+) ([\\w+ ]+) on (\\d+,\\d+:\\d+)."); //works with both
 		buildingArray = ExtractData.extractBuildingData(buildingPattern, infil);
 		String buildingReport = Reporting.countAndPrintFrequenciesBuildings(buildingArray);
@@ -94,18 +86,12 @@ public class RecentReports extends CoreInfo {
 		report = Reporting.appendString(report,laserReport);
 		
 		//T-629: Portal completed
-		//Our workers have finished constructing a portal on planet 2 in the 30,183 system.
-		//T-372	Portal completed	Our workers have finished constructing a portal on planet 5 in the 235,217 system.	
 		Pattern portalPattern = Pattern.compile("(?s)\\s(\\d+) +T-(\\d+)[:\\s]+[Portal completed]+[\\s]+Our workers have finished constructing a portal on"+planetRegex+"."); //works with both
 		portalArray = ExtractData.extractPortalData(portalPattern, infil);
-		//report = Reporting.appendString(report,buildingReport);
 		String portalReport = Reporting.portalReport(portalArray);
 		String unportaledPlanets = Reporting.unportaledPlanets(portalArray,exploreArray);
 		report = Reporting.appendString(report,portalReport);
 		report = Reporting.appendString(report,unportaledPlanets);
-		
-		
-		
 		return report;
 		}
 	
