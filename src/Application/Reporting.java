@@ -189,7 +189,6 @@ public class Reporting {
 	public static String countAndPrintFrequenciesUnitsLost(ArrayList<Units> unitArray) {
 		String outReport = "";
 		outReport = appendString(outReport,"<br><br>--------------------<br>- Unit Lost Detailed Report  -<br>--------------------<br>");
-		
 		int previousTurn = 0;
 		int soldiers = 0;
 		int droids = 0;
@@ -211,7 +210,7 @@ public class Reporting {
 			{
 				if (soldiers > 0 || fighter > 0 || droids > 0)
 				{
-					outReport = appendString(outReport,"<br>"+fighter+ " Fighters Lost, "+soldiers+" Soldiers Lost "+droids+ " Droids Lost (T-" + previousTurn+")");
+					outReport = appendString(outReport,"<br>"+fighter+ " Fighters "+soldiers+" Soldiers "+droids+ " Droids (T-" + previousTurn+")");
 				}
 				
 				soldiers = 0;
@@ -233,8 +232,7 @@ public class Reporting {
 			}			
 		}
 		if (soldiers > 0 || fighter > 0 || droids > 0)
-			{outReport = appendString(outReport,"<br>"+fighter+ " Fighters Lost, "+soldiers+" Soldiers Lost "+droids+ " Droids Lost (T-" + previousTurn+")");}
-		
+			{outReport = appendString(outReport,"<br>"+fighter+ " Fighters "+soldiers+" Soldiers "+droids+ " Droids (T-" + previousTurn+")");}
 			return outReport;
 	}
 	

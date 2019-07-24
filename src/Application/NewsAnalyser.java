@@ -10,7 +10,9 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
@@ -33,12 +35,14 @@ public class NewsAnalyser {
 		String infil = readFileLineByLine("infil5.txt");
 		//String infil = readFileLineByLine("RecentReport.txt");
 		String planetList = readFileLineByLine("planetList2.txt");
+		String famCouncil = readFileLineByLine("famCouncil.txt");
 		
 		
 		//print results in Console
 		//String debugConsole = runFamNewsAnalyser(famNews);
-		String debugConsole = runRecentReportAnalyser(infil);
+		//String debugConsole = runRecentReportAnalyser(infil);
 		//String debugConsole=  PlanetFormater.runPlanetFormaterr(planetList); 
+		String debugConsole=  runFamCouncilAnalyser(famCouncil); 
 		
 		debugConsole = debugConsole.replace("<br>","\r\n");
 		debugConsole = debugConsole.replace("&nbsp","\t");
@@ -64,7 +68,53 @@ public class NewsAnalyser {
 		return report;
 	}
 	
-	
+	public static String runFamCouncilAnalyser(String famCouncil)
+	{
+		String report = "";
+		famCouncil = famCouncil.replace(",", "");
+		famCouncil = famCouncil.replace("+", "");
+		
+		//Last Turn's Affairs
+		//Gold
+		//Income	+1,371,858
+		//TIF:	+689,588
+		//royal victorin:	+629,844
+		//Biscuit:	+33,369
+		//Who:	+6,842
+		//Zanharim:	+5,949
+		//Blood Eagle:	+5,916
+		//Gideon:	+350
+
+		boolean match = true;
+		int count = 1;
+		String namePattern = "\\s([\\w+ ]+):\\s+\\d+";
+		String namePatternFixed = "\\s([\\w+ ]+):\\s+\\d+";
+		String endPattern = "\\s.*Unit Upkeep";
+		List<String> nameList = new ArrayList<String>();
+		while (match)
+		{			
+			Pattern councilNamePattern = Pattern.compile("(?s)Last Turn's Affairs\\sGold\\sIncome	\\d+"+namePattern + endPattern);	
+			Matcher news = councilNamePattern.matcher(famCouncil);
+			match = false;
+			while (news.find()) {
+				//System.out.println(news.group(count));
+				nameList.add(news.group(count));
+				namePattern= namePattern+namePatternFixed;
+				count++;
+				match = true;
+			}	
+		}
+		for(int i = 0; i < nameList.size(); i++) {   
+		    System.out.println(nameList.get(i));
+		}  
+		
+		//unitArray = ExtractData.extractUnitData(unitPattern, infil);
+		//report = Reporting.appendString(report,unitReport);
+		
+		
+		
+		return report;
+	}
 		
 	private static String readFileLineByLineZOLD(String filePath)
 	{
