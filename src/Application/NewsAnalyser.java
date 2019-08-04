@@ -32,7 +32,7 @@ public class NewsAnalyser {
 	public static void main(String[] args) throws IOException {
 		//sample reports for debug only
 		String famNews = readFileLineByLine("famNews5.txt");
-		String infil = readFileLineByLine("infil5.txt");
+		String infil = readFileLineByLine("infil6.txt");
 		//String infil = readFileLineByLine("RecentReport.txt");
 		String planetList = readFileLineByLine("planetList2.txt");
 		String famCouncil = readFileLineByLine("famCouncil.txt");
@@ -40,9 +40,9 @@ public class NewsAnalyser {
 		
 		//print results in Console
 		//String debugConsole = runFamNewsAnalyser(famNews);
-		//String debugConsole = runRecentReportAnalyser(infil);
+		String debugConsole = runRecentReportAnalyser(infil);
 		//String debugConsole=  PlanetFormater.runPlanetFormaterr(planetList); 
-		String debugConsole=  runFamCouncilAnalyser(famCouncil); 
+		//String debugConsole=  runFamCouncilAnalyser(famCouncil); 
 		
 		debugConsole = debugConsole.replace("<br>","\r\n");
 		debugConsole = debugConsole.replace("&nbsp","\t");
@@ -154,7 +154,7 @@ public class NewsAnalyser {
 	}
 	public static String addLineNumber(String famNews) {		
 		int count = 1;
-		String[] lines = famNews.replace("T-","# T-").split("#");
+		String[] lines = famNews.replace("[", "").replace("T-","# T-").split("#");
 		//String[] lines = famNews.split("T-");
 		
 		

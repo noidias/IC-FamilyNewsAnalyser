@@ -52,22 +52,35 @@ public class RecentReports extends CoreInfo {
 		//In the fight we also lost 522 fighters 18 soldiers 1466 droids
 		infil = infil.replace(" turrets", "");
 		
-		String attackedText = "was attacked by [\\w+\\s*\\w*]* of family \\d+";
-		String lostPLanetText = attackedText+". Our defending forces fought bravely but I am sorry to say, after a long and bloody fight, they had to flee the planet";
-		String LostPlanetBlownText = attackedText+". When we first spotted the overwhelming enemy force approaching we already suspected defeat and managed to prepare a nuclear blast which made the planet uninhabitable when we left";
-		String foughtOffText = attackedText+", I am pleased to say that we with our forces extraordinary fighting skill were able to fight the attackers off our planet";		
-		String unitsLostCommon ="(?s)\\s(\\d+) +T-(\\d+).[\\s]+[Defense Report]+[\\s]+Our planet \\d+ at x:\\d+, y:\\d+ ["+lostPLanetText+"|"+foughtOffText+"|"+LostPlanetBlownText+"]+";
+		String attackedText = "was attacked by [\\w+\\s]+ of family \\d+";
+		//String attackedText = "was attacked by [[a-zA-Z0-9_]\\w+\\s*[a-zA-Z0-9_]]* of family \\d+";
+		String lostPLanetText = ". Our defending forces fought bravely but I am sorry to say, after a long and bloody fight, they had to flee the planet";
+		String LostPlanetBlownText = ". When we first spotted the overwhelming enemy force approaching we already suspected defeat and managed to prepare a nuclear blast which made the planet uninhabitable when we left";
+		String foughtOffText = ", I am pleased to say that we with our forces extraordinary fighting skill were able to fight the attackers off our planet";	
+		String unitsLostCommon = "";
 		
-		Pattern unitsLostPattern1 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (fighters|soldiers|droids|laser)[^ ]+()()()()()()()()");
-		Pattern unitsLostPattern2 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (fighters|soldiers|droids|laser) (\\d+) (soldiers|droids|laser)[^ ]+()()()()()()");
-		Pattern unitsLostPattern3 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (fighters|soldiers|droids|laser) (\\d+) (soldiers|droids|laser) (\\d+) (droids|laser)[^ |]()()()()");
-		Pattern unitsLostPattern4 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (fighters|soldiers|droids|laser) (\\d+) (soldiers|droids|laser) (\\d+) (droids|laser) (\\d+) (laser)()()");
+		for (int i = 1; i < 4; i++) {
+			switch (i) {
+			case 1:
+				unitsLostCommon ="(?s)(\\d+) +T-(\\d+). Defense Report[\\s]+Our planet \\d+ at x:\\d+, y:\\d+ "+attackedText+foughtOffText;
+				break;
+			case 2:
+				unitsLostCommon ="(?s)(\\d+) +T-(\\d+). Defense Report[\\s]+Our planet \\d+ at x:\\d+, y:\\d+ "+attackedText+lostPLanetText;
+				break;
+			case 3:
+				unitsLostCommon ="(?s)(\\d+) +T-(\\d+). Defense Report[\\s]+Our planet \\d+ at x:\\d+, y:\\d+ "+attackedText+LostPlanetBlownText;
+				break;
+			}
+			Pattern unitsLostPattern1 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (fighters|soldiers|droids|laser)[^ ]{1}()()()()()()()()");
+			Pattern unitsLostPattern2 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (fighters|soldiers|droids|laser) (\\d+) (soldiers|droids|laser)[^ ]{1}()()()()()()");
+			Pattern unitsLostPattern3 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (fighters|soldiers|droids|laser) (\\d+) (soldiers|droids|laser) (\\d+) (droids|laser)[^ |]{1}()()()()");
+			Pattern unitsLostPattern4 = Pattern.compile(unitsLostCommon+".[\\s]+In the fight we [\\w ]{0,5}lost (\\d+) (fighters|soldiers|droids|laser) (\\d+) (soldiers|droids|laser) (\\d+) (droids|laser) (\\d+) (laser)()()");
+			unitsLostPatternArray.addAll(ExtractData.extractLostUnitData(unitsLostPattern1, infil));
+			unitsLostPatternArray.addAll(ExtractData.extractLostUnitData(unitsLostPattern2, infil));
+			unitsLostPatternArray.addAll(ExtractData.extractLostUnitData(unitsLostPattern3, infil));
+			unitsLostPatternArray.addAll(ExtractData.extractLostUnitData(unitsLostPattern4, infil));
+		}		
 		
-		unitsLostPatternArray = ExtractData.extractLostUnitData(unitsLostPattern1, infil);
-		unitsLostPatternArray.addAll(ExtractData.extractLostUnitData(unitsLostPattern2, infil));
-		unitsLostPatternArray.addAll(ExtractData.extractLostUnitData(unitsLostPattern3, infil));
-		unitsLostPatternArray.addAll(ExtractData.extractLostUnitData(unitsLostPattern4, infil));
-
 		Collections.sort(unitsLostPatternArray);
 		
 		String unitsLostReport = Reporting.countAndPrintFrequenciesUnitsLostSummary(unitsLostPatternArray);

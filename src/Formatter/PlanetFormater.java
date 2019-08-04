@@ -14,6 +14,10 @@ public static String runPlanetFormaterr(String planetList) {
 	    Pattern newsPlanetPattern = Pattern.compile("(?s) planet (\\d+) in the (\\d+)[,:](\\d+) system");
 	    report = report +formatNewsList(newsPlanetPattern, planetList);	
 	    
+	    //Our planet 11 at x:68, y:147
+	    Pattern newsLostPlanetPattern = Pattern.compile("(?s)Our planet (\\d+) at x:(\\d+), y:(\\d+)");
+	    report = report +formatNewsList(newsLostPlanetPattern, planetList);	
+	    
 		return report;
 	}
 
