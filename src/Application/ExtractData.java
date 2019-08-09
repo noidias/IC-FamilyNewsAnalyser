@@ -211,8 +211,8 @@ public class ExtractData {
 			int planetX = Integer.parseInt(news.group(8));
 			int planetY = Integer.parseInt(news.group(9));
 			String planetCoords = (planetX + "," + planetY + ":" + planetNo);
-			String enemy = news.group(5);
-			String family = news.group(4);
+			String enemy = news.group(4);
+			String family = news.group(5);
 			PlanetNews nextLineOfNews = new PlanetNews(line, event, turn, player, planetCoords, family, enemy);
 			newsArray.add(nextLineOfNews);
 		}

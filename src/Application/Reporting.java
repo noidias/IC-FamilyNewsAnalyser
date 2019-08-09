@@ -49,6 +49,14 @@ public class Reporting {
 		return outReport;
 	}
 	
+	public static String printSummaryPlanetsFamily(ArrayList<PlanetNews> news, String text) {		
+		String outReport = "";
+		outReport = appendString(outReport,"<br>--------------------<br>&nbsp&nbsp&nbsp "+text+"&nbsp&nbsp&nbsp<br>--------------------");
+		outReport = appendString(outReport,(countAndPrintFrequenciesPlanetsFamily(news, " planet(s) "+text)));
+		outReport =  appendString(outReport, "<br>-------------------<br> "+news.size() + " planet(s) "+text+".<br>");
+		return outReport;
+	}
+	
 	public static String printSummaryAidSent(ArrayList<AidNews> news, String text) {		
 		String outReport = "";
 		
@@ -164,6 +172,20 @@ public class Reporting {
 		for (Map.Entry<String, Integer> val : hm.entrySet()) {
 			outReport = appendString(outReport,"<br>"+val.getValue() + " " + text + " " + "#" + val.getKey());
 			//System.out.println(val.getValue() + " " + text + " " + "#" + val.getKey());
+		}
+		return outReport;
+	}
+	
+	public static String countAndPrintFrequenciesPlanetsFamily(ArrayList<PlanetNews> newsArray, String text) {
+		String outReport = "";
+		Map<String, Integer> hm = new HashMap<String, Integer>();
+		for (PlanetNews i : newsArray) {
+			Integer j = hm.get(i.getEnemyFam());
+			hm.put(i.getEnemyFam(), (j == null) ? 1 : j + 1);
+		}
+		// displaying the occurrence of elements in the arraylist
+		for (Map.Entry<String, Integer> val : hm.entrySet()) {
+			outReport = appendString(outReport,"<br>"+val.getValue() + " " + text + " " + "#" + val.getKey());
 		}
 		return outReport;
 	}

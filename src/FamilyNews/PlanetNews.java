@@ -87,28 +87,43 @@ public class PlanetNews extends News implements Comparable<PlanetNews> {
 		
 		//Capture
 		captureArray = ExtractData.extractPlanetData(capturePattern, famNews);
-		String captureReport = Reporting.printSummaryPlanets(captureArray, "Captures");
+		
+		String captureReport = Reporting.printSummaryPlanetsFamily(captureArray, "Family Captures");
+		report = Reporting.appendString(report,captureReport);
+		
+		captureReport = Reporting.printSummaryPlanets(captureArray, "Captures");
 		//System.out.println(captureReport);
 		report = Reporting.appendString(report,captureReport);
-		//String capList = Reporting.printArrayExplored(captureArray);	
-		//report = Reporting.appendString(report,capList);
+			
 		
 		defeatsArray = ExtractData.extractPlanetData(defeatPattern, famNews);
-		String defeatsReport = Reporting.printSummaryPlanets(defeatsArray, "Defeats");
+		
+		String defeatsReport = Reporting.printSummaryPlanetsFamily(defeatsArray, "Family Defeats");
+		report = Reporting.appendString(report,defeatsReport);
+		
+		defeatsReport = Reporting.printSummaryPlanets(defeatsArray, "Defeats");
 		//System.out.println(defeatsReport);
 		report = Reporting.appendString(report,defeatsReport);
 	
 		//blow ups Attacks
 		blownSaArray =ExtractData.extractDataBlownSA(blownSAPattern, famNews);
-		String blownSaReport = Reporting.printSummaryPlanets(blownSaArray, "blown ups by");
-		//System.out.println(blownSaReport);
+
+		String blownSaReport = Reporting.printSummaryPlanetsFamily(blownSaArray, "Captures blown up");
+		report = Reporting.appendString(report,blownSaReport);
+
+		
+		blownSaReport = Reporting.printSummaryPlanets(blownSaArray, "blown ups by");
 		report = Reporting.appendString(report,blownSaReport);
 			
 		//blow ups defeats
 		blownEaArray =ExtractData.extractDataBlownEA(blownEAPattern, famNews);
+		
 		lostBlownArray = Reporting.findOutstandingBlowPLanets(captureArray, blownEaArray, exploreArray);
-		String lostBlownReport = Reporting.printSummaryPlanets(blownEaArray, "blown ups lost");
-		//System.out.println(lostBlownReport);
+		
+		String lostBlownReport = Reporting.printSummaryPlanetsFamily(blownEaArray, "defeats blown ups");
+		report = Reporting.appendString(report,lostBlownReport);
+		
+		lostBlownReport = Reporting.printSummaryPlanets(blownEaArray, "blown ups lost");
 		report = Reporting.appendString(report,lostBlownReport);
 		
 		
