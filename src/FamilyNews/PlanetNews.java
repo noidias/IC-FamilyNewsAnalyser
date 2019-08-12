@@ -112,7 +112,7 @@ public class PlanetNews extends News implements Comparable<PlanetNews> {
 		report = Reporting.appendString(report,blownSaReport);
 
 		
-		blownSaReport = Reporting.printSummaryPlanets(blownSaArray, "blown ups by");
+		blownSaReport = Reporting.printSummaryPlanets(blownSaArray, "Captures blown up");
 		report = Reporting.appendString(report,blownSaReport);
 			
 		//blow ups defeats
@@ -120,10 +120,10 @@ public class PlanetNews extends News implements Comparable<PlanetNews> {
 		
 		lostBlownArray = Reporting.findOutstandingBlowPLanets(captureArray, blownEaArray, exploreArray);
 		
-		String lostBlownReport = Reporting.printSummaryPlanetsFamily(blownEaArray, "defeats blown ups");
+		String lostBlownReport = Reporting.printSummaryPlanetsFamily(blownEaArray, "Defeats blown up");
 		report = Reporting.appendString(report,lostBlownReport);
 		
-		lostBlownReport = Reporting.printSummaryPlanets(blownEaArray, "blown ups lost");
+		lostBlownReport = Reporting.printSummaryPlanets(blownEaArray, "Defeats blown up");
 		report = Reporting.appendString(report,lostBlownReport);
 		
 		

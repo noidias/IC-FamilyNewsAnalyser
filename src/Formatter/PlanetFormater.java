@@ -26,12 +26,12 @@ public static String formatStandardList(Pattern planetPattern, String famNews) {
 	String report = "";
 	while (news.find()) {
 		String planet = news.group(1);
-		report = report+planet+"<br>";}
+		report = report+planet+"\r\n";}
 	return report;
 	}
 	
 public static String formatNewsList(Pattern planetPattern, String famNews) {
-		Matcher news = planetPattern.matcher(famNews);
+		Matcher \r\n = planetPattern.matcher(famNews);
 		String report = "";
 		while (news.find()) {
 			int planetNo = Integer.parseInt(news.group(1));
