@@ -31,14 +31,14 @@ public static String formatStandardList(Pattern planetPattern, String famNews) {
 	}
 	
 public static String formatNewsList(Pattern planetPattern, String famNews) {
-		Matcher \r\n = planetPattern.matcher(famNews);
+		Matcher news = planetPattern.matcher(famNews);
 		String report = "";
 		while (news.find()) {
 			int planetNo = Integer.parseInt(news.group(1));
 			int planetX = Integer.parseInt(news.group(2));
 			int planetY = Integer.parseInt(news.group(3));
 			String planetCoords = (planetX + "," + planetY + ":" + planetNo);
-			report = report+planetCoords+"<br>";
+			report = report+planetCoords+"\r\n";
 		}
 	return report;
 }
